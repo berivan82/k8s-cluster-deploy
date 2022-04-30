@@ -1,0 +1,96 @@
+#1642788933
+nano /etc/haproxy/haproxy.cfg
+#1642789110
+apt install -y ansible
+#1642789186
+pwd
+#1642789187
+ls
+#1642789198
+mkdir ansible
+#1642789203
+cd ansible/
+#1642789252
+vi inventory
+#1642789453
+pwd
+#1642789459
+ls
+#1642789468
+mkdir roles
+#1642789476
+mkdir files
+#1642789498
+mkdir default
+#1642789550
+cp /etc/haproxy/haproxy.cfg ./files/
+#1642789571
+cd roles
+#1642789596
+vi haproxy.yaml
+#1642791731
+ls
+#1642791746
+mkdir balancer
+#1642791756
+ls
+#1642791807
+vi balancer/main.yaml
+#1642791972
+cd balancer/
+#1642791984
+mkdir files
+#1642792010
+mv ../../files/haproxy.cfg ./files/
+#1642792069
+rm -rf ../../{default,files}
+#1642792083
+ls
+#1642792090
+mkdir tasks
+#1642792100
+vi tasks/main.yaml
+#1642795843
+history
+#1642795872
+ls
+#1642795905
+vi /etc/sysctl.conf 
+#1642795948
+sysctl -p
+#1642795970
+systemct start haproxy
+#1642795979
+systemctl start haproxy
+#1642795986
+netstat -atupn
+#1642795998
+ps ax
+#1642796009
+ps ax|grep haproxy
+#1642796032
+netstat -ntlp
+#1642796040
+systemctl start haproxy
+#1642796044
+echo $?
+#1642796051
+updatedb
+#1642796059
+locate haproxy
+#1642796126
+haproxy
+#1642796156
+stat /etc/init.d/haproxy 
+#1642796189
+file /etc/init.d/haproxy 
+#1642796197
+file -f /etc/init.d/haproxy 
+#1642796241
+/etc/init.d/haproxy stop
+#1642796250
+/etc/init.d/haproxy start
+#1642796265
+echo $?
+#1642796273
+journalctl -xe

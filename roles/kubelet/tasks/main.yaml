@@ -1,0 +1,31 @@
+---
+
+- name:
+  file:
+    path: /etc/kubernetes.d
+    state: directory
+    mode: 644
+
+- name: copy kubelet manifest
+  copy:
+    src: ./roles/kubelet/files/KubeletConfiguration.yaml
+    dest: /etc/kubernetes.d/
+    mode: 0644
+
+- name: copy kubelet service config file
+  copy:
+    src: ./roles/kubelet/files/20-etcd-service-manager.conf
+    dest: /etc/systemd/system/kubelet.service.d/
+    mode: 0644
+
+- name: Enable and start kubelet service
+  systemd:
+    name: kubelet
+    daemon_reload: yes
+    enabled: yes
+    state: started
+
+
+
+
+

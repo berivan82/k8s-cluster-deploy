@@ -1,0 +1,8 @@
+---
+
+- hosts: etcd01,etcd02,etcd03
+  gather_facts: no
+  user: root
+  roles:
+    - kubelet
+  tags: kubelet

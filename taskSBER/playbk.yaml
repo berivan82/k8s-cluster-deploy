@@ -1,0 +1,18 @@
+---
+
+- hosts: localhost
+
+  vars:
+    mycities: "{{ cities | zip_longest([], fillvalue=';') | map('join') | list }}"
+    arr_len: "{{ cities | length }}"
+
+  tasks:
+  - name: list array elements with added ";" at the end excluding last element
+    debug:
+      msg: "{{ mycities[item] }}"
+    loop: "{{ range(0, arr_len|int - 1, 1)|list }}"
+
+  - name: list last array`s last element
+    debug:
+      msg: "{{ cities | last }}"
+

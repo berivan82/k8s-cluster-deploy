@@ -1,0 +1,85 @@
+---
+
+- name: Install haproxy and heartbeat
+  package:
+    name: "{{ item }}"
+    state: latest
+  with_items: 
+  - 'haproxy'
+  - 'heartbeat'
+  - 'pcs'
+
+- name: Backing default haproxy config
+  copy:
+    remote_src: true
+    src: /etc/haproxy/haproxy.cfg
+    dest: /etc/haproxy/haproxy.cfg.bak
+
+- name: Remove default haproxy config file
+  file:
+    path: /etc/haproxy/haproxy.cfg
+    state: absent
+
+- name: Copy new HAProxy config file
+  copy:
+    src: ./roles/balancer/files/haproxy.cfg
+    dest: /etc/haproxy/haproxy.cfg
+    owner: "haproxy"
+    group: "haproxy"
+    mode: 0640
+
+- name: Allow system services to bind to non-local ip addresses
+  sysctl:
+    name: net.ipv4.ip_nonlocal_bind
+    value: 1
+    sysctl_set: yes
+    state: present
+    reload: yes
+
+- name: Enable haproxy and heartbeat start at boot
+  systemd:
+    name: "{{ item }}"
+    enabled: yes
+    state: started
+    daemon-reload: yes
+  with_items:
+    - 'haproxy'
+    - 'heartbeat'
+    - 'pcsd'
+
+- name: Create authkeys file
+  shell: |
+    echo "auth 1\n1 md5 $(echo -n mypassword|md5sum|awk -F' ' '{print $1}')" > /etc/ha.d/authkeys
+  
+- name: Change autkeys file permissions
+  file:
+    path: /etc/ha.d/authkeys
+    owner: haproxy
+    group: haproxy
+    mode: 0600
+
+- name: Copy ha.cf to etcd01
+  copy:
+    src: /root/ansible/roles/balancer/files/ha.cf.etcd01
+    dest: /etc/ha.d/ha.cf
+  when: "groups['haproxy'] | select('search','01') | list"
+
+- name: Copy ha.cf to etcd02
+  copy:
+    src: /root/ansible/roles/balancer/files/ha.cf.etcd02
+    dest: /etc/ha.d/ha.cf
+  when: "groups['haproxy'] | select('search','02') | list"
+
+- name: Copy haresources config file
+  copy:
+    src: ./roles/balancer/files/haresources
+    dest: /etc/ha.d/haresources
+    mode: 046
+
+- name: Restart heartbeat and haproxy services
+  service:
+    name: "{{ item }}"
+    state: restarted
+  with_items:
+  - 'heartbeat'
+  - 'haproxy'

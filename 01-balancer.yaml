@@ -1,0 +1,8 @@
+---
+
+- hosts: etcd01, etcd02
+  gather_facts: no
+  user: root
+  roles:
+    - balancer
+  tags: balancer

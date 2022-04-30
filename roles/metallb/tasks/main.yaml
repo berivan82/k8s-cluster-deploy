@@ -1,0 +1,18 @@
+---
+
+- name: Install MetalLB balancer
+  shell: |
+    export KUBECONFIG=/etc/kubernetes/admin.conf; \\
+    kubectl apply -f https://raw.githubusercontent.com/metallb/metallb/v0.12.1/manifests/namespace.yaml; \\
+    kubectl apply -f https://raw.githubusercontent.com/metallb/metallb/v0.12.1/manifests/metallb.yaml
+
+- name: Copy config file to host
+  copy:
+    src: /root/ansible/roles/metallb/files/config.yaml
+    dest: /root/config.yaml
+    mode: 664
+
+- name: Configure MetalLB
+  shell:
+    cmd:  kubectl --kubeconfig /etc/kubernetes/admin.conf apply -f config.yaml
+    chdir: /root/

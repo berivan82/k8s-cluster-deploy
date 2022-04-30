@@ -1,0 +1,4126 @@
+#1642867011
+ls
+#1642867015
+cd ansible/
+#1642867071
+vi roles/balancer/tasks/main.yaml
+#1642874102
+wget etcd01:6443
+#1642874493
+ip a
+#1642874812
+nmap -A 192.168.234.115
+#1642874999
+ansible-playbook --inventory inventory/hosts balancer.yaml
+#1642875482
+ssh etcd02
+#1642875646
+vi roles/balancer/tasks/main.yaml
+#1642903018
+ssh etcd02
+#1642951367
+exit
+#1642817705
+netstat -atupn
+#1642817757
+vi ansible/roles/balancer/tasks/main.yaml 
+#1642818248
+cat ansible/roles/balancer/tasks/main.yaml 
+#1642818640
+nano ansible/roles/balancer/tasks/main.yaml 
+#1642818722
+vi ansible/roles/balancer/tasks/main.yaml 
+#1642821458
+cat ansible/inventory 
+#1642821471
+vi ansible/roles/balancer/tasks/main.yaml 
+#1642865445
+pwd
+#1642865463
+ansible-playbook
+#1642865471
+ansible-playbook|less
+#1642865523
+ansible-playbook|echo
+#1642865535
+ansible-playbook
+#1642865551
+man ansible-playbook
+#1642866916
+ansible-playbook --syntax-check --list-tasks -i 
+#1642866929
+cd ansible/
+#1642866933
+ls
+#1642866958
+ansible-playbook --syntax-check --list-tasks -i inventory roles/balancer/tasks/main.yaml 
+#1642867685
+ls
+#1642867736
+mkdir {logs,inventory,vars}
+#1642867767
+mv inventory hosts
+#1642867769
+mkdir {logs,inventory,vars}
+#1642867774
+ls
+#1642867789
+mv hosts inventory/
+#1642867794
+cd inventory/
+#1642867984
+mkdir {group_vars,host_vars}
+#1642867986
+ls
+#1642867994
+cd ../roles/
+#1642867996
+ls
+#1642868014
+cd balancer/ls
+#1642868019
+cd balancer
+#1642868021
+ls
+#1642868058
+mkdir {defaults,handlers,templates,vars}
+#1642868080
+updatedb
+#1642868088
+locate ansible.cfg
+#1642868138
+man ansible-glaxy
+#1642868144
+man ansible-galaxy
+#1642868247
+mzn ansible-config
+#1642868254
+man ansible-config
+#1642868461
+ansible-config list
+#1642868538
+ansible-config view
+#1642868548
+ansible-config dump
+#1642868606
+ls
+#1642868615
+pwd
+#1642868619
+cd ../..
+#1642868621
+ls
+#1642868625
+ansible-config dump
+#1642868629
+ls
+#1642868643
+locate ansible.cfg
+#1642868729
+for i in $(locate ansible.cfg);do cat $i|less;done
+#1642868835
+ls
+#1642868837
+pwd
+#1642868854
+vi ansible.cfg
+#1642869008
+ansible-config dump
+#1642869017
+ansible-config list
+#1642869031
+ansible-config view
+#1642869061
+ansible-config list -c ansible.cfg 
+#1642869087
+ls
+#1642869364
+man ansible-playbook
+#1642870183
+vi balancer.yaml
+#1642870398
+ansible-playbook --syntax-check --list-tasks balancer.yaml 
+#1642870434
+vi inventory/host
+#1642870443
+pwd
+#1642870449
+ls -lahprt
+#1642870475
+ls -lahprt ..
+#1642870528
+grep -r "eetcd02" /root/
+#1642870535
+grep -r "etcd02" /root/
+#1642870581
+ls -lahprt inventory/
+#1642870692
+vi inventory/hosts
+#1642870878
+ansible-playbook --syntax-check --list-tasks balancer.yaml 
+#1642870911
+mv inventory/hosts inventory/hosts.ini
+#1642870913
+ansible-playbook --syntax-check --list-tasks balancer.yaml 
+#1642870923
+vi ansible.cfg 
+#1642870951
+ansible-playbook --syntax-check --list-tasks balancer.yaml 
+#1642871081
+mv inventory/hosts.ini inventory/hosts
+#1642871100
+ansible-playbook --syntax-check --list-tasks --inventory inventory/hosts balancer.yaml 
+#1642871234
+vi inventory/hosts
+#1642871258
+ansible-playbook --syntax-check --list-tasks --inventory inventory/hosts balancer.yaml 
+#1642871313
+echo $?
+#1642871441
+ansible-playbook --syntax-check --list-tasks --verbose --inventory inventory/hosts balancer.yaml 
+#1642871466
+vi balancer.yaml 
+#1642871479
+ls /roles
+#1642871485
+ls roles
+#1642871494
+ls -lahprt roles
+#1642871518
+vi balancer.yaml 
+#1642871552
+cat logs/ansible.log 
+#1642871572
+cat ansible.cfg 
+#1642871592
+vi ansible.cfg 
+#1642871659
+ansible-playbook --syntax-check --list-tasks --verbose balancer.yaml 
+#1642871677
+ansible-playbook --syntax-check --list-tasks --verbose --inventory inventory/hosts balancer.yaml 
+#1642871703
+cat logs/ansible.log 
+#1642871734
+vi balancer.yaml 
+#1642871778
+ansible-playbook --syntax-check --list-tasks --verbose --inventory inventory/hosts balancer.yaml 
+#1642871782
+cat logs/ansible.log 
+#1642871958
+vi balancer.yaml 
+#1642872014
+ansible-playbook --syntax-check --list-tasks --verbose --inventory inventory/hosts balancer.yaml 
+#1642872016
+vi balancer.yaml 
+#1642872048
+ansible-playbook --syntax-check --list-tasks --verbose --inventory inventory/hosts balancer.yaml 
+#1642872051
+vi balancer.yaml 
+#1642872079
+ansible-playbook --syntax-check --list-tasks --verbose --inventory inventory/hosts balancer.yaml 
+#1642872100
+vi balancer.yaml 
+#1642872121
+ssh-keygen -t rsa
+#1642872142
+ssh-copy-id etcd01
+#1642872152
+ssh-copy-id etcd02
+#1642872162
+ssh-copy-id etcd03
+#1642872181
+ssh-copy-id kmaster01
+#1642872189
+ssh-copy-id kmaster02
+#1642872203
+ssh-copy-id kworker01
+#1642872210
+ssh-copy-id kworker02
+#1642872214
+debian11
+#1642872234
+dig kworker01
+#1642872236
+dig kworker02
+#1642872254
+ssh-copy-id kworker02
+#1642872263
+ssh-copy-id kworker03
+#1642872278
+ansible-playbook --syntax-check --list-tasks --verbose --inventory inventory/hosts balancer.yaml 
+#1642872292
+vi balancer.yaml 
+#1642872385
+ansible-playbook --syntax-check --list-tasks --verbose -t balancer --inventory inventory/hosts balancer.yaml 
+#1642872391
+cat logs/ansible.log 
+#1642872425
+ansible-playbook --syntax-check  --verbose -t balancer --inventory inventory/hosts balancer.yaml 
+#1642872434
+ansible-playbook --verbose -t balancer --inventory inventory/hosts balancer.yaml 
+#1642872459
+man ansible-playbook
+#1642872574
+man ansible-galaxy 
+#1642872620
+man ansible-vault 
+#1642872711
+vi balancer.yaml 
+#1642872803
+locate ha.cf
+#1642872858
+ls /etc/ha.d/
+#1642872925
+cp roles/balancer/files/ha.cf.etcd01 /etc/ha.d/ha.cf
+#1642872937
+ls -lahprt /etc/ha.d/
+#1642872992
+chmod 600 /etc/ha.d/authkeys 
+#1642873006
+vi roles/balancer/tasks/main.yaml 
+#1642873154
+vi roles/balancer/files/haresources
+#1642873207
+systemctl
+#1642873218
+service --status-all
+#1642873239
+service heartbeat status
+#1642873285
+cp roles/balancer/files/haresources /etc/ha.d/
+#1642873302
+service heartbeat start
+#1642873306
+echo $?
+#1642873320
+service heartbeat status
+#1642873343
+netstat -atupn
+#1642873383
+nc -v 192.168.234.111 6443
+#1642873408
+ping 192.168.234.111
+#1642873430
+service harpoxy restart
+#1642873443
+service haproxy restart
+#1642873450
+service haproxy status
+#1642874944
+ansible-playbook --verbose -t balancer --inventory inventory/hosts balancer.yaml 
+#1642875081
+vi roles/balancer/tasks/main.yaml 
+#1642875691
+vi logs/ansible.log 
+#1642903270
+vi roles/balancer/tasks/main.yaml 
+#1642903370
+vi roles/balancer/files/haproxy.cfg 
+#1642903477
+ssh etcd02
+#1642960120
+set +x +v +e
+#1642960127
+ls
+#1642960135
+pwd
+#1642960144
+jq
+#1642960157
+ssh etcd02
+#1642961571
+pwd
+#1643196947
+ls
+#1643205901
+nano ansible/roles/etcd/tasks/main.yaml
+#1643206115
+cat /etc/passwd
+#1643206146
+dpkg -L kube
+#1643206150
+dpkg -l kube
+#1643206158
+dpkg -l kube*
+#1643206173
+locate kubeinstall
+#1643206182
+ls
+#1643206188
+kubectl
+#1643206198
+ps ax|grep khbe
+#1643206202
+ps ax|grep kube
+#1643206227
+cat /etc/passwd
+#1643206253
+vi ansible/roles/etcd/tasks/main.yaml
+#1643212241
+mkdir -p ansible/roles/certs/{files,tasks,templates,vars}
+#1643212302
+mv ansible/roles/etcd/files/*.sh ansible/roles/certs/files/
+#1643212413
+nano ansible/roles/certs/files/createKubeadmConfig.sh 
+#1643212876
+vi ansible/roles/etcd/tasks/main.yaml
+#1643212909
+vi ansible/balancer.yaml 
+#1643212976
+nano ansible/balancer.yaml 
+#1643213106
+mv ansible/roles/etcd ansible/roles/kubelet
+#1643213158
+ansible-playbook --synth-check
+#1643213171
+history|grep check
+#1643213222
+ansible-playbook --syntax-check
+#1643213289
+ansible-playbook --syntax-check ansible/kubelet.yaml 
+#1643213347
+ansible-playbook --inventory inventory/hosts --syntax-check -vvvv ansible/kubelet.yaml 
+#1643213401
+history|grep plybook
+#1643213405
+history|grep playbook
+#1643213466
+cat ansible/inventory/hosts
+#1643213577
+nano ansible/kubelet.yaml 
+#1643213596
+ansible-playbook --inventory inventory/hosts --syntax-check -vvvv ansible/kubelet.yaml 
+#1643213767
+cd ansible/
+#1643213781
+ansible-playbook --inventory inventory/hosts --syntax-check -vvvv kubelet.yaml 
+#1643213803
+nano ansible/kubelet.yaml 
+#1643213812
+nano kubelet.yaml 
+#1643213829
+ansible-playbook --inventory inventory/hosts --syntax-check -vvvv kubelet.yaml 
+#1643213933
+ansible-playbook --inventory inventory/hosts --syntax-check --list-tasks -vvvv kubelet.yaml 
+#1643213988
+
+#1643213997
+ansible-playbook --inventory inventory/hosts --syntax-check --list-tasks -vvvv balancer.yaml 
+#1643214039
+ansible-playbook --inventory inventory/hosts -v kubelet.yaml 
+#1643214146
+nano roles/kubelet/tasks/main.yaml 
+#1643214187
+ansible-playbook --inventory inventory/hosts -v kubelet.yaml 
+#1643214315
+nmap -A etcd02
+#1643214570
+nano roles/certs/files/createKubeadmConfig.sh 
+#1643215583
+history|grep kubeadm
+#1643216430
+nmap -A etcd03
+#1643216840
+docker run --rm -it --net host -v /etc/kubernetes:/etc/kubernetes quay.io/coreos/etcd:v3.2.24 etcdctl --cert-file /etc/kubernetes/pki/etcd/peer.crt --key-file /etc/kubernetes/pki/etcd/peer.key --ca-file /etc/kubernetes/pki/etcd/ca.crt --endpoints https://192.168.0.2:2379 cluster-health
+#1643216878
+docker run --rm -it --net host -v /etc/kubernetes:/etc/kubernetes quay.io/coreos/etcd:v3.5.1-0 etcdctl --cert-file /etc/kubernetes/pki/etcd/peer.crt --key-file /etc/kubernetes/pki/etcd/peer.key --ca-file /etc/kubernetes/pki/etcd/ca.crt --endpoints https://192.168.0.2:2379 cluster-health
+#1643216922
+docker run --rm -it --net host -v /etc/kubernetes:/etc/kubernetes quay.io/coreos/etcd:v3.5.1-0 etcdctl --cert-file /etc/kubernetes/pki/etcd/peer.crt --key-file /etc/kubernetes/pki/etcd/peer.key --ca-file /etc/kubernetes/pki/etcd/ca.crt --endpoints https://192.168.234.112:2379 cluster-health
+#1643216965
+docker run --rm -it --net host -v /etc/kubernetes:/etc/kubernetes quay.io/coreos/etcd:v3.5.1 etcdctl --cert-file /etc/kubernetes/pki/etcd/peer.crt --key-file /etc/kubernetes/pki/etcd/peer.key --ca-file /etc/kubernetes/pki/etcd/ca.crt --endpoints https://192.168.234.112:2379 cluster-health
+#1643217180
+etcd --version
+#1643217191
+updatedb
+#1643217202
+locate bin/etcd
+#1643217236
+docker ps
+#1643217358
+etcdctl
+#1643217413
+docker stop 7866e40ca019 2df798876e18 
+#1643217421
+docker images
+#1643217448
+docker rm 7866e40ca019 2df798876e18
+#1643217482
+docker rmi 25f8c7f3da61 ba71c233964f feb5d9fea6a5 6270bb605e12
+#1643217495
+docker ps -a
+#1643217526
+docker rm ce8ea6dce727  3f9fa0b5395c  ff4ca20842d5 
+#1643217536
+docker stop ce8ea6dce727  3f9fa0b5395c  ff4ca20842d5 
+#1643217543
+docker rm ce8ea6dce727  3f9fa0b5395c  ff4ca20842d5 
+#1643217548
+docker ps -a
+#1643217605
+docker run --rm -it --net host -v /etc/kubernetes:/etc/kubernetes quay.io/coreos/etcd:v3.5.1 etcdctl --cert-file /etc/kubernetes/pki/etcd/peer.crt --key-file /etc/kubernetes/pki/etcd/peer.key --ca-file /etc/kubernetes/pki/etcd/ca.crt --endpoints https://192.168.234.112:2379 cluster-health
+#1643217671
+docker ps -a
+#1643217682
+docker images
+#1643217697
+docker ps -a
+#1643217728
+ss -ntlp
+#1643217903
+docker exec -it etcdctl cf54df591fd3 
+#1643217925
+docker exec -it cf54df591fd3 etcdctl
+#1643218013
+docker exec -it cf54df591fd3 etcdctl cluster-health
+#1643218020
+docker exec -it cf54df591fd3 etcdctl health
+#1643218053
+docker exec -it cf54df591fd3 etcdctl endpoint
+#1643218149
+docker exec -it cf54df591fd3 etcdctl endpoint --endpoints=[192.168.234.112:2379]
+#1643218175
+docker exec -it cf54df591fd3 etcdctl endpoint status --endpoints=[192.168.234.112:2379]
+#1643218419
+docker exec -it cf54df591fd3 etcdctl endpoint health --endpoints=[192.168.234.112:2379]
+#1643218443
+docker exec -it cf54df591fd3 etcdctl endpoint health --endpoints=192.168.234.112:2379
+#1643218512
+docker exec -it cf54df591fd3 etcdctl endpoint health --endpoints=[192.168.234.112\:2379]
+#1643218542
+docker exec -it cf54df591fd3 etcdctl endpoint health --endpoints='192.168.234.112:2379'
+#1643218574
+telnet 192.168.234.112 2379
+#1643218604
+nmap -A etcd01
+#1643218625
+telnet 192.168.234.113 2379
+#1643218694
+docker exec -it cf54df591fd3 etcdctl endpoint health --endpoints="192.168.234.112:2379"
+#1643218723
+docker exec -it cf54df591fd3 etcdctl endpoint health --endpoints={192.168.234.112:2379}
+#1643218828
+docker exec -it cf54df591fd3 etcdctl endpoint health --endpoints=(192.168.234.112:2379)
+#1643218835
+docker exec -it cf54df591fd3 etcdctl endpoint health --endpoints=\(192.168.234.112:2379\)
+#1643218888
+docker exec -it cf54df591fd3 etcdctl endpoint health --endpoints=192.168.234.112:2379
+#1643219208
+docker exec -it cf54df591fd3 etcdctl endpoint health --endpoints 192.168.234.112:2379
+#1643219233
+docker exec -it cf54df591fd3 etcdctl endpoint health --endpoints https://192.168.234.112:2379
+#1643219275
+docker exec -it cf54df591fd3 etcdctl endpoint health --endpoints http://192.168.234.112:2379
+#1643219303
+docker exec -it cf54df591fd3 etcdctl endpoint health --cluster
+#1643219413
+docker exec -it cf54df591fd3 etcdctl endpoint status --cluster
+#1643219434
+docker exec -it cf54df591fd3 etcdctl endpoint status --endpoints https://192.168.234.112:2379
+#1643219581
+docker exec -it cf54df591fd3 etcdctl endpoint status --endpoints https://192.168.234.112:2379 --insecure-skip-tls-verify
+#1643219631
+docker exec -it cf54df591fd3 etcdctl endpoint status --endpoints https://192.168.234.112:2379 --insecure-skip-tls-verify=true
+#1643219666
+docker exec -it cf54df591fd3 etcdctl endpoint status --endpoints https://192.168.234.112:2379 --insecure-skip-tls-verify=true -w json
+#1643219806
+docker exec -it cf54df591fd3 etcdctl endpoint status --endpoints="https://192.168.234.112:2379" --insecure-skip-tls-verify=true -w json
+#1643219965
+docker run --rm -it --net host -v /etc/kubernetes:/etc/kubernetes quay.io/coreos/etcd:v3.5.1 etcdctl --cert-file /etc/kubernetes/pki/etcd/peer.crt --key-file /etc/kubernetes/pki/etcd/peer.key --ca-file /etc/kubernetes/pki/etcd/ca.crt --endpoints https://192.168.234.112:2379 
+#1643220037
+docker run --rm -it --net host -v /etc/kubernetes:/etc/kubernetes quay.io/coreos/etcd:v3.5.1 etcdctl --cert /etc/kubernetes/pki/etcd/peer.crt --key /etc/kubernetes/pki/etcd/peer.key --cacert /etc/kubernetes/pki/etcd/ca.crt --endpoints https://192.168.234.112:2379 
+#1643220151
+echo $?
+#1643220168
+docker run --rm -it --net host -v /etc/kubernetes:/etc/kubernetes quay.io/coreos/etcd:v3.5.1 etcdctl --cert /etc/kubernetes/pki/etcd/peer.crt --key /etc/kubernetes/pki/etcd/peer.key --cacert /etc/kubernetes/pki/etcd/ca.crt --endpoints https://192.168.234.112:2379 endpoint health --cluster
+#1643200122
+kubeadm config print init-defaults --component-configs KubeletConfiguration
+#1643203527
+updatedb
+#1643203543
+locate Kubelet
+#1643203572
+ls /etc/kubernetes/manifests/
+#1643203594
+cat /etc/kubernetes/manifests/KubeletConfiguration.yaml.save*
+#1643203615
+rm /etc/kubernetes/manifests/KubeletConfiguration.yaml.save*
+#1643203626
+nano /etc/kubernetes/manifests/KubeletConfiguration.yaml
+#1643203757
+vi /etc/systemd/system/kubelet.service.d/20-etcd-service-manager.conf 
+#1643203767
+nano /etc/systemd/system/kubelet.service.d/20-etcd-service-manager.conf 
+#1643203854
+ls /etc/kubernetes/manifests/KubeletConfiguration.yaml 
+#1643203870
+systemctl daemon-reload
+#1643203874
+echo $?
+#1643203882
+service kubelet start
+#1643203887
+echo $?
+#1643203897
+service --status.all
+#1643203902
+service --status-all
+#1643203923
+service kubelet status
+#1643203938
+journalctl -xe
+#1643204707
+vi /etc/kubernetes/manifests/KubeletConfiguration.yaml 
+#1643204795
+nano /etc/systemd/system/kubelet.service.d/20-etcd-service-manager.conf 
+#1643204902
+systemctl daemon-reload
+#1643204908
+service kubelet status
+#1643204949
+nano /lib/systemd/system/kubelet.service 
+#1643204999
+service kubelet stop
+#1643205004
+service kubelet start
+#1643205010
+echo $?
+#1643205020
+service kubelet status
+#1643205058
+cat /etc/systemd/system/kubelet.service.d/20-etcd-service-manager.conf 
+#1643205071
+cat /etc/systemd/system/kubelet.service.d/10-kubeadm.conf 
+#1643205134
+journalctl -xe
+#1643205384
+nano /etc/systemd/system/kubelet.service.d/20-etcd-service-manager.conf 
+#1643205401
+vi /etc/kubernetes/manifests/KubeletConfiguration.yaml 
+#1643205429
+nano /etc/kubernetes/manifests/KubeletConfiguration.yaml 
+#1643205464
+systemctl daemon-reload
+#1643205470
+service kubelet status
+#1643205478
+service kubelet stop
+#1643205482
+service kubelet start
+#1643205487
+service kubelet status
+#1643205499
+journalctl -xe
+#1643205662
+nano /etc/kubernetes/manifests/KubeletConfiguration.yaml 
+#1643205687
+systemctl daemon-reload
+#1643205691
+service kubelet stop
+#1643205695
+service kubelet start
+#1643205699
+service kubelet status
+#1643205709
+journalctl -xe
+#1643205763
+nano /etc/kubernetes/manifests/KubeletConfiguration.yaml 
+#1643205795
+systemctl daemon-reload
+#1643205797
+service kubelet stop
+#1643205800
+service kubelet start
+#1643205803
+service kubelet status
+#1643205832
+ps a
+#1643205835
+w
+#1643205978
+pwd
+#1643206022
+cat ansible/roles/balancer/tasks/main.yaml 
+#1643206682
+cp /etc/systemd/system/kubelet.service.d/20-etcd-service-manager.conf ansible/roles/etcd/files/
+#1643206704
+cp /etc/kubernetes/manifests/KubeletConfiguration.yaml ansible/roles/etcd/files/
+#1643207471
+�netstat -atupn
+#1643207476
+netstat -atupn
+#1643207698
+nano ansible/roles/etcd/files/createKubeadmConfig.sh
+#1643208885
+kubeadm init phase certs etcd-ca
+#1643208897
+ls /etc/kubernetes/pki/
+#1643208906
+ls -lahprt /etc/kubernetes/pki/
+#1643208918
+ls -lahprt /etc/kubernetes/pki/etcd/
+#1643208938
+ls
+#1643208986
+chmod +x ansible/roles/etcd/files/createKubeadmConfig.sh 
+#1643209010
+vi /ansible/roles/etcd/files/createKubeadmConfig.sh 
+#1643209027
+vi ./ansible/roles/etcd/files/createKubeadmConfig.sh 
+#1643209121
+nano /tmp/192.168.234.112/kubeadmcfg.yaml 
+#1643209262
+vi ./ansible/roles/etcd/files/createCertificates.sh 
+#1643209315
+nano ./ansible/roles/etcd/files/createCertificates.sh 
+#1643209885
+chmod +x ./ansible/roles/etcd/files/createCertificates.sh 
+#1643209926
+ls /tmp/*
+#1643209944
+ls /tmp/*/
+#1643209961
+ls /tmp/*/*
+#1643209988
+ls /tmp/*/*/
+#1643209993
+ls /tmp/*/*/*
+#1643210124
+ls /etc/kubernetes/pki/etcd/
+#1643210150
+ls
+#1643210191
+nano ./ansible/roles/etcd/files/copyCertsToHosts.sh 
+#1643210681
+vhmod +x ./ansible/roles/etcd/files/copyCertsToHosts.sh 
+#1643210688
+chmod +x ./ansible/roles/etcd/files/copyCertsToHosts.sh 
+#1643210763
+ssh etcd02
+#1643210821
+ls
+#1643212601
+nano ./ansible/roles/certs/files/createCertificates.sh 
+#1643212964
+nano ansible/etcd.yaml
+#1643213273
+mv ansible/etcd.yaml ansible/kubelet.yaml
+#1643214352
+netstat -atupn
+#1643214876
+ssh etcd02
+#1643214941
+ssh etcd03
+#1643215412
+pwd
+#1643215415
+cd ansible/
+#1643215416
+ls
+#1643215424
+ls roles/
+#1643215485
+nano /tmp/192.168.234.112/kubeadmcfg.yaml 
+#1643215554
+nano /tmp/192.168.234.112/kubeadmcfg.yaml |grep kubeadm
+#1643215598
+killall nano
+#1643215606
+fg
+#1643215619
+bg
+#1643215628
+fg
+#1643215643
+history|grep kubeadm
+#1643215724
+kubeadm init phase etcd local --config=/tmp/192.168.234.112/kubeadmcfg.yaml
+#1643215762
+nano /etc/kubernetes/manifests/etcd.yaml 
+#1643215945
+ss -ntlp
+#1643216000
+nano roles/certs/files/copyCertsToHosts.sh 
+#1643216334
+./roles/certs/files/copyCertsToHosts.sh 
+#1643216369
+nano roles/certs/files/copyCertsToHosts.sh 
+#1643216395
+./roles/certs/files/copyCertsToHosts.sh 
+#1643216418
+nmap -A etcd02
+#1643216455
+ss -ntlp
+#1643216499
+ssh etcd02
+#1643216539
+ssh etcd03
+#1643216695
+mv roles/certs/files/copyCertsToHosts.sh roles/certs/files/copyCerts-InitCluster.sh
+#1643216746
+nano /etc/kubernetes/manifests/etcd.yaml 
+#1643218317
+ss -ntlp
+#1643218325
+ssh etcd02
+#1643296824
+du -hd 1 /var/log
+#1643298065
+ls -laptrh /var/;og
+#1643298253
+ls -laptrh /var/log
+#1643298296
+ls -laptrh /var/log|sort -h -k 5
+#1643298333
+ls -laptrh /var/log/*|sort -h -k 5
+#1643298472
+rm -rf /var/log/{daemon.log,syslog}
+#1643298477
+ls -laptrh /var/log|sort -h -k 5
+#1643298494
+df -h
+#1643298531
+mount
+#1643298877
+cd /root/ansible/
+#1643298879
+ls
+#1643298895
+vi kubelet.yaml 
+#1643298986
+vi etcd.yaml 
+#1643299044
+mv etcd.yaml certs.yaml
+#1643299047
+vi certs.yaml 
+#1643299093
+ls -lahprt roles/certs/*/*
+#1643299156
+vi roles/certs/files/createCertificates.sh 
+#1643299179
+nano roles/certs/files/createCertificates.sh 
+#1643299214
+nano roles/certs/files/createKubeadmConfig.sh 
+#1643299381
+mv roles/certs/files/createKubeadmConfig.sh roles/certs/files/createCertsConfigs.sh
+#1643299385
+ls -lahprt roles/certs/*/*
+#1643299402
+nano roles/certs/files/copyCerts-InitCluster.sh 
+#1643299496
+viCerts-InitCluster.sh 
+#1643299533
+vi roles/certs/files/copyCerts-InitCluster.sh 
+#1643299632
+nano roles/certs/files/createCertsConfigs.sh 
+#1643299980
+nano roles/certs/tasks/main.yaml
+#1643301830
+pwd
+#1643301832
+ls
+#1643302155
+nano roles/certs/tasks/main.yaml
+#1643302918
+ls
+#1643303502
+ls -laptrh /var/log|sort -h -k 5
+#1643303587
+ls /vare/log
+#1643303595
+ls /var/log
+#1643303644
+man rsyslog
+#1643303650
+rsyslog
+#1643303654
+locate rsyslog
+#1643303683
+ps ax| grep syslog
+#1643303695
+man syslog
+#1643303757
+man syslogd
+#1643303761
+man rsyslogd
+#1643304013
+logger
+#1643304020
+man logger
+#1643304068
+man logrotate
+#1643304503
+vi /etc/rsyslog.conf 
+#1643304510
+nano /etc/rsyslog.conf 
+#1643304672
+updatedb
+#1643304696
+locate heartbeat|grep log
+#1643304792
+for logfile in $(locate heartbeat|grep log|grep -v share); do vi $logfile;done
+#1643305434
+/usr/lib/heartbeat/logtest 
+#1643305445
+/usr/lib/heartbeat/logtest 1
+#1643305450
+/usr/lib/heartbeat/logtest 10
+#1643305454
+/usr/lib/heartbeat/logtest 100
+#1643305463
+locate heartbeat|grep log
+#1643305469
+/usr/lib/heartbeat/logtest 0
+#1643305485
+/usr/lib/heartbeat/ha_logd
+#1643305503
+ps ax |grep log
+#1643305542
+service ha_logd status
+#1643305561
+/usr/lib/heartbeat/ha_logd status
+#1643305570
+/usr/lib/heartbeat/ha_logd --help
+#1643305597
+/usr/lib/heartbeat/ha_logd -s
+#1643305604
+/usr/lib/heartbeat/ha_logd -s -v
+#1643305627
+ls /var/log
+#1643305646
+service rsyslogd restart
+#1643305652
+service rsyslog restart
+#1643305661
+ps ax|grep syslog
+#1643305680
+ls /var/log
+#1643305709
+tail -f /var/log/syslog
+#1643305886
+ls
+#1643310769
+ls /var/log
+#1643310801
+/usr/lib/heartbeat/ha_logd -s -v
+#1643310827
+ps aux|grep ha
+#1643310876
+cat /etc/passwd
+#1643310934
+man gnats
+#1643310938
+gnats
+#1643310940
+gnat
+#1643310951
+locate gnats
+#1643310955
+locate gnat
+#1643311116
+ls -laptrh /var/log|sort -h -k 5
+#1643311161
+vi /etc/rsyslog.d/49-haproxy.conf
+#1643311169
+nano /etc/rsyslog.d/49-haproxy.conf
+#1643311230
+nano /etc/rsyslog.conf 
+#1643311299
+ls
+#1643311324
+vi roles/certs/tasks/main.yaml 
+#1643311385
+ansible-playbook certs.yaml 
+#1643311399
+vi roles/certs/tasks/main.yaml 
+#1643311458
+ansible-playbook certs.yaml 
+#1643311521
+nano certs.yaml
+#1643311531
+ansible-playbook certs.yaml 
+#1643311556
+ansible-playbook -i inventory certs.yaml 
+#1643311731
+ansible-playbook -vvv -i inventory certs.yaml 
+#1643312070
+nano roles/certs/tasks/main.yaml 
+#1643312305
+ansible-playbook -i inventory certs.yaml 
+#1643312344
+ansible-playbook -vvv -i inventory certs.yaml 
+#1643312624
+history
+#1643312704
+man docker exec
+#1643312752
+vi roles/certs/tasks/main.yaml 
+#1643312781
+ansible-playbook -i inventory certs.yaml 
+#1643312835
+nano roles/certs/tasks/main.yaml 
+#1643327167
+ansible all -m command -a"free -hlw; apt install jq -y"
+#1643327201
+ansible all -m command -i inventory -a"free -hlw;"
+#1643327237
+ansible all -m command -i inventory -a"free -hlw"
+#1643327444
+ansible all -m command -i inventory -a"apt update"
+#1643327596
+ansible all -m command -i inventory -a"apt install -y jq"
+#1643349807
+pwd
+#1643349820
+git init
+#1643349970
+git config --global init.defaultBranch main
+#1643349978
+ls
+#1643349990
+git add *
+#1643351775
+git commit -m  "ininiitial commit"
+#1643351806
+ls /mnt
+#1643351830
+vmware-vmblock-fuse 
+#1643351841
+msn vmware-vmblock-fuse 
+#1643351849
+man vmware-vmblock-fuse 
+#1643351856
+vmware-vmblock-fuse --help
+#1643351983
+vmware-hgfsclient 
+#1643351993
+echo $? 
+#1643352002
+vmware-hgfsclient --help
+#1643353982
+dmesg
+#1643354024
+vmware-hgfsclient 
+#1643354050
+vmhgfs-fuse
+#1643354065
+vmhgfs-fuse /mnt
+#1643354073
+ls /mnt
+#1643354096
+ls -lahprt /mnt
+#1643354122
+vmhgfs-fuse /mnt/code
+#1643354134
+mkdir /mnt/code
+#1643354135
+vmhgfs-fuse /mnt/code
+#1643354142
+vmware-hgfsclient 
+#1643354212
+cp -r /root/ansible /mnt/code/code/
+#1643502934
+ssh kmaster01
+#1643503050
+exit
+#1643553355
+history|grep free
+#1643553371
+ansible -m command
+#1643553490
+cd ansible/
+#1643553504
+ansible -m command-i inventory/ all
+#1643553511
+ansible -m command-i inventory/ all free -hlw
+#1643553660
+ansible -m command-i inventory/ all -a" free -hlw"
+#1643553665
+ansible -m command-i inventory/  -a" free -hlw"
+#1643553671
+ansible -m command-i inventory/  -a" free -hlw" all
+#1643553687
+ansible -m command -i inventory/  -a "free -hlw" 
+#1643553698
+ansible -m command -i inventory/  -a "free -hlw" alll
+#1643553701
+ansible -m command -i inventory/  -a "free -hlw" all
+#1643659991
+ansible -m command -i inventory/  -a "ls -lahprt" all
+#1643660073
+ansible -m command -i inventory/  -a " \ls -lahprt" all
+#1643660088
+crm_verify -L -V
+#1643660105
+ls
+#1643660178
+ansible -m command -i inventory/  -a " pwd" all
+#1643660383
+docker run --rm -it --net host -v /etc/kubernetes:/etc/kubernetes quay.io/coreos/etcd:v3.5.1 etcdctl --cert /etc/kubernetes/pki/etcd/peer.crt --key /etc/kubernetes/pki/etcd/peer.key --cacert /etc/kubernetes/pki/etcd/ca.crt --endpoints https://192.168.234.112:2379 endpoint health --cluster
+#1643665302
+history
+#1643665348
+ansible -m setup -i inventory/ etcd01
+#1643665630
+ansible -i inventory/ -m setup -a '' all
+#1643671846
+ls
+#1643671857
+ls roles/balancer/
+#1643671980
+mkdir -p ./roles/kmasters/{defaults,files,tasks,templates,vars}
+#1643671985
+echo $?
+#1643672076
+nano roles/kmasters/files/kubeadm-config.yaml
+#1643672842
+ansible -m command -i inventory -a"apt update && apt upgrade -y" all -v
+#1643672881
+ansible -m command -i inventory -a"apt update" all -v
+#1643672919
+ansible -m command -i inventory -a"apt upgrade -y" all -v
+#1643673630
+nano roles/kmasters/tasks/main.yaml
+#1643675274
+cat balancer.yaml 
+#1643675297
+nano masters
+#1643675532
+ansible-playbook -i inventory/ kmaster01 masters 
+#1643675581
+mv masters kmasters.yaml
+#1643675586
+ansible-playbook -i inventory/ kmaster01 masters -vvv
+#1643675604
+nano inventory/host
+#1643675612
+nano inventory/hosts
+#1643675649
+ssh kmaster01
+#1643675667
+nano kmasters.yaml
+#1643675698
+ls roles/kmasters/
+#1643675713
+nano kmasters.yaml
+#1643675751
+dig kmaster01
+#1643675758
+dig kmaster01.mynet.loc
+#1643675767
+dig kmaster01
+#1643675780
+ssh ns1dns
+#1643675905
+dig kmaster01.mynet.loc
+#1643675908
+dig kmaster01
+#1643675915
+vi kmasters.yaml 
+#1643675960
+ansible-playbook -i inventory/ kmaster01.mynet.loc kmasters.conf -vvv
+#1643675977
+vi inventory/hosts
+#1643676014
+ansible-playbook -i inventory/ kmaster01.mynet.loc kmasters.conf -vvv
+#1643676034
+ls
+#1643676063
+vi kmasters.yaml 
+#1643735182
+ls
+#1643735195
+ps ax|grep kube
+#1643735228
+ps ax|grep ans
+#1643735255
+ls
+#1643735262
+cat kubeadm.log 
+#1643735268
+rm kubeadm.log 
+#1643735338
+cat logs/ansible.log 
+#1643735631
+tail -f logs/ansible.log 
+#1643729899
+ls
+#1643729902
+cd ansible/
+#1643729903
+ls
+#1643729911
+history
+#1643729954
+crm_verify -L -V
+#1643729964
+crm_verify -L 
+#1643729979
+updatedb
+#1643730007
+ls
+#1643730018
+nano kmasters.yaml 
+#1643730085
+ssh kmaster01
+#1643730091
+nano kmasters.yaml 
+#1643730117
+nano inventory/hosts
+#1643730197
+nano roles/kmasters/tasks/main.yaml 
+#1643730275
+ansible -m shell -i inventory/ -a"free -hlw" kmaster01
+#1643730342
+ansible-playbook --syntax-check --list-tasks -i inventory/ kmasters.yaml 
+#1643730367
+ansible-playbook --syntax-check --list-tasks -i inventory/ kmasters.yaml -v
+#1643730371
+ansible-playbook --syntax-check --list-tasks -i inventory/ kmasters.yaml -vv
+#1643730375
+ansible-playbook --syntax-check --list-tasks -i inventory/ kmasters.yaml -vvv
+#1643730473
+nano roles/kmasters/tasks/main.yaml 
+#1643730504
+ansible-playbook --syntax-check --list-tasks -i inventory/ kmasters.yaml -v
+#1643730525
+ansible-playbook  -i inventory/ kmasters.yaml -v
+#1643730633
+nano roles/kmasters/tasks/main.yaml 
+#1643730712
+ansible-playbook  -i inventory/ kmasters.yaml -v
+#1643730847
+ssh kmaster01
+#1643730883
+nano roles/kmasters/tasks/main.yaml 
+#1643731146
+ansible-playbook  -i inventory/ kmasters.yaml -v
+#1643731158
+nano roles/kmasters/tasks/main.yaml 
+#1643731235
+ansible-playbook  -i inventory/ kmasters.yaml -v
+#1643731349
+mv roles/kmasters/files/kubeadm-config.yaml roles/kmasters/files/kubeadm-config.yml 
+#1643731437
+kubeadm config migrate --old-config roles/kmasters/files/kubeadm-config.yml --new-config roles/kmasters/files/kubeadm-config.yaml 
+#1643731506
+nano roles/kmasters/files/kubeadm-config.yml 
+#1643731536
+kubeadm config migrate --old-config roles/kmasters/files/kubeadm-config.yml --new-config roles/kmasters/files/kubeadm-config.yaml -vv
+#1643731553
+kubeadm config migrate -v --old-config roles/kmasters/files/kubeadm-config.yml --new-config roles/kmasters/files/kubeadm-config.yaml 
+#1643731570
+kubeadm config migrate --old-config roles/kmasters/files/kubeadm-config.yml --new-config roles/kmasters/files/kubeadm-config.yaml --v=5
+#1643731751
+kubeadm config migrate --old-config roles/kmasters/files/kubeadm-config.yml --new-config roles/kmasters/files/kubeadm-config.yaml 
+#1643731778
+kubeadm --version
+#1643731785
+kubeadm -v
+#1643731792
+kubeadm -version
+#1643731799
+kubeadm
+#1643731844
+kubeadm version
+#1643731868
+kubeadm config
+#1643731878
+kubeadm config help
+#1643731891
+kubeadm  help config
+#1643732050
+kubeadm  help config migrate
+#1643732160
+kubeadm config migrate --old-config roles/kmasters/files/kubeadm-config.yml --log-file kubeadm.log
+#1643732209
+touch kubeadm.log
+#1643732224
+kubeadm config migrate --old-config roles/kmasters/files/kubeadm-config.yml --log-file ./kubeadm.log
+#1643732232
+cat kubeadm.log 
+#1643732284
+kubeadm config migrate --old-config roles/kmasters/files/kubeadm-config.yml --log-file ./kubeadm.log --v=5
+#1643732448
+kubeadm config view
+#1643732464
+kubeadm  help config
+#1643732810
+kubeadm config print init-defaults
+#1643732928
+kubeadm config migrate --old-config roles/kmasters/files/kubeadm-config.yml --log-file ./kubeadm.log --v=5
+#1643734146
+nano roles/kmasters/files/kubeadm-config.yml 
+#1643734481
+kubeadm config migrate --old-config roles/kmasters/files/kubeadm-config.yml --new-config roles/kmasters/files/kubeadm-config.yaml --log-file ./kubeadm.log --v=5
+#1643734583
+nano roles/kmasters/files/kubeadm-config.yml 
+#1643734709
+kubeadm version
+#1643734713
+nano roles/kmasters/files/kubeadm-config.yml 
+#1643734808
+kubeadm config migrate --old-config roles/kmasters/files/kubeadm-config.yml --new-config roles/kmasters/files/kubeadm-config.yaml --log-file ./kubeadm.log --v=5
+#1643734814
+nano roles/kmasters/files/kubeadm-config.yml 
+#1643734829
+kubeadm config migrate --old-config roles/kmasters/files/kubeadm-config.yml --new-config roles/kmasters/files/kubeadm-config.yaml --log-file ./kubeadm.log --v=5
+#1643734843
+nano roles/kmasters/files/kubeadm-config.yaml 
+#1643734943
+ansible-playbook  -i inventory/ kmasters.yaml -v
+#1643756113
+ls -lahprt /var/log
+#1643756170
+nano roles/kubelet/tasks/main.yaml 
+#1643756298
+mkdir /etc/kubernetes.d
+#1643756377
+ssh kmaster01
+#1644404599
+history
+#1644404616
+ls
+#1644404665
+cd ansible/
+#1644404666
+ls
+#1644404679
+cat logs/ansible.log 
+#1644404981
+ansible-playbook -i inventory/ kmasters.yaml 
+#1644412639
+ansible-playbook -i inventory/ kmasters.yaml --v=5
+#1644412643
+ansible-playbook -i inventory/ kmasters.yaml -v=5
+#1644412663
+ansible-playbook -v==5 -i inventory/ kmasters.yaml 
+#1644412674
+ansible-playbook -vvvvv -i inventory/ kmasters.yaml 
+#1644436043
+exit
+#1644476703
+cd ansible/ls
+#1644476708
+cd ansible/
+#1644476709
+ls
+#1644476726
+history
+#1644476748
+echo $?
+#1644476756
+echo $#
+#1644476764
+echo $!
+#1644476769
+echo $1
+#1644476772
+echo $0
+#1644476840
+vi roles/kubelet/tasks/main.yaml 
+#1644512359
+ls /etc/kubernetes.d/
+#1644512369
+vi kubelet.yaml 
+#1644512448
+mv /etc/kubernetes/manifests/KubeletConfiguration.yaml /etc/kubernetes.d
+#1644512463
+ssh etcd02
+#1644512680
+df -h
+#1644512844
+du -hd1
+#1644512858
+du -hd1 /
+#1644512886
+du -hd1 /var/log
+#1644512901
+du -hd1 /var/log/journal/
+#1644513063
+tail -f  /var/log/journal/85b577b95ffd4694bd2a884da9e5c2de/system@4446b997d7e8485c8ef256700db90e95-0000000000000001-0005d60a7d0449cc.journal
+#1644513136
+rm -rf /var/log/journal/85b577b95ffd4694bd2a884da9e5c2de/
+#1644513140
+df -h
+#1644476559
+docker exec -it cf54df591fd3 etcdctl --cert /etc/kubernetes/pki/etcd/peer.crt --key /etc/kubernetes/pki/etcd/peer.key --cacert /etc/kubernetes/pki/etcd/ca.crt --endpoints https://192.168.234.112:2379 endpoint health --cluster
+#1644476572
+ls
+#1644476575
+cd ansible/
+#1644476580
+cat logs/ansible.log 
+#1645113000
+cd ansible/
+#1645113001
+ls
+#1645113092
+service --status-all
+#1645113137
+nestat -atupn
+#1645113142
+netstat -atupn
+#1645113171
+ss -ntpl
+#1645113189
+when
+#1645113194
+where
+#1645113197
+whereis
+#1645113201
+whereis --help
+#1645113219
+whereis -l
+#1645113257
+w
+#1645113260
+whois
+#1645113263
+who
+#1645113285
+seriec haproxy status
+#1645113292
+service haproxy status
+#1645113301
+df -h
+#1645113322
+cat logs/ansible.log 
+#1645113345
+ls /etc/kubernetes.d/
+#1645113394
+nano /etc/kubernetes/manifests/etcd.yaml 
+#1645113470
+ssh etcd02
+#1645118839
+ls
+#1645118845
+ls roles/
+#1645119030
+cat roles/balancer/tasks/main.yaml 
+#1645119202
+cat /etc/passwd|grep kube
+#1645119206
+cat /etc/passwd
+#1645119215
+cat roles/balancer/tasks/main.yaml |less
+#1645119466
+nano roles/balancer/tasks/main.yaml
+#1645120105
+cd ..
+#1645120107
+ls
+#1645120112
+cd ansible/
+#1645120113
+ls
+#1645120121
+git commit *
+#1645120124
+git commit .
+#1645120137
+git add .
+#1645120143
+git status
+#1645120177
+git commit -m "17.02.2022"
+#1645120215
+git push origin master
+#1645120309
+git origin
+#1645120508
+git cinfig
+#1645120513
+git config
+#1645120564
+git config --get-all
+#1645120580
+git config --get-all origin
+#1645120589
+git config --get-all master
+#1645120627
+git config --show-origin
+#1645120634
+git config --show-origin --global
+#1645120649
+man git config
+#1645121224
+cat /root/.ssh/id_rsa.pub 
+#1645121625
+git push origin master
+#1645121690
+git push git@github.com:berivan82/ansibleKubernetesInstall.git
+#1645121888
+git push origin master
+#1645121910
+git push git@github.com:berivan82/ansibleKubernetesInstall.git
+#1645122026
+git remote
+#1645122032
+echo $? 
+#1645122039
+man git remote
+#1645122174
+git push origin master
+#1645122302
+ls
+#1645122449
+ls roles/*/tasks
+#1645122480
+cat roles/*/tasks/main.yaml
+#1645174638
+docker run --rm --net host -v /etc/kubernetes:/etc/kubernetes quay.io/coreos/etcd:v3.5.1           etcdctl           --cert /etc/kubernetes/pki/etcd/peer.crt           --key /etc/kubernetes/pki/etcd/peer.key           --cacert /etc/kubernetes/pki/etcd/ca.crt           --endpoints https://192.168.234.112:2379           endpoint health --cluster"
+#1645174669
+history|grep docker
+#1645174684
+docker run --rm --net host -v /etc/kubernetes:/etc/kubernetes quay.io/coreos/etcd:v3.5.1           etcdctl           --cert /etc/kubernetes/pki/etcd/peer.crt           --key /etc/kubernetes/pki/etcd/peer.key           --cacert /etc/kubernetes/pki/etcd/ca.crt           --endpoints https://192.168.234.112:2379           endpoint health --cluster"
+"
+#1645174736
+docker run --rm --net host -v /etc/kubernetes:/etc/kubernetes quay.io/coreos/etcd:v3.5.1           etcdctl           --cert /etc/kubernetes/pki/etcd/peer.crt           --key /etc/kubernetes/pki/etcd/peer.key           --cacert /etc/kubernetes/pki/etcd/ca.crt           --endpoints https://192.168.234.112:2379           endpoint health --cluster
+#1645174983
+ls roles/certs/files/ -lahptr
+#1645175416
+ls roles/certs/files/ -lhptr
+#1645175518
+ls roles/certs/files/ -lhptr|sort -h -k5
+#1645175565
+ls roles/certs/files/ -lhptr|sort -h -k5|awk '{print $9'}
+#1645176606
+for scriptname in $(ls roles/certs/files/ -lhptr|sort -h -k5|awk '{print $9'}); do stat ${scriptname};done
+#1645177237
+for scriptname in $(ls roles/certs/files/ -lhptr|sort -h -k5|awk '{print $9'} | sed "s/$filename/\/root\/ansible\/roles\/certs\/files\/$filename"); do stat ${scriptname};done
+#1645177291
+ls roles/certs/files/ -lhptr|sort -h -k5|awk '{print $9'} | sed "s/$filename/\/root\/ansible\/roles\/certs\/files\/$filename"
+#1645177378
+for scriptname in $(ls roles/certs/files/ -lhptr|sort -h -k5|awk '{print $9'} | sed "s/$filename/\/root\/ansible\/roles\/certs\/files\/$filename/"); do stat ${scriptname};done
+#1645179462
+filesdir=/root/ansible/roles/certs/files/ for filename in $(ls ${filesdir} -lhptr|sort -h -k5|awk '{print $9'}); do fullname=$(sed -e "sstart{filename}start{filesdir}${filename}!")|; echo ${fullname};done
+#1645179518
+filesdir=/root/ansible/roles/certs/files/ for filename in $(ls ${filesdir} -lhptr|sort -h -k5|awk '{print $9'}); do; fullname=$(sed -e "sstart{filename}start{filesdir}${filename}!")|; echo ${fullname};done
+#1645179529
+set -x -v
+#1645179531
+filesdir=/root/ansible/roles/certs/files/ for filename in $(ls ${filesdir} -lhptr|sort -h -k5|awk '{print $9'}); do; fullname=$(sed -e "sstart{filename}start{filesdir}${filename}!")|; echo ${fullname};done
+#1645179547
+fullname
+#1645181462
+filesdir=/root/ansible/roles/certs/files/ for filename in $(ls ${filesdir} -lhptr|sort -h -k5|awk '{print $9}'); do fullname=$(sed -e "sstart{filename}start{filesdir}${filename}!")|; echo ${fullname};done
+#1645181612
+filesdir=/root/ansible/roles/certs/files/ for filename in $(ls ${filesdir} -lhptr|sort -h -k5|awk '{print $9}'); do fullname=$(sed -e "sstart{filename}done{filesdir}${filename}!")|; echo ${fullname};done
+#1645181719
+filesdir=/root/ansible/roles/certs/files/ for filename in $(ls ${filesdir} -lhptr|sort -h -k5|awk '{print $9}'); do fullname=$(sed -e "sdone{filename}done{filesdir}${filename}!")|; echo ${fullname};done
+#1645181799
+filesdir=/root/ansible/roles/certs/files/ for filename in $(ls ${filesdir} -lhptr|sort -h -k5|awk '{print $9}'); do fullname=$(sed -e "s/${filename}/${filesdir}${filename}!"); echo ${fullname};done
+#1645181823
+filesdir=/root/ansible/roles/certs/files/ for filename in $(ls ${filesdir} -lhptr|sort -h -k5|awk '{print $9}'); do fullname=$(sed -e "s/${filename}/${filesdir}${filename}/"); echo ${fullname};done
+#1645181866
+filesdir=/root/ansible/roles/certs/files/ for filename in $(ls ${filesdir} -lhptr|sort -h -k5|awk '{print $9}'); do fullname=$(sed -e 's/${filename}/${filesdir}${filename}/'); echo ${fullname};done
+#1645181958
+filesdir=/root/ansible/roles/certs/files/ for filename in $(ls ${filesdir} -lhptr|sort -h -k5|awk '{print $9}'); do fullname=$(echo ${filename}|sed -e "s/${filename}/${filesdir}${filename}/"); echo ${fullname};done
+#1645182033
+echo $filename
+#1645182050
+set +x +v
+#1645182054
+echo $filename
+#1645182059
+echo $filesdir
+#1645182067
+echo $fullname
+#1645182371
+lsb_release -d | awk -F: '{ print $2 }' | tr -d '\t'
+#1645182388
+lsb_release -d
+#1645182414
+lsb_release -d | awk -F: '{ print $2 }' 
+#1645182469
+filesdir=/root/ansible/roles/certs/files/ for filename in $(ls ${filesdir} -lhptr|sort -h -k5|awk '{print $9}'); do fullname=$(echo ${filename}|sed -e "s/${filename}/${filesdir}${filename}/"); echo ${fullname};done
+#1645182517
+filesdir=/root/ansible/roles/certs/files/ for filename in $(ls ${filesdir} -lhptr|sort -h -k5|awk '{print $9}'); echo ${filename};done
+#1645182534
+filesdir=/root/ansible/roles/certs/files/ for filename in $(ls ${filesdir} -lhptr|sort -h -k5|awk '{print $9}'); o echo ${filename};done
+#1645182539
+filesdir=/root/ansible/roles/certs/files/ for filename in $(ls ${filesdir} -lhptr|sort -h -k5|awk '{print $9}'); do echo ${filename};done
+#1645182615
+for scriptname in $(ls roles/certs/files/ -lhptr|sort -h -k5|awk '{print $9'}); do stat ${scriptname};done
+#1645182637
+echo scriptname
+#1645182642
+echo $scriptname
+#1645182713
+filesname=/root/ansible/roles/certs/files/ echo $filesname; for scriptname in $(ls roles/certs/files/ -lhptr|sort -h -k5|awk '{print $9'}); do stat ${scriptname};done
+#1645182728
+filesname=/root/ansible/roles/certs/files/
+#1645182734
+echo $filesname
+#1645182776
+filesname=/root/ansible/roles/certs/files/ echo $filesname; for scriptname in $(ls roles/certs/files/ -lhptr|sort -h -k5|awk '{print $9'}); do stat ${scriptname};done
+#1645182800
+filesname=/root/ansible/roles/certs/files
+#1645182802
+echo $filesname
+#1645182881
+unset filesname
+#1645182883
+echo $filesname
+#1645182965
+filesname=/root/ansible/roles/certs/files/ echo $filesname; for scriptname in $(ls roles/certs/files/ -lhptr|sort -h -k5|awk '{print $9'}); do stat ${scriptname};done
+#1645182975
+filesname=/root/ansible/roles/certs/files/; echo $filesname; for scriptname in $(ls roles/certs/files/ -lhptr|sort -h -k5|awk '{print $9'}); do stat ${scriptname};done
+#1645183050
+scriptsdir=/root/ansible/roles/certs/files/; echo $scriptsdir; for scriptname in $(ls $scriptsdir -lhptr|sort -h -k5|awk '{print $9'}); do stat ${scriptname};done
+#1645183665
+scriptsdir=/root/ansible/roles/certs/files/; echo $scriptsdir; for scriptname in $(ls $scriptsdir -lhptr|sort -h -k5|awk '{print $9}'); do stat ${scriptname};done
+#1645183704
+scriptsdir=/root/ansible/roles/certs/files/; echo $scriptsdir; for scriptname in $(ls $scriptsdir -lhptr|sort -h -k5|awk '{print $9}'); do stat ${scriptsdir}${scriptname};done
+#1645183748
+scriptsdir=/root/ansible/roles/certs/files/; for scriptname in $(ls ${scriptsdir} -lhptr|sort -h -k5|awk '{print $9}'); do stat ${scriptsdir}${scriptname};done
+#1645183960
+scriptsdir=/root/ansible/roles/certs/files/; for scriptname in $(ls ${scriptsdir} -lhptr|sort -h -k5|awk '{print $9}'); do ls -i ${scriptsdir}${scriptname};done
+#1645184275
+scriptsdir=/root/ansible/roles/certs/files/; for scriptname in $(ls ${scriptsdir} -lhptr|sort -h -k5|awk '{print $9}'); do inode=$(ls -i ${scriptsdir}${scriptname} | awk '{print $1}');done
+#1645184299
+echo $inode
+#1645184360
+scriptsdir=/root/ansible/roles/certs/files/; for scriptname in $(ls ${scriptsdir} -lhptr|sort -h -k5|awk '{print $9}'); do inode=$(ls -i ${scriptsdir}${scriptname} | awk '{print $1}'); debugfs -R 'stat <${inode}>' done
+#1645184376
+scriptsdir=/root/ansible/roles/certs/files/; for scriptname in $(ls ${scriptsdir} -lhptr|sort -h -k5|awk '{print $9}'); do inode=$(ls -i ${scriptsdir}${scriptname} | awk '{print $1}'); debugfs -R 'stat <${inode}>'; done
+#1645184398
+scriptsdir=/root/ansible/roles/certs/files/; for scriptname in $(ls ${scriptsdir} -lhptr|sort -h -k5|awk '{print $9}'); do inode=$(ls -i ${scriptsdir}${scriptname} | awk '{print $1}'); debugfs -R "stat <${inode}>"; done
+#1645184419
+scriptsdir=/root/ansible/roles/certs/files/; for scriptname in $(ls ${scriptsdir} -lhptr|sort -h -k5|awk '{print $9}'); do inode=$(ls -i ${scriptsdir}${scriptname} | awk '{print $1}'); debugfs -R "stat \<${inode}\>"; done
+#1645184482
+debugfs -R 'stat <1583519>' /dev/sdb1
+#1645184493
+debugfs -R 'stat <1583519>' /dev/sda
+#1645184496
+debugfs -R 'stat <1583519>' /dev/sda1
+#1645184552
+scriptsdir=/root/ansible/roles/certs/files/; for scriptname in $(ls ${scriptsdir} -lhptr|sort -h -k5|awk '{print $9}'); do inode=$(ls -i ${scriptsdir}${scriptname} | awk '{print $1}'); debugfs -R 'stat <${inode}>' done
+#1645184566
+fdisk -l
+#1645184584
+debugfs -R 'stat <1583519>' /dev/sda1
+#1645184588
+debugfs -R 'stat <1583519>' /dev/sda
+#1645184597
+debugfs -R 'stat <1583519>' /dev/sda2
+#1645184600
+debugfs -R 'stat <1583519>' /dev/sda1
+#1645184664
+scriptsdir=/root/ansible/roles/certs/files/; for scriptname in $(ls ${scriptsdir} -lhptr|sort -h -k5|awk '{print $9}'); do inode=$(ls -i ${scriptsdir}${scriptname} | awk '{print $1}'); debugfs -R 'stat <${inode}>' /dev/sda1; done
+#1645184682
+scriptsdir=/root/ansible/roles/certs/files/; for scriptname in $(ls ${scriptsdir} -lhptr|sort -h -k5|awk '{print $9}'); do inode=$(ls -i ${scriptsdir}${scriptname} | awk '{print $1}'); debugfs -R "stat <${inode}>" /dev/sda1; done
+#1645184716
+set x -v
+#1645184719
+scriptsdir=/root/ansible/roles/certs/files/; for scriptname in $(ls ${scriptsdir} -lhptr|sort -h -k5|awk '{print $9}'); do inode=$(ls -i ${scriptsdir}${scriptname} | awk '{print $1}'); debugfs -R "stat <${inode}>" /dev/sda1; done
+#1645184810
+scriptsdir=/root/ansible/roles/certs/files/; for scriptname in $(ls ${scriptsdir} -lhptr|sort -h -k5|awk '{print $9}'); do inode=$(ls -i ${scriptsdir}${scriptname} | awk '{print $1}'); debugfs -R "stat \<${inode}\>" /dev/sda1; done
+#1645184841
+scriptsdir=/root/ansible/roles/certs/files/; for scriptname in $(ls ${scriptsdir} -lhptr|sort -h -k5|awk '{print $9}'); do inode=$(ls -i ${scriptsdir}${scriptname} | awk '{print $1}'); debugfs -R "stat <${inode}>" /dev/sda1; done
+#1645185022
+cat roles/certs/files/*
+#1645326530
+scriptsdir=/root/ansible/roles/certs/files/; for scriptname in $(ls ${scriptsdir} -lhptr|sort -h -k5|awk '{print $9}'); do inode=$(ls -i ${scriptsdir}${scriptname} | awk '{print $1}'); debugfs -R "stat <${inode}>" /dev/sda1; done
+#1645326561
+history
+#1645326734
+docker run --rm --net host -v /etc/kubernetes:/etc/kubernetes quay.io/coreos/etcd:v3.5.1 \etcdctl --cert /etc/kubernetes/pki/etcd/peer.crt --key /etc/kubernetes/pki/etcd/peer.key --cacert /etc/kubernetes/pki/etcd/ca.crt --endpoints https://192.168.234.112:2379 endpoint health --cluster"
+
+;
+\
+cd
+'
+'
+"
+#1645326808
+docker run --rm --net host -v /etc/kubernetes:/etc/kubernetes quay.io/coreos/etcd:v3.5.1 \etcdctl --cert /etc/kubernetes/pki/etcd/peer.crt --key /etc/kubernetes/pki/etcd/peer.key --cacert /etc/kubernetes/pki/etcd/ca.crt --endpoints https://192.168.234.112:2379 endpoint health --cluster
+#1645326834
+etcdctl --cert /etc/kubernetes/pki/etcd/peer.crt --key /etc/kubernetes/pki/etcd/peer.key --cacert /etc/kubernetes/pki/etcd/ca.crt --endpoints https://192.168.234.112:2379 endpoint health --cluster
+#1645326845
+ps ax|grep etcd
+#1645326899
+sync
+#1645326903
+echo $?
+#1645326909
+man sync
+#1645326985
+fsync
+#1645326992
+fdatasync
+#1645326996
+updatedb
+#1645327005
+locate fdatasync
+#1645327016
+locate fsync
+#1645327024
+man fsync
+#1645327059
+ls
+#1645327069
+vi 500000 
+#1645327133
+ls -lahprt /var/log
+#1645327153
+ls -lahprt /var/log|sort -k5
+#1645327161
+ls -lahprt /var/log|sort h-k5
+#1645327165
+ls -lahprt /var/log|sort -hk5
+#1645327206
+cat /var/log/syslog.1
+#1645327255
+ps ax|grep pace
+#1645327269
+pace
+#1645327300
+man pacemaker
+#1645327378
+crm_attribute --query
+#1645327396
+crm_attribute --query node
+#1645327410
+ls
+#1645327419
+pcm
+#1645327426
+ss -ntlp
+#1645327452
+curl -iv 192.168.234.111:6443
+#1645327465
+brctl
+#1645328153
+cat /var/log/haproxy.log
+#1645328159
+cat /var/log/haproxy.log.1
+#1645328194
+ps ax|gerp haproxy
+#1645328200
+ps ax|grep haproxy
+#1645328231
+cat /var/log/debug
+#1645328236
+cat /var/log/debug*
+#1645328283
+cat /var/log/daemon.log
+#1645328370
+cat /var/log/messages
+#1645328388
+man hup
+#1645328397
+locatr HUP
+#1645328401
+locate HUP
+#1645328407
+locate hup
+#1645328415
+man nohup
+#1645328469
+ls
+#1645328481
+service haproxy restart
+#1645328493
+ps ax|grep haproxy
+#1645328503
+cat /var/log/haproxy.log
+#1645328534
+ss -ntlp
+#1645328719
+service haproxy restart
+#1645328721
+ps ax|grep haproxy
+#1645328725
+cat /var/log/haproxy.log
+#1645328741
+ssh etcd02
+#1645328808
+service haproxy restart
+#1645328816
+ps ax|grep haproxy
+#1645328820
+ss -ntlp
+#1645328826
+cat /var/log/haproxy.log
+#1645329953
+jq
+#1645379620
+uptime
+#1645379631
+w
+#1645379641
+who
+#1645379643
+ll
+#1645380902
+ip a
+#1645380958
+cat /etc/ha.d/*
+#1645381142
+cat /etc/ha.d/rc.d/*
+#1645381222
+cat /etc/ha.d/resource.d/*
+#1645381244
+cat /etc/haproxy/haproxy.cfg
+#1645381320
+netstat -atupn
+#1645381377
+cat /etc/haproxy/haproxy.cfg
+#1645381698
+cat roles/kmasters/files/kubeadm-config.yaml 
+#1645381804
+cat kmasters.yaml 
+#1645382336
+login
+#1645382393
+passwd hacluster
+#1645382430
+dpkg --get-selections|grep corosync
+#1645382439
+ps ax|grep corosync
+#1645382447
+ps ax|grep pacemaker
+#1645382464
+apt install pcs
+#1645382522
+service pcsd start
+#1645382526
+echo $?
+#1645382594
+pcs cluster setup --name mycluster etcd01 etcd02
+#1645382605
+pcs cluster setup -name mycluster etcd01 etcd02
+#1645382630
+pcs cluster setup
+#1645382643
+pcs cluster setup mycluster etcd01 etcd02
+#1645382708
+pcs cluster auth etcd01 etcd02
+#1645382876
+pcs cluister authkey corosync
+#1645384412
+pcs cluister auth authkey corosync
+#1645395269
+man pcs
+#1645395472
+pcs cluster auth
+#1645395611
+cat /var/lib/pcsd/pcsd.crt 
+#1645395632
+nano /var/lib/pcsd/known-hosts
+#1645395648
+pcs cluster auth
+#1645395685
+pcs cluster auth etcd01
+#1645395727
+pcs cluster auth authkey corosync etcd01 etcd02
+#1645395858
+pcs host auth etcd01 etcd02
+#1645395887
+ping etcd02
+#1645395899
+nmap -A etcd02
+#1645395939
+dig etcd02
+#1645395946
+pcs host auth etcd01 etcd02
+#1645395976
+pcs host auth etcd02
+#1645396094
+pcs host auth etcd01 etcd02
+#1645396123
+pcs host auth etcd02
+#1645396190
+pcs host authkey corosync
+#1645396226
+pcs host deauth
+#1645396241
+rm /var/lib/pcsd/known-hosts 
+#1645396244
+pcs host deauth
+#1645396271
+pcs host auth etcd01 etcd02
+#1645396303
+pcs host deauth etcd02
+#1645396377
+pcs host auth etcd01 etcd02
+#1645396437
+pcs cluster setup haproxycluster etcd01 etcd02
+#1645397163
+man pcs
+#1645397238
+man pcsd
+#1645397281
+man pcs
+#1645397298
+pcs host
+#1645397304
+pcs
+#1645397356
+pcs status
+#1645397545
+pcs cluster setup debian etcd01 etcd02
+#1645398049
+service pcsd restart
+#1645398060
+pcs host auth etcd01 etcd02
+#1645398083
+pcs cluster setup debian etcd01 etcd02
+#1645398248
+pcs host auth etcd01 etcd02
+#1645398310
+pcs cluster setup debian etcd01 etcd02
+#1645398342
+pcs host auth 192.168.234.112 192.168.234.113
+#1645398358
+ip a
+#1645398374
+pcs host auth 192.168.234.112 192.168.234.113
+#1645398413
+pcs host deauth etcd01 etcd02
+#1645398440
+vi /var/lib/pcsd/known-hosts
+#1645398477
+touch /var/lib/pcsd/known-hosts
+#1645398492
+pcs host auth etcd01 etcd02
+#1645398508
+vi /var/lib/pcsd/known-hosts
+#1645398560
+pcs host
+#1645398618
+pcs host auth etcd01 addr=192.168.234.112:2224 -u hacluster -p hacluster
+#1645398622
+vi /var/lib/pcsd/known-hosts
+#1645398627
+pcs host auth etcd01 addr=192.168.234.112:2224 -u hacluster -p hacluster
+#1645398633
+vi /var/lib/pcsd/known-hosts
+#1645398644
+service pcsd stop
+#1645398647
+pcs host auth etcd01 addr=192.168.234.112:2224 -u hacluster -p hacluster
+#1645398663
+service pcsd start
+#1645398668
+service pcsd status
+#1645398695
+pcs host auth etcd01 addr=192.168.234.112:2224 -u hacluster -p hacluster
+#1645398727
+service pcsd status
+#1645398732
+ss -ntlp
+#1645398777
+telnet etcd01 2224
+#1645398804
+vi /var/lib/pcsd/known-hosts
+#1645398812
+pcs host auth etcd01 addr=192.168.234.112:2224 -u hacluster -p hacluster
+#1645398825
+pcs host auth etcd01.mynet.loc addr=192.168.234.112:2224 -u hacluster -p hacluster
+#1645398839
+cat /var/log/daemon.log
+#1645398853
+cat /var/log/messages
+#1645398871
+cat /var/log/pcsd/pcsd.log 
+#1645399067
+/usr/bin/ruby
+#1645399088
+ps ax| grep ruby
+#1645399098
+ssh etcd02
+#1645399133
+/usr/bin/ruby /usr/share/pcsd/pcsd
+#1645399144
+/usr/bin/ruby /usr/share/pcsd/pcsd &
+#1645399152
+pcs host auth etcd01.mynet.loc addr=192.168.234.112:2224 -u hacluster -p hacluster
+#1645399162
+vi /var/lib/pcsd/known-hosts
+#1645399178
+pcs host auth etcd02.mynet.loc addr=192.168.234.113:2224 -u hacluster -p hacluster
+#1645399182
+vi /var/lib/pcsd/known-hosts
+#1645399228
+pcs --debug host auth etcd02.mynet.loc addr=192.168.234.113:2224 -u hacluster -p hacluster
+#1645399251
+pcs --debug host deauth etcd02.mynet.loc addr=192.168.234.113:2224 -u hacluster -p hacluster
+#1645399257
+pcs --debug host deauth etcd02.mynet.loc addr=192.168.234.113:2224 
+#1645399268
+pcs --debug host auth etcd02.mynet.loc addr=192.168.234.113:2224 -u hacluster -p hacluster
+#1645399349
+pcs
+#1645399361
+pcs cluster
+#1645493118
+pcs status cluster
+#1645493173
+pcs cluster config
+#1645493184
+pcs cluster config show
+#1645493215
+pcs cluster config show --output-format json
+#1645493266
+crm_verifu -L
+#1645493269
+crm_verifyu -L
+#1645493273
+crm_verify -L
+#1645493278
+crm_verify -L -V
+#1645493282
+echo $?
+#1645493731
+crm_verify -L -V
+#1645493739
+history
+#1645493879
+etcdctl --cert /etc/kubernetes/pki/etcd/peer.crt --key /etc/kubernetes/pki/etcd/peer.key --cacert /etc/kubernetes/pki/etcd/ca.crt --endpoints https://192.168.234.112:2379 endpoint health --cluster
+#1645493907
+\docker run --rm -it --net host -v /etc/kubernetes:/etc/kubernetes quay.io/coreos/etcd:v3.5.1 etcdctl --cert /etc/kubernetes/pki/etcd/peer.crt --key /etc/kubernetes/pki/etcd/peer.key --cacert /etc/kubernetes/pki/etcd/ca.crt --endpoints https://192.168.234.112:2379 endpoint health --cluster
+#1645493924
+ssh etcd02
+#1645493973
+ls
+#1645494015
+ansible-playbook -i inventory/ kmasters.yaml 
+#1645494082
+nano roles/kmasters/tasks/main.yaml 
+#1645494818
+\docker run --rm -it --net host -v /etc/kubernetes:/etc/kubernetes quay.io/coreos/etcd:v3.5.1 etcdctl --cert /etc/kubernetes/pki/etcd/peer.crt --key /etc/kubernetes/pki/etcd/peer.key --cacert /etc/kubernetes/pki/etcd/ca.crt --endpoints https://192.168.234.112:2379 endpoint health --cluster
+#1645494845
+nano roles/kmasters/tasks/main.yaml 
+#1645495964
+cat roles/*/tasks/main.yaml
+#1645496071
+nano roles/certs/tasks/main.yaml 
+#1645496110
+nano roles/kmasters/tasks/main.yaml 
+#1645496709
+sync
+#1645496712
+exit
+#1645118893
+cd ansible/
+#1645118896
+ls roles/
+#1645118931
+vi roles/kubelet/tasks/main.yaml 
+#1645119318
+vi roles/certs/tasks/main.yaml 
+#1645119385
+vi roles/kubelet/tasks/main.yaml 
+#1645119594
+vi roles/kmasters/tasks/main.yaml 
+#1645119766
+grep -r 'daemon' ./
+#1645120698
+git edit --global
+#1645120720
+git config -e --global
+#1645120736
+git config -e --system
+#1645120826
+git config -e --system --show origin
+#1645120835
+git config -e --system --show-origin
+#1645120866
+git config --list
+#1645120883
+git config --list --system
+#1645120890
+git config --list --global
+#1645120929
+git config --list --show-origin
+#1645120975
+git config --list --show-scope
+#1645121022
+git config --list --local
+#1645121782
+git config --global user.name "Ivan"
+#1645121810
+git config --global user.email berivan82@gmail.com
+#1645121819
+git config --global user.name "berivan82"
+#1645121858
+git commit --amend --reset-author
+#1645122068
+git remote get-url
+#1645122109
+git remote get-url --all
+#1645122124
+git remote get-url --push
+#1645122135
+git remote show
+#1645122154
+git remote add origin git@github.com:berivan82/ansibleKubernetesInstall.git
+#1645122159
+echo $?
+#1645328098
+history
+#1645328581
+vi /etc/haproxy/errors/400.http 
+#1645328597
+vi /etc/haproxy/haproxy.cfg.back 
+#1645328621
+vi /etc/haproxy/haproxy.cfg
+#1645328703
+ping kmaster01
+#1645328773
+vi /etc/haproxy/haproxy.cfg
+#1645395342
+echo $?
+#1645395394
+man pcs
+#1645396012
+ssh etcd02
+#1645397444
+pcs resource
+#1645397464
+pcs property
+#1645397489
+pcs config
+#1645397580
+pcs host
+#1645399570
+pcs cluster status
+#1645485949
+history
+#1645494576
+kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 | tr -d '\n')"
+#1645494634
+kubectl --kubeconfig /etc/kubernetes/admin.conf apply -f "https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 | tr -d '\n')"
+#1645496733
+sync
+#1645496735
+exit
+#1645514835
+ls
+#1645514853
+uptime
+#1645514957
+ansible all -m command -i inventory -a"apt install -y htop atop"
+#1645514967
+cd ansible/
+#1645514969
+ansible all -m command -i inventory -a"apt install -y htop atop"
+#1645515000
+hopt
+#1645515003
+htop
+#1645515040
+atop
+#1645515751
+history
+#1645515780
+ansible all -m command -i inventory -a"kubectl get nodes"
+#1645515788
+ls
+#1645515807
+ansible all -m command -i inventory/ -a"kubectl get nodes"
+#1645515896
+ssh kmatser02
+#1645515909
+ssh kmaster01
+#1645516476
+ls
+#1645516501
+cat roles/*/tasks/main.yaml
+#1645521600
+vi roles/kmasters/tasks/main.yaml 
+#1645521864
+cat roles/kmasters/tasks/main.yaml 
+#1645522580
+ls -lahprt logs/
+#1645522592
+cat logs/ansible.log 
+#1645522795
+tail -f logs/ansible.log 
+#1645523056
+kubeadm reset
+#1645523124
+docker run --rm -it --net host -v /etc/kubernetes:/etc/kubernetes quay.io/coreos/etcd:v3.5.1 etcdctl --cert /etc/kubernetes/pki/etcd/peer.crt --key /etc/kubernetes/pki/etcd/peer.key --cacert /etc/kubernetes/pki/etcd/ca.crt --endpoints https://192.168.234.112:2379 endpoint health --cluster
+#1645523981
+ssh etcd02
+#1645524210
+docker run --rm -it --net host -v /etc/kubernetes:/etc/kubernetes quay.io/coreos/etcd:v3.5.1 etcdctl --cert /etc/kubernetes/pki/etcd/peer.crt --key /etc/kubernetes/pki/etcd/peer.key --cacert /etc/kubernetes/pki/etcd/ca.crt --endpoints https://192.168.234.112:2379 endpoint health --cluster
+#1645524254
+netstat -atupn
+#1645524310
+ps ax|grep kube
+#1645524319
+ssh etcd02
+#1645515136
+memusage
+#1645515143
+memusage --help
+#1645515162
+memusagestat
+#1645515203
+top
+#1645515214
+ls
+#1645515229
+cat pwd
+#1645515232
+pwd
+#1645515234
+cd ansible/
+#1645515236
+ls
+#1645515264
+cat logs/ansible.log 
+#1645515364
+stat roles/kmasters/tasks/main.yaml 
+#1645515378
+df -h
+#1645515420
+du -hd 1 /*/
+#1645515451
+du -hd 1 /*/|sort -h -k1
+#1645515482
+ls -lahprt /
+#1645515535
+du -hd 1 /var/|sort -h -k1
+#1645515544
+du -hd 1 /var/lib|sort -h -k1
+#1645515562
+du -hd 1 /lib|sort -h -k1
+#1645515568
+du -hd 1 /lib/|sort -h -k1
+#1645515581
+du -hd 1 /var/|sort -h -k1
+#1645515593
+ls -lhprta /var/log
+#1645515630
+cat /var/log/syslog
+#1645515673
+kubectl get nodes
+#1645515735
+history
+#1645516121
+kubectl get nodes
+#1645516235
+docker run --rm -it --net host -v /etc/kubernetes:/etc/kubernetes quay.io/coreos/etcd:v3.5.1 etcdctl --cert /etc/kubernetes/pki/etcd/peer.crt --key /etc/kubernetes/pki/etcd/peer.key --cacert /etc/kubernetes/pki/etcd/ca.crt --endpoints https://192.168.234.112:2379 endpoint health --cluster
+#1645516255
+nano roles/kmasters/tasks/main.yaml 
+#1645521507
+ls
+#1645521546
+ansible-playbook -i inventory/ kmasters.yaml -vvvvv
+#1645521757
+cd ansible/
+#1645521759
+ls
+#1645522327
+vi roles/kmasters/tasks/main.yaml 
+#1645522394
+ansible-playbook -i inventory/ kmasters.yaml -vvv
+#1645522456
+vi roles/kmasters/tasks/main.yaml 
+#1645522489
+ansible-playbook -i inventory/ kmasters.yaml -vvv
+#1645523034
+ansible-playbook -i inventory/ kmasters.yaml -vv
+#1645523152
+ls
+#1645523211
+ansible-playbook -i inventory/ certs.yaml -vv
+#1645523267
+ansible-playbook -i inventory/ certs.yaml -v
+#1645523291
+vi roles/certs/tasks/main.yaml 
+#1645523328
+ansible-playbook -i inventory/ certs.yaml -v
+#1645523417
+vi roles/certs/tasks/main.yaml 
+#1645523438
+ansible-playbook -i inventory/ certs.yaml -v
+#1645523447
+ls
+#1645523497
+vi roles/certs/tasks/main.yaml 
+#1645523546
+ansible-playbook -i inventory/ certs.yaml -v
+#1645523643
+ls roles/*/*
+#1645523686
+vi roles/certs/tasks/main.yaml 
+#1645523711
+ansible-playbook -i inventory/ certs.yaml -v
+#1645523917
+vi roles/certs/files/createCertsConfigs.sh 
+#1645524437
+reboot
+#1645524556
+ls
+#1645524563
+netstat -atupn
+#1645524604
+curl -iv 192.168.234.111:6443
+#1645524636
+journalctl -xn
+#1645524771
+pwd
+#1645524777
+cd ansible/
+#1645524791
+journalctl -xn
+#1645524827
+grep -r "KubeletConfiguration" .
+#1645524916
+vi roles/kubelet/files/20-etcd-service-manager.conf 
+#1645524961
+reboot
+#1645525500
+journalctl -xe
+#1645525566
+grep -r "manifest" /root/ansible/
+#1645525849
+pwd
+#1645525853
+cd ansible/
+#1645525881
+history
+#1645526003
+grep -r "manifest" /root/ansible/
+#1645526133
+vi roles/kubelet/tasks/main.yaml 
+#1645526451
+reboot
+#1645526933
+docker run --rm -it --net host -v /etc/kubernetes:/etc/kubernetes quay.io/coreos/etcd:v3.5.1 etcdctl --cert /etc/kubernetes/pki/etcd/peer.crt --key /etc/kubernetes/pki/etcd/peer.key --cacert /etc/kubernetes/pki/etcd/ca.crt --endpoints https://192.168.234.112:2379 endpoint health --cluster
+#1645527180
+ssh etcd03
+#1645527288
+docker run --rm -it --net host -v /etc/kubernetes:/etc/kubernetes quay.io/coreos/etcd:v3.5.1 etcdctl --cert /etc/kubernetes/pki/etcd/peer.crt --key /etc/kubernetes/pki/etcd/peer.key --cacert /etc/kubernetes/pki/etcd/ca.crt --endpoints https://192.168.234.112:2379 endpoint health --cluster
+#1645529811
+pcs
+#1645529819
+ps ax|grep pcs
+#1645551891
+pcs cluster config
+#1645551917
+pcs status cluster
+#1645551953
+pcs cluster start -all
+#1645551958
+pcs cluster start --all
+#1645551964
+pcs status cluster
+#1645552004
+pcs property
+#1645552047
+corosync-cmapctl |grep members
+#1645552065
+pcs status resources
+#1645553451
+history
+#1645553581
+docker ps
+#1645554074
+kubectl get pods
+#1645554086
+pwd
+#1645554092
+cd ansible/
+#1645554093
+ls
+#1645554137
+nano roles/certs/files/createCertsConfigs.sh 
+#1645554708
+ls /tm
+#1645554710
+ls /tmp/
+#1645554744
+nano roles/certs/files/createCertsConfigs.sh 
+#1645555486
+./roles/certs/files/createCertsConfigs.sh 
+#1645555512
+docker run --rm -it --net host -v /etc/kubernetes:/etc/kubernetes quay.io/coreos/etcd:v3.5.1 etcdctl --cert /etc/kubernetes/pki/etcd/peer.crt --key /etc/kubernetes/pki/etcd/peer.key --cacert /etc/kubernetes/pki/etcd/ca.crt --endpoints https://192.168.234.112:2379 endpoint health --cluster
+#1645557395
+docker run --rm -it --net host -v /etc/kubernetes:/etc/kubernetes quay.io/coreos/etcd:v3.5.1 while true; do etcdctl --debug --endpoints https://192.168.234.112:2379,https://192.168.234.113:2379,https://192.168.234.114:2379 --cert /etc/kubernetes/pki/etcd/peer.crt --key /etc/kubernetes/pki/etdc/peer.key --cacert /etc/kubernetes/pki/etcd/ca.crt member list; sleep 1; done
+#1645557486
+docker run --rm -it --net host -v /etc/kubernetes:/etc/kubernetes quay.io/coreos/etcd:v3.5.1 while true; do; etcdctl --debug --endpoints https://192.168.234.112:2379,https://192.168.234.113:2379,https://192.168.234.114:2379 --cert /etc/kubernetes/pki/etcd/peer.crt --key /etc/kubernetes/pki/etdc/peer.key --cacert /etc/kubernetes/pki/etcd/ca.crt member list; sleep 1; done
+#1645557494
+set -x -v
+#1645557497
+docker run --rm -it --net host -v /etc/kubernetes:/etc/kubernetes quay.io/coreos/etcd:v3.5.1 while true; do etcdctl --debug --endpoints https://192.168.234.112:2379,https://192.168.234.113:2379,https://192.168.234.114:2379 --cert /etc/kubernetes/pki/etcd/peer.crt --key /etc/kubernetes/pki/etdc/peer.key --cacert /etc/kubernetes/pki/etcd/ca.crt member list; sleep 1; done
+#1645557534
+docker run --rm -it --net host -v /etc/kubernetes:/etc/kubernetes quay.io/coreos/etcd:v3.5.1  etcdctl --debug --endpoints https://192.168.234.112:2379,https://192.168.234.113:2379,https://192.168.234.114:2379 --cert /etc/kubernetes/pki/etcd/peer.crt --key /etc/kubernetes/pki/etdc/peer.key --cacert /etc/kubernetes/pki/etcd/ca.crt member list; sleep 1;
+#1645557560
+docker run --rm -it --net host -v /etc/kubernetes:/etc/kubernetes quay.io/coreos/etcd:v3.5.1  etcdctl --debug --endpoints https://192.168.234.112:2379,https://192.168.234.113:2379,https://192.168.234.114:2379 --cert /etc/kubernetes/pki/etcd/peer.crt --key /etc/kubernetes/pki/etcd/peer.key --cacert /etc/kubernetes/pki/etcd/ca.crt member list; sleep 1;
+#1645557818
+docker logs cb57a458215456d7
+#1645557828
+docker ps
+#1645557858
+curl -iv etcd03:2380
+#1645557863
+curl -iv etcd03:2379
+#1645557878
+telnet etcd03 2379
+#1645557883
+telnet etcd03 2380
+#1645557897
+pingetcd03
+#1645557900
+ping etcd03
+#1645565489
+sync
+#1645565491
+exit
+#1645740145
+ls
+#1645740149
+cd .ssh
+#1645740150
+ls
+#1645740163
+ls -lahprt
+#1645740177
+vi known_hosts
+#1645740478
+ssh etcd02
+#1645740616
+ls
+#1645740627
+cd ../ansible/
+#1645740629
+ls
+#1645741076
+updatedb
+#1645741095
+locate task_etcd
+#1645741108
+ls logs/
+#1645741121
+cat logs/task_etcd.log 
+#1645741352
+exit
+#1645725662
+ls
+#1645725679
+cd ansible/
+#1645725680
+ls
+#1645725800
+ansible -m command -i inventory/ -a"hostname; cat /etc/resolv.conf"
+#1645725810
+ansible -m command -i inventory/ -a"cat /etc/resolv.conf"
+#1645725829
+ansible -m command all -i inventory/ -a"cat /etc/resolv.conf"
+#1645725866
+ansible -m command all -i inventory/ -a"hostname; cat /etc/resolv.conf"
+#1645725881
+ansible -m command all -i inventory/ -a"cat /etc/resolv.conf"
+#1645726424
+history
+#1645741851
+exit
+#1646430480
+apt install ansible -y
+#1646430562
+pwd
+#1646430568
+git clone https://github.com/berivan82/ansibleKubernetesInstall
+#1646430633
+git clone git@github.com:berivan82/ansibleKubernetesInstall.git
+#1646430650
+cd ansibleKubernetesInstall/
+#1646430652
+ls
+#1646430660
+cd ..
+#1646430670
+mv ansibleKubernetesInstall ansible
+#1646430672
+cd ansible/
+#1646430673
+ls
+#1646430686
+rm logs/ansible.log 
+#1646430694
+touch logs/ansible.log 
+#1646430752
+ansible-playbook -i inventory/ balancer.yaml 
+#1646430884
+cat /etc/passwd
+#1646431293
+vi roles/balancer/templates/pcs_setup.sh 
+#1646431404
+pcs
+#1646431425
+ps ax|grep hac
+#1646431428
+ps ax|grep ha
+#1646431441
+updatedb
+#1646431452
+locate bin/haproxy
+#1646431457
+locate haproxy
+#1646431496
+ls
+#1646431592
+mk dir -p roles/pcs/{tasks,files,vars,templates}
+#1646431599
+mkdir -p roles/pcs/{tasks,files,vars,templates}
+#1646431627
+vi roles/balancer/tasks/main.yaml 
+#1646431996
+ls
+#1646432006
+cat balancer.yaml 
+#1646432025
+vi balancer.yaml 
+#1646432137
+mv roles/balancer/templates/pcs_setup.sh roles/certs/files/
+#1646432152
+vi  roles/certs/files/pcs_setup.sh 
+#1646432209
+ansible-playbook -i inventory/ balancer.yaml -v
+#1646432247
+vi roles/balancer/tasks/main.yaml 
+#1646432257
+ansible-playbook -i inventory/ balancer.yaml -vq
+#1646432343
+pcs
+#1646432354
+ansible-playbook -i inventory/ pcs.yaml -v
+#1646432408
+vi roles/pcs/tasks/main.yaml 
+#1646432465
+tree roles/pcs/
+#1646432502
+mv  roles/certs/files/pcs_setup.sh roles/pcs/files/
+#1646432505
+ansible-playbook -i inventory/ pcs.yaml -v
+#1646432525
+tree roles/pcs/
+#1646432543
+vi roles/pcs/tasks/main.yaml 
+#1646432558
+ansible-playbook -i inventory/ pcs.yaml -v
+#1646432581
+ssh-copy-id localhost
+#1646432672
+vi roles/pcs/tasks/main.yaml 
+#1646432711
+ansible-playbook -i inventory/ pcs.yaml -v
+#1646432733
+vi roles/pcs/tasks/main.yaml 
+#1646432924
+ansible-playbook -i inventory/ pcs.yaml -v
+#1646432946
+vi pcs.yaml 
+#1646432986
+vi roles/pcs/tasks/main.yaml 
+#1646433000
+ls ..
+#1646433004
+ansible-playbook -i inventory/ pcs.yaml -v
+#1646433029
+vi roles/pcs/tasks/main.yaml 
+#1646433045
+ansible-playbook -i inventory/ pcs.yaml -v
+#1646433419
+ansible-playbook -i inventory/ pcs.yaml --v=5
+#1646433426
+ansible-playbook -i inventory/ pcs.yaml -v=5
+#1646433435
+ansible-playbook -i inventory/ pcs.yaml -vvvvv
+#1646478888
+ls logs/
+#1646478896
+cat logs/pcs_stdout.log 
+#1646478905
+cat logs/task_etcd.log 
+#1646479288
+cat logs/ansible.log 
+#1646479536
+updatedb
+#1646479546
+locate setup.sh
+#1646479572
+ansible-playbook -i inventory/ pcs.yaml -vvvvv
+#1646482561
+vi roles/pcs/tasks/main.yaml 
+#1646482921
+ansible-playbook -i inventory/ pcs.yaml -vvvvv
+#1646482943
+vi roles/pcs/tasks/main.yaml 
+#1646482960
+ansible-playbook -i inventory/ pcs.yaml -vvvvv
+#1646482996
+cat /etc/passwd
+#1646483014
+man passwd
+#1646483090
+man chpasswd
+#1646487910
+echo "hacluster:hacluster"|mkpasswd
+#1646487921
+echo "hacluster:hacluster"|chpasswd
+#1646487927
+login
+#1646488007
+vi  roles/pcs/files/pcs_setup.sh 
+#1646488047
+nano  roles/pcs/files/pcs_setup.sh 
+#1646488324
+ansible-playbook -i inventory/ pcs.yaml -vvvvv
+#1646488362
+nano  roles/pcs/files/pcs_setup.sh 
+#1646488549
+ansible-playbook -i inventory/ pcs.yaml -vvvvv
+#1646488617
+vi  roles/pcs/files/pcs_setup.sh 
+#1646488633
+updatedb
+#1646488640
+locate crm_verify
+#1646488650
+crm_verify
+#1646488654
+crm_verify -L
+#1646488658
+crm_verify -L -V
+#1646488667
+vi  roles/pcs/files/pcs_setup.sh 
+#1646488707
+ansible-playbook -i inventory/ pcs.yaml -v
+#1646488767
+pcs resource
+#1646488774
+pcs status resource
+#1646488779
+pcs status cluster
+#1646488844
+pcs status resources
+#1646488850
+pcs resources
+#1646488870
+pcs property
+#1646488893
+vi  roles/pcs/files/pcs_setup.sh 
+#1646488937
+pcs cluster destroy
+#1646488947
+pcs property
+#1646488968
+vi  roles/pcs/files/pcs_setup.sh 
+#1646489109
+ansible-playbook -i inventory/ pcs.yaml -v
+#1646489154
+vi  roles/pcs/files/pcs_setup.sh 
+#1646489209
+nano  roles/pcs/files/pcs_setup.sh 
+#1646489330
+ansible-playbook -i inventory/ pcs.yaml -v
+#1646489350
+cat logs/pcs_stdout.log 
+#1646489605
+ssh etcd02
+#1646489636
+vi  roles/pcs/files/pcs_setup.sh 
+#1646489739
+ansible-playbook -i inventory/ pcs.yaml -v
+#1646489755
+cat logs/pcs_stdout.log 
+#1646489793
+pcsproperty
+#1646489798
+pcs property
+#1646489818
+vi  roles/pcs/files/pcs_setup.sh 
+#1646489865
+netstat -atupn
+#1646489882
+service haproxy status
+#1646489893
+service haproxy restart
+#1646489895
+service haproxy status
+#1646489902
+netstat -atupn
+#1646489922
+vi  roles/balancer/tasks/main.yaml 
+#1646490112
+ansible-playbook -i inventory/ balancer.yaml -v
+#1646490136
+ssh etcd02
+#1646490162
+ansible-playbook -i inventory/ pcs.yaml -v
+#1646490217
+vi  roles/balancer/tasks/main.yaml 
+#1646490226
+vi  roles/pcs/files/pcs_setup.sh 
+#1646490285
+ansible-playbook -i inventory/ pcs.yaml -v
+#1646836307
+ssh-copy-id etcd01
+#1646836312
+ssh-copy-id etcd02
+#1646836315
+ssh-copy-id etcd03
+#1646836477
+cd ansible/
+#1646836479
+ls
+#1646836510
+ansible-playbook -i inventory/ pcs.yaml 
+#1646837243
+ansible-playbook -i inventory/ pcs.yaml -v
+#1646837585
+ss -ntlp
+#1646837603
+curl -iv 192.168.234.111:6443
+#1646837914
+vi roles/pcs/files/pcs_setup.sh 
+#1646837957
+ansible-playbook -i inventory/ pcs.yaml -v
+#1646837982
+curl -iv 192.168.234.111:6443
+#1646838067
+netstat -atupn
+#1646838074
+ssh etcd02
+#1646838176
+nc -v 192.168.234.111 6443
+#1646838184
+ls
+#1646838190
+git status
+#1646838196
+git add *
+#1646838198
+git status
+#1646838229
+git commit -m "DEBUGGING AND FIXING BULLSHIT"
+#1646838264
+git config --global --edit
+#1646838323
+git commit -m "DEBUGGING AND FIXING BULLSHIT"
+#1646838337
+git push -u origin master
+#1646838434
+ls
+#1646838447
+cat logs/ansible.log 
+#1646838483
+cat logs/pcs_stdout.log 
+#1646838633
+cat logs/task_etcd.log 
+#1646838673
+s
+#1646838675
+ls
+#1646838705
+ssh kworker01
+#1646838724
+ls
+#1646838736
+vi kubelet.yaml 
+#1646838765
+nano roles/kubelet/tasks/main.yaml 
+#1646838815
+ansible-playbook -i inventory/ kubelet.yaml -v
+#1646838840
+vi kubelet.yaml 
+#1646838863
+ansible-playbook -i inventory/ kubelet.yaml -v
+#1646838941
+ls
+#1646838963
+vi certs.yaml 
+#1646838985
+ansible-playbook -i inventory/ certs.yaml -v
+#1646839178
+ps ax|grep kube
+#1646839226
+ansible-playbook -i inventory/ -a"ps ax|grep kube" all
+#1646839245
+ansible -m command  -i inventory/ -a "ps ax|grep kube" all
+#1646839295
+ansible -m command  -i inventory/ -a "ps |grep kube" all
+#1646839418
+ansible -m command  -i inventory/ -a"a=$(ps); b=$(echo $a|grep kube); echo $b" all
+#1646839434
+ansible -m command  -i inventory/ -a "a=$(ps); b=$(echo $a|grep kube); echo $b" all
+#1646839498
+set -x -v
+#1646839499
+ansible -m command  -i inventory/ -a "a=$(ps); b=$(echo $a|grep kube); echo $b" all
+#1646839527
+echo $(ps)
+#1646839548
+echo ${ps}
+#1646839570
+echo `ps`
+#1646839576
+ps
+#1646839599
+echo $(ps -a)
+#1646839604
+ps -a
+#1646839607
+ps -ax
+#1646839613
+echo $(ps -ax)
+#1646839654
+ansible -m command  -i inventory/ -a "a=$(ps -ax); b=$(echo $a|grep kube); echo $b" all
+#1646839726
+ansible -m command  -i inventory/ -a "a=$(ps -ax | grep kube)" all
+#1646839768
+ansible -m command  -i inventory/ -a "ps -ax | grep kube" all
+#1646839820
+ansible -m command  -i inventory/ -a "a=$(ps -ax | grep kube)" all
+#1646839906
+docker run --rm -it --net host -v /etc/kubernetes:/etc/kubernetes quay.io/coreos/etcd:v3.5.1 etcdctl --cert /etc/kubernetes/pki/etcd/peer.crt --key /etc/kubernetes/pki/etcd/peer.key --cacert /etc/kubernetes/pki/etcd/ca.crt --endpoints https://192.168.234.112:2379 endpoint health --cluster
+#1646839961
+ansible-playbook -i inventory/ certs.yaml -vvvvv
+#1646839982
+vi certs.yaml
+#1646839996
+ansible-playbook -i inventory/ certs.yaml -vvvvv
+#1646840072
+set +x +v
+#1646840090
+tree roles/kmasters/
+#1646840111
+nano roles/kmasters/tasks/main.yaml 
+#1646840209
+vi kmasters.yaml 
+#1646840229
+ansible-playbook -i inventory/ kmasters.yaml -vvvvv
+#1646841558
+ansible-playbook -i inventory/ kmasters.yaml -vv
+#1646842364
+nano roles/kmasters/tasks/main.yaml 
+#1646842735
+ansible-playbook -i inventory/ kmasters.yaml -vv
+#1646842800
+nano roles/kmasters/tasks/main.yaml 
+#1646842865
+ansible-playbook -i inventory/ kmasters.yaml -vv
+#1646842893
+ssh kmaster01
+#1646842929
+nano roles/kmasters/tasks/main.yaml 
+#1646843021
+ansible-playbook -i inventory/ kmasters.yaml -vv
+#1646843067
+nano roles/kmasters/tasks/main.yaml 
+#1646843726
+ssh kmaster01
+#1646843773
+ansible-playbook -i inventory/ kmasters.yaml -vv
+#1646843891
+ssh kmaster01
+#1646843936
+nano roles/kmasters/tasks/main.yaml 
+#1646844200
+ansible-playbook -i inventory/ kmasters.yaml -vv\
+#1646844204
+ansible-playbook -i inventory/ kmasters.yaml -vv
+#1646844264
+nano roles/kmasters/tasks/main.yaml 
+#1646844600
+ssh kmaster01
+#1646844639
+ansible-playbook -i inventory/ kmasters.yaml -vvv
+#1646844801
+ls
+#1646844820
+nano roles/kmasters/tasks/main.yaml 
+#1646844959
+ssh kmaster01
+#1646845008
+ansible-playbook -i inventory/ kmasters.yaml -vv
+#1646845089
+ssh kmaster01
+#1646845129
+ls
+#1646845137
+cat kube_token.txt 
+#1646870342
+ls
+#1646870351
+nano roles/kmasters/tasks/main.yaml 
+#1646870415
+kubectl get nodes
+#1646870425
+ssh kmaster02
+#1646919418
+ssh kmaster01
+#1646919476
+kubectl get nodes
+#1646919493
+docker run --rm -it --net host -v /etc/kubernetes:/etc/kubernetes quay.io/coreos/etcd:v3.5.1 etcdctl --cert /etc/kubernetes/pki/etcd/peer.crt --key /etc/kubernetes/pki/etcd/peer.key --cacert /etc/kubernetes/pki/etcd/ca.crt --endpoints https://192.168.234.112:2379 endpoint health --cluster
+#1646924241
+kubectl get nodes
+#1646924251
+nano roles/kmasters/tasks/main.yaml 
+#1646924895
+ssh kmaster01
+#1646924930
+ls
+#1646924989
+ansible-playbook -i inventory/ kmasters.yaml -vvvvv > 1.log 2>&1
+#1646925036
+echo $?
+#1646925043
+ls
+#1646925051
+ls -lahprt 1.log 
+#1646925060
+nano 1.log 
+#1647285614
+nano cit.sh 
+#1647285667
+./cit.sh 
+#1647285718
+nano cit.sh 
+#1647285849
+./cit.sh 
+#1647285865
+nano cit.sh 
+#1647285878
+./cit.sh 
+#1647285917
+nano cit.sh 
+#1647285952
+./cit.sh 
+#1647285972
+nano cit.sh 
+#1647286085
+./cit.sh 
+#1647286099
+nano cit.sh 
+#1647286111
+./cit.sh 
+#1647286123
+nano cit.sh 
+#1647286134
+./cit.sh 
+#1647286158
+nano cit.sh 
+#1647286277
+./cit.sh 
+#1647286313
+nano cit.sh 
+#1647286376
+./cit.sh 
+#1647286415
+nano cit.sh 
+#1647286432
+./cit.sh 
+#1647286471
+nano cit.sh 
+#1647286501
+./cit.sh 
+#1647286515
+nano cit.sh 
+#1647286530
+./cit.sh 
+#1647286549
+nano cit.sh 
+#1647286608
+./cit.sh 
+#1647286934
+nano cit.sh 
+#1647286965
+./cit.sh 
+#1647286997
+nano cit.sh 
+#1647287035
+./cit.sh 
+#1647287081
+nano cit.sh 
+#1647287114
+./cit.sh 
+#1647287133
+nano cit.sh 
+#1647287187
+./cit.sh 
+#1647287202
+nano cit.sh 
+#1647287247
+./cit.sh 
+#1647287251
+nano cit.sh 
+#1647287271
+./cit.sh 
+#1647287278
+nano cit.sh 
+#1647287315
+./cit.sh 
+#1647287350
+nano cit.sh 
+#1647287498
+./cit.sh 
+#1647287511
+nano cit.sh 
+#1647287622
+cities="$(<cities.list)"
+#1647287634
+echo ${cities}
+#1647287699
+IFS=$' ' && cities=( ${cities} )
+#1647287701
+echo ${cities}
+#1647287707
+echo ${cities[0]}
+#1647287727
+IFS=$'\n'
+#1647287729
+echo ${cities[0]}
+#1647287735
+echo ${cities[1\]}
+#1647287739
+echo ${cities[1]}
+#1647287804
+cities="$(<cities.list)"
+#1647287813
+echo ${cities}
+#1647287838
+IFS=$'\n' && cities=( ${cities} )
+#1647287843
+echo ${cities}
+#1647287853
+echo ${cities[@]}
+#1647287862
+echo ${cities[*]}
+#1647287874
+echo ${cities[3]}
+#1647290025
+./cit.sh 
+#1647291006
+nano citi.sh
+#1647291333
+./cit.sh 
+#1647291337
+nano citi.sh
+#1647291452
+./cit.sh 
+#1647291459
+nano citi.sh
+#1647291486
+./citi.sh 
+#1647291496
+chmod +x citi.sh 
+#1647291497
+./citi.sh 
+#1647291504
+nano citi.sh
+#1647291534
+./citi.sh 
+#1647291557
+nano citi.sh
+#1647292156
+man ansible-playbook
+#1647322091
+cd a
+#1647322737
+cd ansible/
+#1647322766
+cat roles/*/tasks/main.yaml
+#1647363966
+exit
+#1647442469
+ls
+#1647442490
+chomd +x *.sh
+#1647442537
+chmod +x *.sh
+#1647442568
+./playbook.sh 
+#1647442576
+ls
+#1647442589
+./cit.sh 
+#1647442599
+./citi.sh 
+#1647447842
+ctat pcs_setup.sh 
+#1647447845
+tat pcs_setup.sh 
+#1647447850
+cat pcs_setup.sh 
+#1647447880
+ip a
+#1647447985
+ls
+#1647448018
+cp playbk.yaml ansible/
+#1647448021
+cd ansible/
+#1647448116
+docker run --rm -it --net host -v /etc/kubernetes:/etc/kubernetes quay.io/coreos/etcd:v3.5.1 etcdctl --cert /etc/kubernetes/pki/etcd/peer.crt --key /etc/kubernetes/pki/etcd/peer.key --cacert /etc/kubernetes/pki/etcd/ca.crt --endpoints https://192.168.234.112:2379 endpoint health --cluster
+#1647448144
+ssh-copy-id etcd01
+#1647448148
+exit
+#1647450774
+ld
+#1647450776
+ls
+#1647450791
+last
+#1647450804
+ls
+#1647450827
+lslastlog
+#1647450832
+lalastlog
+#1647450836
+lalstlog
+#1647450840
+lastlog
+#1647457470
+ping 192.168.234.111
+#1647457572
+ps ax|grep kube
+#1647457578
+kubectl
+#1647457584
+kubectl get nodes
+#1647457615
+tree ansible/roles/kmasters/
+#1647457629
+ls
+#1647457633
+cd ansible/
+#1647457646
+cat roles/kmasters/tasks/main.yaml 
+#1647725701
+ls
+#1647725713
+ansible-playbook playbk.yaml --extra-vars='{"cities": [Москва, Питер, Патонг, Паттайя]}'
+#1647725948
+./citi.sh 
+#1647725955
+cat citi.sh 
+#1647729264
+cd ansible/
+#1647729286
+ansible-playbook kmasters.yaml -i inventory/
+#1647729906
+vim roles/kmasters/tasks/main.yaml 
+#1647795084
+ssh-copy-id kworker01
+#1647795099
+ssh kworker01
+#1647795117
+ls..
+#1647795119
+ls ..
+#1647795139
+ssh kmaster01
+#1647797306
+ls
+#1647797312
+cat kmasters.yaml 
+#1647797475
+/etc//kubernetes/pki/etcd/
+#1647797493
+vi inventory/hosts 
+#1647797585
+ansible -m shell -i nventory/hosts kworkers a "---
+
+- hosts: kmaster01
+  gather_facts: no
+  user: root
+  roles:
+    - kmasters
+#1647797656
+ansible -m shell -i nventory/hosts kworkers a " kubeadm join 192.168.234.111:6443 --token dqz0wx.pyb558ln4ddhhc7p   --discovery-token-ca-cert-hash sha256:38515ea7dcca9cf5a9e3a5224c73dc58c74c79eab07e8332eed61922cd027079kubeadm join 192.168.234.111:6443 --token dqz0wx.pyb558ln4ddhhc7p "
+#1647797745
+ansible -m shelll inventory/hosts kworkers a "kubeadm join 192.168.234.111:6443 --token dqz0wx.pyb558ln4ddhhc7p   --discovery-token-ca-cert-hash sha256:38515ea7dcca9cf5a9e3a5224c73dc58c74c79eab07e8332eed61922cd027079"
+#1647797775
+ansible -m shell inventory/hosts kworkers -a "kubeadm join 192.168.234.111:6443 --token dqz0wx.pyb558ln4ddhhc7p   --discovery-token-ca-cert-hash sha256:38515ea7dcca9cf5a9e3a5224c73dc58c74c79eab07e8332eed61922cd027079"
+#1647797969
+ansible -kworkers -m command -i inventory/hosts -a"kubeadm join 192.168.234.111:6443 --token dqz0wx.pyb558ln4ddhhc7p   --discovery-token-ca-cert-hash sha256:38515ea7dcca9cf5a9e3a5224c73dc58c74c79eab07e8332eed61922cd027079"" -v
+;
+"
+#1647798038
+ansible -kworkers -m command -i inventory/hosts -a"kubeadm join 192.168.234.111:6443 --token dqz0wx.pyb558ln4ddhhc7p   --discovery-token-ca-cert-hash sha256:38515ea7dcca9cf5a9e3a5224c73dc58c74c79eab07e8332eed61922cd027079" -v
+#1647798039
+;
+#1647798039
+"
+#1647798053
+ansible -kworkers -m command -i inventory/hosts -a"kubeadm join 192.168.234.111:6443 --token dqz0wx.pyb558ln4ddhhc7p   --discovery-token-ca-cert-hash sha256:38515ea7dcca9cf5a9e3a5224c73dc58c74c79eab07e8332eed61922cd027079" -v;
+#1647798192
+ansible kworkers -m command -i inventory/hosts -a"kubeadm join 192.168.234.111:6443 --token dqz0wx.pyb558ln4ddhhc7p   --discovery-token-ca-cert-hash sha256:38515ea7dcca9cf5a9e3a5224c73dc58c74c79eab07e8332eed61922cd027079" -v
+#1647798215
+vi inventory/hosts 
+#1647798249
+ansible  workers -m command -i inventory/hosts -a"kubeadm join 192.168.234.111:6443 --token dqz0wx.pyb558ln4ddhhc7p   --discovery-token-ca-cert-hash sha256:38515ea7dcca9cf5a9e3a5224c73dc58c74c79eab07e8332eed61922cd027079" -v
+#1647798346
+ls
+#1647798360
+cat playbk.yaml 
+#1647798817
+ssh kmaster01
+#1647791891
+ls
+#1647791899
+cat playbk.yaml
+#1647791908
+ansible-playbook playbk.yaml --extra-vars='{"cities": [Москва, Питер, Патонг, Паттайя]}'
+#1647791911
+cat playbk.yaml
+#1647791926
+ls
+#1647792518
+ssh kmaster01
+#1647794188
+ls
+#1647794194
+cd ansible/
+#1647794195
+ls
+#1647794206
+vim kube_token.txt 
+#1647794235
+ls
+#1647794243
+rm kube_token.txt 
+#1647794245
+ls
+#1647794285
+ansible-playbook -i inventory/ kubelet.yaml 
+#1647794293
+ls logs/
+#1647794319
+cat logs/pcs_stdout.log 
+#1647794324
+ls
+#1647794333
+cat logs/task_etcd.log 
+#1647794344
+rm logs/ansible.log 
+#1647794356
+touch logs/ansible.log 
+#1647794360
+ls logs/
+#1647794367
+ls -lahprt logs/
+#1647794402
+chmod +w logs/*
+#1647794404
+ls -lahprt logs/
+#1647794448
+chmod -R +w logs/*
+#1647794451
+ls -lahprt logs/
+#1647794462
+chmod -R +w logs
+#1647794467
+echo $?
+#1647794471
+ls -lahprt logs/
+#1647794488
+chmod +w logs/ansible.log 
+#1647794490
+ls -lahprt logs/
+#1647794520
+chmod +w logs/ansible.log 
+#1647794532
+ls -lahport logs/
+#1647794546
+ls
+#1647794556
+ansible-playbook -i inventory/ kubelet.yaml 
+#1647794670
+docker run --rm -it --net host -v /etc/kubernetes:/etc/kubernetes quay.io/coreos/etcd:v3.5.1 etcdctl --cert /etc/kubernetes/pki/etcd/peer.crt --key /etc/kubernetes/pki/etcd/peer.key --cacert /etc/kubernetes/pki/etcd/ca.crt --endpoints https://192.168.234.112:2379 endpoint health --cluster
+#1647794693
+ps ax|grep kube
+#1647794719
+ansible-playbook -i inventory/ kmasters.yaml 
+#1647794720
+ls
+#1647794727
+ansible-playbook -i inventory/ kmasters.yaml 
+#1647796362
+docker run --rm -it --net host -v /etc/kubernetes:/etc/kubernetes quay.io/coreos/etcd:v3.5.1 etcdctl --cert /etc/kubernetes/pki/etcd/peer.crt --key /etc/kubernetes/pki/etcd/peer.key --cacert /etc/kubernetes/pki/etcd/ca.crt --endpoints https://192.168.234.112:2379 endpoint health --cluster
+#1647796680
+ls
+#1647796695
+vi kube_token.txt 
+#1647796893
+cat kube_token.txt 
+#1647796991
+:q
+#1647796992
+ls
+#1647798095
+mkdir -p roles/add_nodes/{tasks,files,vars,templates,handlers}
+#1648965147
+cd ansible/
+#1648965182
+ansible -m command -i inventory/ -a"free -hlw" all
+#1648965282
+docker run --rm -it --net host -v /etc/kubernetes:/etc/kubernetes quay.io/coreos/etcd:v3.5.1 etcdctl --cert /etc/kubernetes/pki/etcd/peer.crt --key /etc/kubernetes/pki/etcd/peer.key --cacert /etc/kubernetes/pki/etcd/ca.crt --endpoints https://192.168.234.112:2379 endpoint health --cluster
+#1649830301
+cd ansible/roles/balancer/tasks/
+#1649830303
+vi main.yaml 
+#1649831009
+cd /root/ansible/
+#1649831033
+cat roles/*/tasks/*|less
+#1649831565
+ssh kmaster01
+#1649831685
+ls
+#1649831690
+cat balancer.yaml 
+#1649832203
+exit
+#1649827095
+ls
+#1649827209
+cd ansible/
+#1649827211
+ls
+#1649827233
+cat 1.log 
+#1649827299
+ls -lahprt
+#1649827322
+rm 1.log 
+#1649827338
+cat kube_token.txt 
+#1649828831
+ip_vs
+#1649828835
+updatedb
+#1649828845
+locate ip_vs
+#1649828866
+grep -e ipvs -e nf_conntrack_ipv4 /lib/modules/$(uname -r)/modules.builtin
+#1649828872
+echo $?
+#1649828885
+uname -r
+#1649828923
+grep -e ipvs -e nf_conntrack_ipv4 /usr/lib/modules/$(uname -r)/modules.builtin
+#1649828926
+echo $?
+#1649828964
+ipvs
+#1649828966
+adm
+#1649828969
+ipvsadm
+#1649828981
+apt-file search bin/ipvsadm
+#1649829107
+kubectl get po
+#1649829134
+ip a
+#1649829583
+ls
+#1649829608
+vi roles/kmasters/files/kubeadm-config.yaml 
+#1649829681
+vi roles/kmasters/tasks/main.yaml 
+#1649829782
+vi roles/certs/files/createCertsConfigs.sh 
+#1649830094
+mkdir -p roles/metallb/{files,tasks}
+#1649830157
+vi roles/metallb/tasks/main.yaml
+#1649831322
+vi roles/metallb/files/config.yaml
+#1649831543
+ls
+#1649831717
+vi metallb.yaml
+#1649831821
+vi roles/metallb/tasks/main.yaml
+#1649831927
+ansible-playbook -i inventory -v metallb.yaml 
+#1649832014
+vi roles/metallb/tasks/main.yaml
+#1649832102
+ansible-playbook -i inventory -v metallb.yaml 
+#1649832132
+vi roles/metallb/tasks/main.yaml
+#1649832174
+ansible-playbook -i inventory -v metallb.yaml 
+#1650044875
+ls
+#1650044880
+history
+#1650045342
+cd ansible/
+#1650045344
+ls
+#1650045350
+cat playbk.yaml 
+#1650045367
+vi metallb.yaml 
+#1650045403
+cat roles/metallb/*/*
+#1650045445
+w
+#1650045479
+who
+#1650045495
+last
+#1650045527
+lastb
+#1650045537
+lastlog
+#1650045701
+ls
+#1650047626
+cat roles/kmasters/files/kubeadm-config.yaml 
+#1650047649
+cat roles/kmasters/tasks/main.yaml 
+#1650047710
+ls
+#1650047796
+mkdir -p  roles/test_nginx/{files,tasks}
+#1650047838
+vi roles/test_nginx/files/nginx-deployment.yaml
+#1650048190
+nano roles/test_nginx/files/nginx-service.yaml
+#1650048282
+nano roles/test_nginx/tasks/main.yaml
+#1650049040
+vi test_nginx.yaml
+#1650049216
+ansible-playbook -i inventory/ test_nginx.yaml -v
+#1650049235
+nano roles/test_nginx/tasks/main.yaml
+#1650049314
+ansible-playbook -i inventory/ test_nginx.yaml -v
+#1650049351
+nano roles/test_nginx/tasks/main.yaml
+#1650049491
+ls logs/
+#1650049508
+rm logs/*
+#1650049511
+ls logs/
+#1650049521
+ansible-playbook -i inventory/ test_nginx.yaml -v
+#1650049542
+nano roles/test_nginx/tasks/main.yaml
+#1650049673
+ansible-playbook -i inventory/ test_nginx.yaml -v
+#1650049763
+ls 
+#1650049769
+ls logs/
+#1650049795
+ls roles/test_nginx/files/nginx-
+#1650049803
+ls roles/test_nginx/files/
+#1650049816
+nano roles/test_nginx/tasks/main.yaml
+#1650049847
+ansible-playbook -i inventory/ test_nginx.yaml -v
+#1650050259
+nano roles/test_nginx/tasks/main.yaml
+#1650050321
+ansible-playbook -i inventory/ test_nginx.yaml -v
+#1650050341
+nano roles/test_nginx/tasks/main.yaml
+#1650050597
+ansible-playbook -i inventory/ test_nginx.yaml -v
+#1650050625
+nano roles/test_nginx/tasks/main.yaml
+#1650050673
+ansible-playbook -i inventory/ test_nginx.yaml -v
+#1650050813
+exit
+#1650051697
+cd ansible/
+#1650051716
+vi servers.list
+#1650052000
+ls
+#1650052055
+touch nmap-hosts.list
+#1650052239
+cat nmap-hosts.list 
+#1650139461
+pwd
+#1650139474
+git clone git@github.com:berivan82/ansibleKubernetesInstall.git
+#1650139493
+ping ya.ru
+#1650139539
+curl -iv github.com
+#1650139580
+pwd
+#1650139633
+scp git@github.com:berivan82/ansibleKubernetesInstall.git .
+#1650139743
+git clone ssh://git@github.com:berivan82/ansibleKubernetesInstall.git
+#1650139826
+git clone https://github.com/berivan82/ansibleKubernetesInstall.git
+#1650140079
+pwd
+#1650140081
+ls
+#1650140182
+scp ivan@192.168.234.1:/c:/users/ivan/downloads/ansiblekubernetesinstall-master.zip .
+#1650140203
+unzip ansiblekubernetesinstall-master.zip 
+#1650140205
+ls
+#1650140234
+mv ansibleKubernetesInstall-master ansible
+#1650140236
+ls
+#1650140240
+cd ansible/
+#1650140241
+ls
+#1650220697
+cd ansible/ls
+#1650220705
+cd ansible
+#1650220707
+ls
+#1650220738
+mv balancer.yaml 01-balancer.yaml
+#1650220750
+ansible-playbook 01-balancer.yaml 
+#1650220763
+apt install ansible
+#1650220803
+ansible-playbook 01-balancer.yaml 
+#1650220825
+ansible-playbook -i inventory/01-balancer.yaml 
+#1650220830
+ansible-playbook -i inventory/ 01-balancer.yaml 
+#1650220870
+ssh root@etcd02
+#1650220876
+dig
+#1650220885
+dig etcd02
+#1650220891
+dig etcd01
+#1650220894
+dig etcd03
+#1650220914
+ansible-playbook -i inventory/ 01-balancer.yaml 
+#1650221003
+ssh etcd01
+#1650221012
+ip a
+#1650221027
+dig
+#1650221048
+dig etcd01
+#1650221059
+ansible-playbook -i inventory/ 01-balancer.yaml 
+#1650221159
+ssh etcd01
+#1650221173
+ping etcd01
+#1650221195
+service sshd status
+#1650221323
+netstat -atupn
+#1650221357
+cat /etc/resolv.conf 
+#1650221366
+dig etcd01
+#1650221391
+ssh etcd01
+#1650221428
+nmap -A etcd01
+#1650221454
+nmap -A -Pn etcd01
+#1650221577
+ssh 192.168.234.112
+#1650221693
+ansible-playbook -i inventory/ 01-balancer.yaml 
+#1650221745
+ls
+#1650221784
+mv pcs.yaml 02-pcs.yaml
+#1650221793
+ansible-playbook -i inventory/ 02-pcs.yaml 
+#1650221817
+ip a
+#1650221837
+service pcs status
+#1650221843
+ls
+#1650221874
+service haproxy status
+#1650221886
+service haproxy restart
+#1650221901
+service haproxy status
+#1650221909
+netstat -atupn
+#1650221914
+ip s
+#1650221939
+ip a
+#1650221955
+ssh etcd02
+#1650234400
+vi 01-balancer.yaml 
+#1650234477
+history
+#1650234497
+vi roles/balancer/tasks/main.yaml 
+#1650234597
+ls
+#1650234610
+ping kmaster01
+#1650234615
+ls
+#1650305879
+history
+#1650305891
+ls
+#1650305903
+ls -lahprt
+#1650306155
+scriptsdir=/root/ansible/roles/certs/files/; for scriptname in $(ls ${scriptsdir} -lhptr|sort -h -k5|awk '{print $9}'); do stat ${scriptsdir}${scriptname};done
+#1650306211
+git status
+#1650306216
+pwd
+#1650306222
+ls
+#1650306427
+cat roles/kubelet/tasks/main.yaml 
+#1650306467
+cat roles/certs/tasks/main.yaml 
+#1650306540
+docker ps -a
+#1650306546
+kubectl
+#1650306592
+cat roles/certs/files/copyCerts-InitCluster.sh 
+#1650306703
+cat roles/certs/files/createCertsConfigs.sh 
+#1650306850
+cat roles/certs/tasks/main.yaml 
+#1650306876
+cat roles/kubelet/tasks/main.yaml 
+#1650306899
+ls
+#1650306920
+mv kubelet.yaml 03-kubelet.yaml
+#1650306943
+ansible-playbook -i inventory/ 03-kubelet.yaml -v
+#1650306981
+ps ax|grep kubelet
+#1650307017
+mv certs.yaml 04-certs.yaml
+#1650307032
+ansible-playbook -i inventory/ 04-certs.yaml -v
+#1650307212
+docker ps -a
+#1650307233
+ls
+#1650307244
+cat logs/ansible.log 
+#1650307375
+docker run --rm -it --net host -v /etc/kubernetes:/etc/kubernetes quay.io/coreos/etcd:v3.5.1 etcdctl --cert /etc/kubernetes/pki/etcd/peer.crt --key /etc/kubernetes/pki/etcd/peer.key --cacert /etc/kubernetes/pki/etcd/ca.crt --endpoints https://192.168.234.112:2379 endpoint health --cluster
+#1650307434
+cat roles/certs/tasks/main.yaml 
+#1650307542
+netstat -atupn
+#1650307570
+ls
+#1650307599
+mv kmasters.yaml 05-kmasters.yaml
+#1650307605
+cat 05-kmasters.yaml 
+#1650307626
+tree roles/kmasters/
+#1650307641
+cat roles/kmasters/tasks/main.yaml 
+#1650307681
+ssh kmaster01
+#1650307685
+ssh kmaster02
+#1650307689
+ls
+#1650307755
+ansible-playbook -i inventory/ 05-kmasters.yaml 
+#1650307829
+cat roles/kmasters/files/kubeadm-config.yaml 
+#1650307975
+ssh kmaster01
+#1650308141
+ansible-playbook -i inventory/ 05-kmasters.yaml -v
+#1650308161
+ansible-playbook -i inventory/ 05-kmasters.yaml -vvvvv
+#1650308332
+nano roles/kmasters/tasks/main.yaml 
+#1650308340
+ip a
+#1650308361
+nano roles/kmasters/tasks/main.yaml 
+#1650308407
+ansible-playbook -i inventory/ 05-kmasters.yaml -v
+#1650308941
+nano roles/kmasters/files/kubeadm-config.yaml 
+#1650309257
+nano roles/kmasters/tasks/main.yaml 
+#1650309287
+ansible-playbook -i inventory/ 05-kmasters.yaml -v
+#1650309887
+nano roles/kmasters/tasks/main.yaml 
+#1650309912
+ssh kmaster01
+#1650310040
+nano roles/kmasters/tasks/main.yaml 
+#1650310087
+ssh kmaster01
+#1650310182
+ip a
+#1650310196
+dig master01
+#1650310212
+dig kmaster01
+#1650310229
+dig kmaster02
+#1650310274
+ssh ns1dns
+#1650310365
+dig kmaster01
+#1650310374
+ssh-copy-id ns1dns
+#1650310392
+dig kmaster01
+#1650310398
+ssh ns1dns
+#1650310436
+ssh kmaster01
+#1650310611
+ansible-playbook -i inventory/ 05-kmasters.yaml -v
+#1650310654
+ls
+#1650310664
+nano kube_token.txt 
+#1650310770
+cat kube_token.txt 
+#1650312173
+ls
+#1650312197
+cat roles/metallb/files/config.yaml 
+#1650312331
+mv metallb.yaml 06-metallb.yaml && ansible-playbook -i inventory 06-metallb.yaml
+#1650312383
+cat roles/metallb/tasks/main.yaml 
+#1650312423
+ls
+#1650312464
+cat roles/test_nginx/tasks/main.yaml 
+#1650314210
+tree
+#1650314332
+cat roles/metallb/files/config.yaml 
+#1650314360
+ls
+#1650314390
+mv test_nginx.yaml 07-test_nginx.yaml
+#1650314414
+cat roles/metallb/tasks/main.yaml 
+#1650314453
+cat roles/test_nginx/tasks/main.yaml 
+#1650318399
+nmap -A kworker01
+#1650318472
+http-get
+#1650318479
+apt-file searchhttp-get
+#1650318484
+apt-file search http-get
+#1650318630
+kubectl -n metallb-system describe po speaker-dmpb7 
+#1650319771
+ls
+#1650319783
+history
+#1650319838
+ansible-playbook -i inventory/ 07-test_nginx.yaml -v
+#1650320176
+cat logs/ansible.log 
+#1650320352
+nano roles/test_nginx/files/nginx-deployment.yaml 
+#1650320746
+apt install yamllint
+#1650320755
+ls
+#1650320795
+yamllint roles/*/tasks/main.yaml
+#1650320863
+yamllint roles/test_nginx/tasks/main.yaml 
+#1650320879
+yamllint roles/test_nginx/files/*
+#1650322314
+for i in ${cat servers.list}; do ssh -T $i "ip a|grep '192.168'"; done
+#1650322329
+for i in $(cat servers.list); do ssh -T $i "ip a|grep '192.168'"; done
+#1650322377
+yamllint roles/test_nginx/tasks/main.yaml 
+#1650322384
+for i in $(cat servers.list); do ssh -T $i "ip a|grep '192.168'"; done
+#1650322399
+for i in $(cat servers.list); do ssh -T $i "ip a|grep '240'"; done
+#1650322408
+echo $?
+#1650322492
+nmap -A 192.168.234.240
+#1650322737
+curl -iv 192.168.234.240:80
+#1650322851
+lynx 192.168.234.240:80
+#1650322865
+links 192.168.234.240:80
+#1650322950
+ls
+#1650398456
+history
+#1650398472
+exit
+#1650224511
+free -hlw
+#1650224623
+echo ${NETNS}
+#1650224693
+ip a
+#1650224714
+ping etcd02
+#1650224727
+ping 192.168.234.111
+#1650224736
+ip r
+#1650224740
+ip s
+#1650224743
+ip ss
+#1650224748
+ip sss
+#1650224751
+ip -sss
+#1650224768
+ip s
+#1650224798
+ip -sss
+#1650224852
+ip rs
+#1650224857
+ip r
+#1650224871
+ip sr
+#1650224877
+ip sra
+#1650224879
+ip sa
+#1650224881
+ip ss
+#1650224884
+ip ssr
+#1650224888
+ip sr
+#1650224914
+ip sr hmac show
+#1650224921
+echo $?
+#1650224970
+man hmac
+#1650224982
+man tunsrc
+#1650226614
+dladm
+#1650226650
+apt-file search tunsrc
+#1650226661
+echo $?
+#1650226672
+updatedb
+#1650226679
+locate tunsrc
+#1650226688
+df -h
+#1650226720
+apt-file search bin/dladm
+#1650226727
+apt-file search dladm
+#1650226752
+man dladm
+#1650234334
+ls
+#1650234351
+cd ansible/
+#1650234352
+ls
+#1650305844
+history
+#1650305857
+ip sr
+#1650310791
+ssh kmaster02
+#1650311044
+ssh kmaster01
+#1650311104
+ssh kworker01
+#1650311190
+ssh kworker02
+#1650311212
+ssh kworker03
+#1650311229
+ssh kmaster01
+#1650317640
+ls
+#1650317658
+ssh kmaster01
+#1650321241
+ls
+#1650321268
+vi roles/test_nginx/files/nginx-deployment.yaml 
+#1650321304
+ssh kmaster01
+#1650321374
+ansible-playbook -i inventory/ 07-test_nginx.yaml 
+#1650321425
+vi roles/test_nginx/files/nginx-deployment.yaml 
+#1650321437
+cat logs/ansible.log 
+#1650321491
+ansible-playbook -i inventory/ 07-test_nginx.yaml -vv
+#1650321608
+vi roles/test_nginx/files/nginx-deployment.yaml 
+#1650321690
+ansible-playbook -i inventory/ 07-test_nginx.yaml -vv
+#1650322251
+ls
+#1650322258
+cat servers.list 
+#1650322290
+vi servers.list 
+#1650398483
+ls
+#1650398491
+exit
+#1650571715
+ls
+#1650571739
+ls -lahprt
+#1650571769
+pwd
+#1650571771
+ls
+#1650571781
+cd a
+#1650571785
+cd ansible/
+#1650571786
+ls
+#1650571811
+cat roles/metallb/files/config.yaml 
+#1650571942
+cat roles/metallb/tasks/main.yaml 
+#1651082514
+ip a
+#1651082528
+pig
+#1651082535
+pin ivanpcg
+#1651082541
+ping ivanpc
+#1651082555
+cat /etc/resolv.conf 
+#1651082569
+cat /etc/hostname 
+#1651082573
+cat /etc/hosts
+#1651082595
+choco
+#1651082605
+apt-file update
+#1651082676
+ssh etcd03
+#1651082686
+ssh kmaster10
+#1651082692
+ssh kmaster01
+#1651082700
+ssh kworker02
+#1651082706
+ls
+#1651082719
+cd ansible/
+#1651082720
+ls
+#1651097491
+nano inventory/hosts 
+#1651097558
+ansible -m command -i inventory -a"free -hlw" all
+#1651137967
+updatedb
+#1651137982
+locate metallb-config
+#1651137992
+ls
+#1651138017
+tree roles/test_nginx/
+#1651138038
+cat roles/test_nginx/*
+#1651138064
+cat roles/test_nginx/files/nginx-*
+#1651138081
+ls
+#1651138113
+locate config.yaml
+#1651138289
+tree roles/
+#1651138324
+rm roles/metallb/files/.config.yaml.swp 
+#1651138350
+nano roles/metallb/files/config.yaml 
+#1651138525
+exit
+#1651107973
+ls
+#1651107987
+cd ansible/
+#1651107988
+ls
+#1651108008
+cat tee
+#1651108011
+rm tee
+#1651108034
+rm logs/*
+#1651108136
+vim list_strings.sh
+#1651108174
+nano list_strings.sh
+#1651108200
+cat servers.list 
+#1651108221
+vi cities.list
+#1651108304
+cat playbk.yaml 
+#1651108437
+vi cities.sh
+#1651108487
+nano cities.sh
+#1651108588
+ls
+#1651108624
+chmod +x *.sh
+#1651108633
+./cities.sh 
+#1651108683
+cat logs/ansible.log 
+#1651108693
+rm logs/ansible.log 
+#1651108694
+ls
+#1651108733
+mkdir taskSBER
+#1651108807
+mv cities.* list_strings.sh list_strings.sh playbk.yaml taskSBER/
+#1651108814
+ls
+#1651108835
+ls taskSBER/
+#1651108847
+ls
+#1651108859
+git status
+#1651108881
+git add
+#1651108966
+updatedb
+#1651108975
+locate .*
+#1651109000
+locate --regex .*
+#1651109018
+locate --regex ^.*
+#1651109034
+locate --regex ^.
+#1651109046
+locate --regexp ^.
+#1651109049
+locate --regex ^.
+#1651109060
+locate --regex ^\.
+#1651109068
+locate --regex ^\.|wc -l
+#1651109074
+ls
+#1651109087
+ls ..
+#1651109093
+ls .. -lahprt
+#1651109105
+netstat -atupn
+#1651109159
+ss -ntlp
+#1651109198
+pcsd
+#1651109202
+echo $?
+#1651109207
+man pcsd
+#1651109220
+ls
+#1651136116
+tree roles/metallb/
+#1651136138
+tree roles/test_nginx/
+#1651136171
+ls
+#1651136214
+cat roles/test_nginx/files/*|less
+#1651136269
+cat roles/test_nginx/tasks/main.yaml 
+#1651136320
+ls
+#1651136539
+ls ..
+#1651141197
+curl -iv 192.168.234.240
+#1651141301
+ping 192.168.234.240
+#1651167505
+cd ansible/
+#1651167506
+ls
+#1651167519
+mount
+#1651167565
+ls /mnt/
+#1651167579
+nc
+#1651167596
+nc -v 192.168.234.111 6443
+#1651167729
+nc -v 192.168.234.240 30725
+#1651167833
+ls
+#1651167857
+rm logs/*
+#1651167868
+rm ./logs/*
+#1651167881
+rm logs/

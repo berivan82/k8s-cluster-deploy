@@ -1,0 +1,9 @@
+
+---
+
+- hosts: etcd01
+  gather_facts: no
+  user: root
+  roles:
+    - pcs
+  tags: pcs

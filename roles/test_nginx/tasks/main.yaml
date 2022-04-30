@@ -1,0 +1,16 @@
+---
+
+- name: Copy configs for nginx installation in cluster
+  copy:
+    src: /root/ansible/roles/test_nginx/files/{{ item }}
+    dest: /root/{{ item }}
+    mode: 664
+  with_items:
+    - nginx-deployment.yaml
+    - nginx-service.yaml
+
+- name: Install nginx into kubernetes cluster
+  shell: |
+    export KUBECONFIG=/etc/kubernetes/admin.conf; \\
+    kubectl apply -f /root/nginx-deployment.yaml; \\
+    kubectl apply -f /root/nginx-service.yaml

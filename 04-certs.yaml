@@ -1,0 +1,7 @@
+
+- hosts: etcd01
+  gather_facts: no
+  user: root
+  roles:
+    - certs 
+  tags: certs

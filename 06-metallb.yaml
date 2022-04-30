@@ -1,0 +1,8 @@
+---
+
+- hosts: kmaster01
+  gather_facts: no
+  user: root
+  roles:
+    - metallb
+  tags: metallb

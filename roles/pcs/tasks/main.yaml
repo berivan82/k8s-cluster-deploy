@@ -1,0 +1,12 @@
+---
+- name: Copy PCS setup script
+  copy:
+    src: /root/ansible/roles/pcs/files/pcs_setup.sh
+    dest: /root/
+    mode: 447
+
+- name: Run pcs_setup.sh
+  shell:
+    cmd: ./pcs_setup.sh >> /root/ansible/logs/pcs_stdout.log
+    chdir: /root/
+  delegate_to: 127.0.0.1

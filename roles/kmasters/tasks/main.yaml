@@ -1,0 +1,70 @@
+---
+
+- name: Create directory for certs on kmaster01
+  file:
+    path: /etc/kubernetes/pki/etcd
+    state: directory
+    mode: 755
+
+- name: Copy certs from etcd01
+  copy:
+    src: "{{ item }}"
+    dest: "{{ item }}"
+    mode: 664
+  with_items:
+    - '/etc/kubernetes/pki/etcd/ca.crt'
+    - '/etc/kubernetes/pki/apiserver-etcd-client.crt'
+    - '/etc/kubernetes/pki/apiserver-etcd-client.key'
+
+- name: Copy ClusterConfiguration to kmaster01
+  copy:
+    src: ./roles/kmasters/files/kubeadm-config.yaml
+    dest: /etc/kubernetes/kubeadm-config.yaml
+    mode: 664
+
+- name: Launch kubernetes cluster
+  shell:
+    cmd: kubeadm init --config kubeadm-config.yaml #--pod-network-cidr=172.17.0.0/16
+    chdir: /etc/kubernetes/
+  register: kubeadm_output
+
+- debug:
+    msg: "{{ kubeadm_output | regex_search('.*token.*', multiline=True, ignorecase=True) }}"
+  register: token
+
+- name: Write kubernetes join command with token
+  shell: echo "{{ token }}" > kube_token.txt
+  delegate_to: 127.0.0.1
+
+- name: Install Weave CNI plugin for k8s
+  shell:
+    cmd: kubectl --kubeconfig /etc/kubernetes/admin.conf apply -f "https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 | tr -d '\n')"
+
+- name: Test if k8s cluster started normally
+  shell:
+    cmd: kubectl --kubeconfig /etc/kubernetes/admin.conf get pod -n kube-system -w
+  register: kubectl_get_nodes
+
+- debug:
+    var: kubectl_get_nodes.stdout
+
+- name: create kubernetes certs directory
+  shell: ssh -T kmaster02 "mkdir -p /etc/kubernetes/pki/etcd"
+
+- name: Copy certs and config to kmster02
+  shell: scp -r "{{ item }}" kmaster02:"{{ item }}" 
+  with_items:
+    - '/etc/kubernetes/pki/ca.crt'
+    - '/etc/kubernetes/pki/ca.key'
+    - '/etc/kubernetes/pki/sa.key'
+    - '/etc/kubernetes/pki/sa.pub'    
+    - '/etc/kubernetes/pki/front-proxy-ca.crt'
+    - '/etc/kubernetes/pki/front-proxy-ca.key'
+    - '/etc/kubernetes/pki/apiserver-etcd-client.crt'
+    - '/etc/kubernetes/pki/apiserver-etcd-client.key'
+    - '/etc/kubernetes/pki/etcd/ca.crt'
+    - '/etc/kubernetes/admin.conf'
+  delegate_to: kmaster01
+
+#- name: Launch kubernetes cluster master02
+#  shell: ssh -T kmaster02 "kubeadm init --config kubeadm-config.yaml"
