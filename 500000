@@ -4124,3 +4124,261 @@ rm logs/*
 rm ./logs/*
 #1651167881
 rm logs/
+#1651325404
+ls
+#1651325412
+cat setupdebian.sh 
+#1651325509
+scp /c:/users/ivan/desktop/setupdebian.sh ./setupdeb11.sh
+#1651325530
+scp root@etcd01:/c:/users/ivan/desktop/setupdebian.sh ./setupdeb11.sh
+#1651325549
+ls
+#1651325637
+scp ivan@etcd01:/c:/users/ivan/desktop/setupdebian.sh ./setupdeb11.sh
+#1651325669
+scp ivan@ivanpc:/c:/users/ivan/desktop/setupdebian.sh ./setupdeb11.sh
+#1651325764
+scp ivan@192.168.234.1:/c:/users/ivan/desktop/setupdebian.sh ./setupdeb11.sh
+#1651325821
+scp ivan@192.168.234.1:/c:/users/ivan/desktop/setupdebian.sh setupdeb11.sh
+#1651325843
+ls
+#1651325974
+cp setupdeb11.sh ansible/
+#1651325979
+cd ansible/
+#1651325989
+ls
+#1651326051
+ls ..
+#1651326075
+ls
+#1651326079
+git add
+#1651326094
+git init
+#1651326104
+ls
+#1651326122
+git status
+#1651326151
+git add .
+#1651326154
+echo $?
+#1651326159
+git status
+#1651326288
+git commit -m "first commit in branch about getting free"
+#1651326424
+git branch -M main
+#1651326428
+echo $?
+#1651326488
+git remote add origin https://github.com/berivan82/k8s-cluster-deploy.git
+#1651326493
+echo $?
+#1651326522
+git push -u origin main
+#1651326987
+history
+#1651327093
+git remote add origin git@github.com:berivan82:ivan82/k8s-cluster-deploy.git
+#1651327125
+git status
+#1651327131
+ls
+#1651327173
+mv taskSBER exttasks
+#1651327222
+mv servers.list setupdeb11.sh exttasks/
+#1651327230
+ls
+#1651327276
+la .git/
+#1651327281
+ls .git/
+#1651327300
+du hd 1
+#1651327306
+du -hd 1
+#1651327309
+ls
+#1651327323
+git status
+#1651327369
+ls exttasks/
+#1651327383
+ls
+#1651327456
+git remote add origin git@github.com:berivan82/k8s-cluster-deploy.git
+#1651327483
+git remote
+#1651327493
+ls
+#1651327516
+man git-remote
+#1651327858
+git status
+#1651327907
+git commit -a "added some recent scripts"
+#1651328080
+git show
+#1651328176
+history|grep git
+#1651328273
+git remote
+#1651328281
+git remote origin
+#1651328368
+git remote remove origin
+#1651328372
+echo $?
+#1651328375
+ls
+#1651328380
+git remote
+#1651328422
+git remote add origin git@github.com:berivan82/k8s-cluster-deploy.git
+#1651328427
+echo $?
+#1651328438
+git branch -M main
+#1651328453
+git pust -u origin main
+#1651328457
+git push -u origin main
+#1651328533
+ssh-keygen
+#1651328568
+ls /root/.ssh/
+#1651328658
+git remote
+#1651328770
+git status
+#1651328803
+git add exttasks
+#1651328808
+git status
+#1651328821
+git add .
+#1651328823
+git status
+#1651328877
+git remote
+#1651328985
+git config --global username "berivan82"
+#1651328994
+git config --global user.name "berivan82"
+#1651329050
+git config --global user.email "berivan82@gmail.com"
+#1651329055
+git remote
+#1651329065
+git status
+#1651329107
+git show branch
+#1651329128
+git show 
+#1651329174
+git branch
+#1651329203
+git push -u origin main
+#1651329415
+cat ~/.ssh/id_rsa.pub 
+#1651329504
+git status
+#1651329511
+git push -u origin main
+#1651329571
+git status
+#1651329603
+git push -u origin main
+#1651329620
+ls
+#1651329669
+rm kube_token.txt 
+#1651329670
+ls
+#1651329680
+git status
+#1651329689
+git add *
+#1651329691
+git status
+#1651329723
+git add *
+#1651329725
+git status
+#1651329739
+git add ./*
+#1651329742
+git status
+#1651329752
+git rm kube_token.txt 
+#1651329757
+ls
+#1651329767
+git stataus
+#1651329771
+git status
+#1651329818
+git commit -m "del kube_token.txt"
+#1651329832
+git push -u origin main
+#1651330044
+history| grep git
+#1651333548
+git status
+#1651333876
+vim destoy-nginx.sh
+#1651333948
+chmod +x destoy-nginx.sh 
+#1651432674
+ды
+#1651432676
+ls
+#1651432721
+mv destoy-nginx.sh destroy-nginx.sh
+#1651432723
+ls
+#1651432733
+git status
+#1651432743
+git add /
+#1651432746
+git add .
+#1651432749
+git status
+#1651432786
+git commit -m "destroy-nginx.sh corrected
+#1651432792
+git commit -m "destroy-nginx.sh corrected"
+#1651432819
+git push -u origin main
+#1651457939
+ls -lahprt
+#1651457961
+ls -lahprt|tree
+#1651458091
+ls -lahprt roles/kmasters/files/kubeadm-config.y
+#1651458098
+ls -lahprt roles/kmasters/files/
+#1651458191
+rm roles/kmasters/files/kubeadm-config.yml 
+#1651458224
+ls -lahprt roles/certs/files/
+#1651458259
+cat *|less
+#1651458285
+cat roles/certs/files/*|less
+#1651330232
+git remote
+#1651330243
+cd ansible/
+#1651330244
+git remote
+#1651330250
+git remote show
+#1651330257
+git show
