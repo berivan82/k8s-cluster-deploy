@@ -1,0 +1,8 @@
+---
+
+- hosts: kworker01,kworker02,kworker03
+  gather_facts: no
+  user: root
+  roles:
+    - gluster_fs
+  tags: gluster_fs

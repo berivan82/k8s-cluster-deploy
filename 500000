@@ -4382,3 +4382,505 @@ git remote
 git remote show
 #1651330257
 git show
+#1651860742
+ls
+#1651860754
+cd ansible/
+#1651860756
+ls
+#1651861015
+git status
+#1651861035
+tree
+#1651861063
+vi roles/certs/tasks/main.yaml 
+#1651861361
+vi roles/certs/files/createCertsConfigs.sh 
+#1651861428
+man tree
+#1651861495
+strftime
+#1651861501
+dircolors
+#1651861510
+man dircolors
+#1651864003
+arp-scan --interface=enp2s0 --localnet
+#1651864019
+arp-scan --interface=ens34 --localnet
+#1651864026
+apt-file update
+#1651864080
+apt list --upgradable
+#1651864108
+apt-file search bin/arp-scan
+#1651864124
+apt install -y arp-scan
+#1651864182
+arp-scan --interface=ens34 --localnet
+#1651864199
+ip 
+#1651864208
+arp-scan --interface=ens34 
+#1651864288
+arp-scan --interface=ens34 --localnet
+#1651864303
+arp-scan --interface=ens33 --localnet
+#1651864310
+arp-scan --interface=lo --localnet
+#1651864316
+ip a
+#1651864334
+arp-scan --interface=docker0 --localnet
+#1651928848
+ls -lahprt /var/log
+#1651928883
+user
+#1651928885
+users
+#1651928915
+pstree
+#1651929004
+ps -eo pid,ppid,cmd,%mem,%cpu --sort=-%mem | head
+#1651929183
+ps -a pid,ppid,cmd,%mem,%cpu --sort=-%mem | head
+#1651929206
+ps -a
+#1651929211
+ps 
+#1651929235
+ps -x
+#1651929297
+ps -xa
+#1651929302
+ps -xu
+#1651929396
+docker run --rm -it --net host -v /etc/kubernetes:/etc/kubernetes quay.io/coreos/etcd:v3.5.1 etcdctl --cert /etc/kubernetes/pki/etcd/peer.crt --key /etc/kubernetes/pki/etcd/peer.key --cacert /etc/kubernetes/pki/etcd/ca.crt --endpoints https://192.168.234.112:2379 endpoint health --cluster
+#1651929419
+ps -e
+#1651929433
+ps -o
+#1651929461
+ps --help o
+#1651930173
+nproc
+#1651930183
+nproc --help
+#1651930208
+nproc --all
+#1651930386
+zz
+#1651930392
+fasd
+#1651930409
+updatedb
+#1651930428
+locate fasd
+#1651930440
+apt-file search bin/fasd
+#1651930448
+apt search fasd
+#1651930470
+apt  install fasd
+#1651930477
+zz
+#1651930485
+apt-file search bin/zz
+#1651930539
+apt search fex-utils
+#1651931105
+man fasd
+#1651932182
+whatis arp
+#1651932195
+whatis --help
+#1651932243
+whatis arp -l
+#1651932249
+whatis arp
+#1651932260
+whatis -l arp
+#1651932269
+whatis
+#1651932276
+whatis bash
+#1651932284
+whatis bash -v
+#1651932289
+whatis bash --verbose
+#1651932292
+whatis bash --verbose -d
+#1651932333
+whatis bash  -d
+#1651932339
+whatis arp  -d
+#1651932462
+user
+#1651932465
+users
+#1651932468
+ls
+#1651932471
+cd ansible/
+#1651932474
+users
+#1651932481
+users --help
+#1651932586
+stat -f 01-balancer.yaml 
+#1651932602
+stat 01-balancer.yaml 
+#1651932623
+ls
+#1651933099
+netstat -a | more
+#1651933214
+nc -zv 192.168.234.1
+#1651933219
+nc -zv 192.168.234.1 22
+#1651933226
+nc -zv 192.168.234.119 22
+#1651933233
+nc -zv 192.168.234.2 22
+#1651933276
+debsums
+#1651933287
+md5sum
+#1651933293
+ls
+#1651933300
+md5sum destroy-nginx.sh 
+#1651933305
+ls
+#1651933323
+apt-file search debsums
+#1651933349
+apt search systraq
+#1651933368
+apt search debsums
+#1651933400
+free -hlw
+#1651933431
+ps -eo pid,ppid,cmd,%mem,%cpu --sort=-%mem | head
+#1651933444
+smem
+#1651933526
+lshw
+#1651933548
+apt-file search bin/lshw
+#1651933556
+apt install lshw
+#1651933562
+lshw
+#1652280711
+cd ansible/
+#1652280712
+ls
+#1652280719
+ls -I
+#1652280732
+ls --help
+#1652280812
+ls -R
+#1652280831
+pstree
+#1652280839
+tree
+#1652280847
+ls -IR
+#1652280856
+ls -R
+#1652281012
+ls
+#1652281031
+nano 03-kubelet.yaml 
+#1652281079
+vi 08-gluster_fs.yaml
+#1652281325
+ls
+#1652281347
+cat 07-test_nginx.yaml 
+#1652281379
+mkdir -p roles/gluster-fs/{files,tasks}
+#1652281409
+nano roles/gluster-fs/tasks/main.yaml
+#1652283461
+modprobe
+#1652283465
+modprobe -h
+#1652283532
+kmod
+#1652283553
+kmod list
+#1652283572
+kmod list | grep dm_thin
+#1652283588
+kmod list | grep dm_thin_pool
+#1652283600
+kmod
+#1652283614
+which modprobe
+#1652283636
+file -f /sbin/modprobe
+#1652283648
+file /sbin/modprobe
+#1652283658
+kmod
+#1652283668
+man modprobe
+#1652283698
+lsmod
+#1652283710
+kmod list | grep dm_thin_pool
+#1652283720
+lsmod|grep dm
+#1652283771
+nano roles/gluster-fs/tasks/main.yaml
+#1652283862
+nano roles/gluster-fs/files/loop_gluster.service
+#1652283994
+nano roles/gluster-fs/tasks/main.yaml
+#1652293681
+man chmod
+#1652293811
+nano roles/gluster-fs/tasks/main.yaml
+#1652293849
+ls
+#1652293963
+ansible-playbook -i inventory/ 08-gluster_fs.yaml -v
+#1652294034
+nano 08-gluster_fs.yaml 
+#1652294064
+nano 07-test_nginx.yaml 
+#1652294089
+nano 06-metallb.yaml 
+#1652294103
+nano 08-gluster_fs.yaml 
+#1652294134
+ls roles/
+#1652294156
+mv roles/gluster-fs/ roles/gluster_fs/
+#1652294160
+ansible-playbook -i inventory/ 08-gluster_fs.yaml -v
+#1652294239
+vim roles/gluster_fs/tasks/main.yaml
+#1652294270
+ansible-playbook -i inventory/ 08-gluster_fs.yaml -v
+#1652294281
+vim roles/gluster_fs/tasks/main.yaml
+#1652294720
+ansible-playbook -i inventory/ 08-gluster_fs.yaml -v
+#1652294774
+vim roles/gluster_fs/tasks/main.yaml
+#1652294995
+ansible-playbook -i inventory/ 08-gluster_fs.yaml -v
+#1652295141
+ls -lahprt logs/
+#1652295158
+exit
+#1652269381
+dig
+#1652269388
+ssh knmaster01
+#1652269396
+ssh kmaster01
+#1652269488
+ls
+#1652269492
+cd ansible/
+#1652269494
+ls
+#1652269527
+cat roles/kmasters/*/*
+#1652271904
+ssh kmaster01
+#1652271953
+ssh kmaster02
+#1652271998
+ssh kworker01
+#1652272022
+ssh kworker02
+#1652272050
+ssh kworker03
+#1652272077
+ls
+#1652272087
+ls ..
+#1652272116
+ansible-playbook 05-kmasters.yaml -i inventory/
+#1652272162
+ls
+#1652272173
+cat kube_token.txt 
+#1652272305
+ssh kmaster02
+#1652272416
+for i in kworker01 kworker02 kworker03; do ssh -T $i "kubeadm join 192.168.234.111:6443 --token dqz0wx.pyb558ln4ddhhc7p --discovery-token-ca-cert-hash sha256:87b1cb8b3037c565e30c2d6a3508e3c94581dbd40116620b0850ad66f6e0cc2f"; done
+#1652272447
+ssh kmaster01
+#1652272493
+ansible-playbook 06-metallb.yaml -i inventory/
+#1652272503
+ssh kmaster01
+#1652281146
+ls
+#1652281151
+cat 03-kubelet.yaml 
+#1652282031
+ls
+#1652282078
+whereis losetup
+#1652282094
+whatis losetup
+#1652282132
+which losetup
+#1652282150
+dpkg -L losetup
+#1652282155
+dpkg -l losetup
+#1652282163
+dpkg -S losetup
+#1652282177
+dpkg -s losetup
+#1652282184
+dpkg -s mount
+#1652282309
+cat roles/*/tasks/*|less
+#1652295168
+exit
+#1652710373
+cd ansible/
+#1652710378
+cat logs/ansible.log 
+#1652719744
+ls
+#1652719753
+git clone https://github.com/heketi/heketi
+#1652719758
+ls
+#1652719768
+rm -rf heketi
+#1652722525
+grep -r "default" .
+#1652723319
+ls
+#1652723328
+rm logs/ansible.log 
+#1652723366
+ansible-playbook -i inventory/ 08-gluster_fs.yaml -v
+#1652723607
+ssh kworker01
+#1652723803
+ansible -m command -i inventory/ workers -a"losetup -D"
+#1652723814
+ssh kworker01
+#1652723850
+ansible -m command -i inventory/ workers -a"rm /home/glusterfs/image"
+#1652723864
+ansible -m command -i inventory/ workers -a"rm /home/gluster/image"
+#1652723886
+ssh kworker01
+#1652723935
+rm logs/ansible.log 
+#1652724039
+ansible-playbook -i inventory 08-gluster_fs.yaml 
+#1652724105
+ansible -m command -i inventory/ workers -a"losetup -D"
+#1652724110
+ansible -m command -i inventory/ workers -a"rm /home/gluster/image"
+#1652724447
+ansible-playbook -i inventory 08-gluster_fs.yaml 
+#1652724522
+ansible -m command -i inventory/ workers -a"losetup -D"
+#1652724526
+ansible -m command -i inventory/ workers -a"rm /home/gluster/image"
+#1652724533
+rm logs/ansible.log 
+#1652724541
+ansible-playbook -i inventory 08-gluster_fs.yaml -v
+#1652724623
+ansible -m command -i inventory/ workers -a"losetup -D"
+#1652724631
+ansible -m command -i inventory/ workers -a"rm /home/gluster/image"
+#1652724667
+ansible -m command -i inventory/ workers -a"rm -rf /root/heketi"
+#1652724789
+ansible-playbook -i inventory 08-gluster_fs.yaml -v
+#1652725897
+mkdir -p roles/heketi/{files,tasks}
+#1652725925
+nano roles/heketi/tasks/main.yaml
+#1652726206
+nano 09-heketi.yaml
+#1652726296
+ansible-playbook -i inventory 09-heketi.yaml -v
+#1652726509
+grep -r KUBECONFIG .
+#1652726575
+nano roles/heketi/tasks/main.yaml
+#1652726604
+ansible-playbook -i inventory 09-heketi.yaml -v
+#1652726643
+nano roles/heketi/tasks/main.yaml
+#1652726685
+ansible-playbook -i inventory 09-heketi.yaml -v
+#1652726707
+nano roles/heketi/tasks/main.yaml
+#1652726722
+ansible-playbook -i inventory 09-heketi.yaml -v
+#1652726810
+nano roles/heketi/tasks/main.yaml
+#1652733297
+учше
+#1652733303
+exit
+#1652710056
+ls
+#1652710059
+cd ansible/
+#1652710061
+ls
+#1652710077
+cat roles/gluster_fs/files/loop_gluster.service 
+#1652710110
+cat roles/gluster_fs/tasks/main.yaml 
+#1652710851
+nano roles/gluster_fs/tasks/main.yaml 
+#1652723267
+curl -iv http://192.168.234.1:5357/
+#1652723305
+nmap -A 192.168.234.1
+#1652723584
+nano roles/gluster_fs/tasks/main.yaml 
+#1652723922
+nmap -sV 192.168.234.0/24
+#1652724299
+nano roles/gluster_fs/tasks/main.yaml 
+#1652724957
+nano del_files_workers.sh
+#1652725027
+nano roles/gluster_fs/tasks/main.yaml 
+#1652725124
+chmod +x del_files_workers.sh 
+#1652725129
+./del_files_workers.sh 
+#1652725165
+ansible-playbook -i inventory/ -v 08-gluster_fs.yaml 
+#1652725824
+nano roles/gluster_fs/tasks/main.yaml 
+#1652726167
+nano 08-gluster_fs.yaml 
+#1652727098
+ssh kmaster01
+#1652733332
+exit
+#1652794271
+ls
+#1652794276
+cd ansible/
+#1652794291
+nano roles/heketi/tasks/main.yaml 
+#1652794860
+ssh kmaster01
+#1652795202
+nano roles/heketi/tasks/main.yaml 

@@ -1,0 +1,32 @@
+---
+- name: Create dir for image
+  file:
+    path: /home/gluster
+    state: directory
+
+- name: Create fictitious block devices
+  shell: |
+    dd if=/dev/zero of=/home/gluster/image bs=1M count=10000
+    losetup /dev/loop0 /home/gluster/image
+
+- name: Load dm_thin_pool module
+  modprobe:
+    name: dm_thin_pool
+    state: present
+
+- name: Install glusterfs-client
+  package:
+    name: glusterfs-client
+    state: latest
+
+- name: Copy loop_gluster.service
+  copy:
+    src: /root/ansible/roles/gluster_fs/files/loop_gluster.service
+    dest: /etc/systemd/system/loop_gluster.service
+
+- name: Enable loop_gluster.service
+  systemd:
+    name: loop_gluster
+    enabled: yes
+    daemon-reload: yes
+    state: started
