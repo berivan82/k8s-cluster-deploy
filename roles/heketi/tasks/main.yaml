@@ -1,37 +1,48 @@
 ---
 
-- name: Create directory to clone heketi repository to
+#- name: Create directory to clone heketi repository to
+#  file:
+#    path: /root/heketi
+#    state: directory
+
+- name: Create directory to clone gluster-kubernetes repository to
   file:
-    path: /root/heketi
+    path: /root/gluster-kubernetes
     state: directory
 
-- name: Clone heketi repo
-  git:
-    repo: https://github.com/heketi/heketi
-    dest: /root/heketi
+      #- name: Clone heketi repo
+      #  git:
+      #    repo: https://github.com/heketi/heketi
+      #    dest: /root/heketi
 
-- name: Create GlusterFS DaemonSet
-  shell:
-    cmd: kubectl --kubeconfig /etc/kubernetes/admin.conf create -f glusterfs-daemonset.json
-    chdir: /root/heketi/extras/kubernetes
+- name: Clone gluster-kubernetes repository
+  git:
+    repo: https://github.com/gluster/gluster-kubernetes.git
+    dest: /root/gluster-kubernetes
+
+      #- name: Create GlusterFS DaemonSet
+      #  shell:
+      #    cmd: kubectl --kubeconfig /etc/kubernetes/admin.conf create -f glusterfs-daemonset.json
+      #    chdir: /root/heketi/extras/kubernetes
 
 - name: Label worker nodes
-  shell:
-    cmd: kubectl --kubeconfig /etc/kubernetes/admin.conf label node "{{ item }}" storagenode=glusterfs --overwrite
+  shell: |
+    kubectl --kubeconfig /etc/kubernetes/admin.conf label node "{{ item }}" node-role.kubernetes.io/worker=worker
+    kubectl --kubeconfig /etc/kubernetes/admin.conf label node "{{ item }}" storagenode=glusterfs --overwrite
   with_items:
   - 'kworker01'
   - 'kworker02'
   - 'kworker03'
 
-- name: Installing heketi
-  shell: |
-    export KUBECONFIG=/etc/kubernetes/admin.conf
-    kubectl create -f heketi-service-account.json
-    kubectl create clusterrolebinding heketi-gluster-admin --clusterrole=edit --seviceaccount=default:heketi-service-account
-    kubectl create secret generic heketi-config-secret --from-file:./heketi.json
-    kubectl create -f heketi-bootstrap.json
-  args:
-    chdir: /root/heketi/extras/kubernetes
+    #- name: Installing heketi
+    #  shell: |
+    #    export KUBECONFIG=/etc/kubernetes/admin.conf
+    #    kubectl create -f heketi-service-account.json
+    #    kubectl create clusterrolebinding heketi-gluster-admin --clusterrole=edit --seviceaccount=default:heketi-service-account
+    #    kubectl create secret generic heketi-config-secret --from-file:./heketi.json
+    #    kubectl create -f heketi-bootstrap.json
+    #  args:
+    #    chdir: /root/heketi/extras/kubernetes
 
 - name: Install heketi-client
   get_url:
@@ -44,10 +55,20 @@
     dest: /root/
     remote_src: yes
 
-- name: Copy heketi-cli to PATH
+- name: Copy heketi-cli to PATH directory
   copy:
     src: /root/heketi-client/bin/heketi-cli
     dest: /usr/local/bin/heketi-cli
     mode: 755
     remote_src: yes
 
+- name: Copy topology.json to deploy directory of downloaded repo
+  copy:
+    src: /root/ansible/roles/heketi/files/topology.json
+    dest: /root/gluster-kubernetes/deploy/topology.json
+    mode: 755
+
+- name: Launch installation script from GitHub
+  shell:
+    cmd: ./gk-deploy -g
+    chdir: /root/gluster-kubernetes/deploy

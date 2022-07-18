@@ -4884,3 +4884,451 @@ nano roles/heketi/tasks/main.yaml
 ssh kmaster01
 #1652795202
 nano roles/heketi/tasks/main.yaml 
+#1652846875
+ssh-keygen -t rsa
+#1652846964
+for i in etcd01 etcd02 etcd03 kmaster01 kmaster02 kworker01 kworker02 kworker03; do echo "yes" | ssh-copy-id $i; done
+#1652846989
+for i in etcd01 etcd02 etcd03 kmaster01 kmaster02 kworker01 kworker02 kworker03; do  ssh-copy-id $i; done
+#1652847039
+ssh-copy-id etcd02
+#1652847045
+dig etcd02
+#1652847069
+vi /etc/resolv.conf 
+#1652847091
+dig @192.168.234.251 etcd02
+#1652847112
+for i in etcd01 etcd02 etcd03 kmaster01 kmaster02 kworker01 kworker02 kworker03; do  ssh-copy-id $i; done
+#1652847276
+apt install ansible
+#1652847330
+git clone git@github.com:berivan82/k8s-cluster-deploy.git
+#1652847478
+git clone https://github.com/berivan82/k8s-cluster-deploy.git
+#1652847586
+gh repo clone berivan82/k8s-cluster-deploy
+#1652847611
+apt-file search --regex bin/gh$
+#1652847622
+apt install gitsome
+#1652847639
+gh repo clone berivan82/k8s-cluster-deploy
+#1652847659
+gh repo clone
+#1652848608
+gh repo --help
+#1652848635
+cat ~/.ssh/id_rsa.pub 
+#1652848678
+git clone git@github.com:berivan82/k8s-cluster-deploy.git
+#1652848682
+ls
+#1652848695
+mv k8s-cluster-deploy ansible
+#1652848699
+cd ansible/
+#1652848701
+ls
+#1652848757
+ssh kmaster01
+#1656414217
+ls
+#1656414221
+cd ansible/
+#1656414225
+git pull
+#1656414232
+ls
+#1656414243
+cat del_files_workers.sh 
+#1656414266
+./kuber_install.sh 
+#1656414350
+./launch_kuber_cluster.sh 
+#1656414546
+cat kube_token.txt 
+#1656414594
+ssh kmaster02 "kubeadm join 192.168.234.111:6443 --token dqz0wx.pyb558ln4ddhhc7p  --discovery-token-ca-cert-hash sha256:b7805f162749d86eb795a358adf2e2a32419b02f95daf43655388549327495dc --control-plane"
+#1656414687
+for i in {1..3};do ssh kworker0${i} "kubeadm join 192.168.234.111:6443 --token dqz0wx.pyb558ln4ddhhc7p  --discovery-token-ca-cert-hash sha256:b7805f162749d86eb795a358adf2e2a32419b02f95daf43655388549327495dc";done
+#1656414771
+ls
+#1656414797
+ansible-playbook -i inventory/ 08-gluster_fs.yaml -v
+#1656414939
+ls
+#1656414951
+cat 08-gluster_fs.yaml 
+#1656414966
+cat roles/gluster_fs/tasks/main.yaml 
+#1656415029
+cat 09-heketi.yaml 
+#1656415041
+cat roles/heketi/tasks/main.yaml 
+#1656415054
+ls
+#1656415071
+ansible-playbook -i inventory/ 06-metallb.yaml -v
+#1656430090
+ls
+#1656430102
+tree
+#1656430115
+man apt-file
+#1656430179
+updatedb
+#1656430189
+man locate
+#1656430252
+locate -r /tree
+#1656430270
+locate -r /tree|wc
+#1656430280
+locate -r bin/tree|wc
+#1656430283
+locate -r bin/tree
+#1656430302
+apt-file search bin/tree$
+#1656430348
+treeview
+#1656430356
+treesheets
+#1656430363
+treeline
+#1656430384
+apt-file search bin/(tree)$
+#1656430392
+apt-file search bin/\(tree)$
+#1656430397
+apt-file search bin/\(tree\)$
+#1656430429
+apt-file search -x bin/(tree)$
+#1656430439
+apt-file search -x bin/\(tree\)$
+#1656430453
+apt-file search -x bin/\(?tree\)$
+#1656430464
+apt-file search -x 'bin/(tree)$
+#1656430481
+apt-file search -x bin/\(?tree\)$'
+#1656430499
+apt-file search -x 'bin/(tree)$'
+#1656430507
+apt-file search -x 'bin/.(tree)$'
+#1656430561
+apt search adacontrol|ytree|mtree-netbsd
+#1656430569
+apt search adacontrol
+#1656431332
+apt search ytree
+#1656431355
+apt install ytree
+#1656431362
+ytree
+#1656431442
+apt search mtree-netbsd
+#1656431477
+apt install mtree-netbsd
+#1656431487
+mtree
+#1656431500
+mtree --help
+#1656431506
+man mtree
+#1656431655
+nano /etc/mtab 
+#1656431676
+man mtab
+#1656431683
+man fstab
+#1656431698
+nano /etc/mtab 
+#1656431714
+mknod
+#1656431718
+mknod --help
+#1656431742
+ls
+#1656431750
+history
+#1656431800
+updatedb
+#1656431828
+locate -r bin/grep
+#1656431845
+locate -r 'bin/.grep'
+#1656431854
+locate -r 'bin/..grep'
+#1656431873
+locate -r 'bin/...grep'
+#1656431883
+locate -r 'bin/....grep'
+#1656431898
+man ptargrep
+#1656431924
+locate -r 'bin/.....grep'
+#1656431931
+echo $?
+#1656431942
+history
+#1656432361
+cat roles/heketi/tasks/main.yaml 
+#1656910303
+ls
+#1656910314
+seq
+#1656910318
+jot
+#1656910330
+yot
+#1656910336
+apt-file update
+#1656910356
+apt list --upgradeable
+#1656910426
+apt-file search --regex "bin/.ot$"
+#1656910467
+apt install athena-jot
+#1656910471
+jot
+#1656910485
+jot -r
+#1656910513
+jot --help
+#1656910516
+man jot
+#1656910944
+kubectl get po -A --show-label
+#1656910947
+kubectl get po -A --show-labels
+#1656910964
+ssh kmaster01 "kubectl get po -A --show-labels"
+#1656911005
+ssh kmaster01 "KUBECONFIG=/etc/kubernetes/admin.conf; kubectl get po -A --show-labels"
+#1656911027
+ssh kmaster01
+#1656911051
+ssh -tt kmaster01 "KUBECONFIG=/etc/kubernetes/admin.conf; kubectl get po -A --show-labels"
+#1656911060
+ssh -T kmaster01 "KUBECONFIG=/etc/kubernetes/admin.conf; kubectl get po -A --show-labels"
+#1656911063
+ssh kmaster01
+#1656911252
+shred
+#1656911258
+man shred
+#1656911309
+iostat
+#1656911313
+iostat  1
+#1656911327
+namei
+#1656911331
+namei -o
+#1656911337
+man namei
+#1656911366
+man jot
+#1656912597
+delv ya.ru
+#1656912622
+delv @8.8.8.8 ya.ru
+#1656912640
+delv @192.168.234.2 ya.ru
+#1656912656
+delv @192.168.234.251 ya.ru
+#1656912666
+delv @192.168.1.1 ya.ru
+#1656912673
+delv @192.168.1.1 ya.ru ANY
+#1656912694
+delv @192.168.1.1 ya.ru ANY +trace
+#1656912737
+delv @192.168.1.1 ya.ru ANY +rtrace
+#1656912766
+delv @192.168.1.1 ya.ru ANY +rtrace +mtrace
+#1656912902
+delv @192.168.1.1 ya.ru ANY +rtrace +vtrace
+#1656914183
+delv @192.168.1.1 ya.ru ANY +rtrace +comments
+#1656914213
+delv @192.168.1.1 ya.ru ANY +rtrace +rrcomments
+#1656914254
+delv @192.168.1.1 ya.ru ANY +rtrace +trust
+#1656914320
+delv @192.168.1.1 ya.ru ANY +rtrace +trust +root
+#1656914346
+delv @192.168.1.1 ya.ru ANY +rtrace +trust +root +multiline
+#1656914369
+delv @192.168.1.1 ya.ru ANY +rtrace +trust +root +multiline +dnssec
+#1656914429
+delv @192.168.234.251 yandex.ru ANY +rtrace +trust +root +multiline +dnssec
+#1656914493
+delv @192.168.234.251 mynet.loc ANY +rtrace +trust +root +multiline +dnssec
+#1656914514
+delv @192.168.234.251 mail.mynet.loc ANY +rtrace +trust +root +multiline +dnssec
+#1656914657
+route
+#1656914679
+route get yandex.ru
+#1656914694
+route -n get yandex.ru
+#1656915015
+ls
+#1656915018
+cd ansible/
+#1656915020
+ls
+#1656915042
+cat roles/heketi/tasks/main.yaml 
+#1657031093
+ls
+#1657031097
+cd ansible/
+#1657031106
+cat roles/heketi/tasks/main.yaml 
+#1657034029
+ls
+#1657035193
+cat roles/metallb/tasks/main.yaml 
+#1657061476
+history
+#1657061558
+pwd
+#1657061564
+hostnamectl
+#1657061587
+ls
+#1657061611
+cat roles/metallb/tasks/main.yaml 
+#1657061796
+cat roles/gluster_fs/tasks/main.yaml 
+#1657061852
+cat 08-gluster_fs.yaml 
+#1657061878
+vim roles/gluster_fs/tasks/main.yaml 
+#1657070643
+for i in {1..3}; do ssh kworker0$i "modprobe dm_snapshot; modprobe dm_mirror; lsmod | grep dm_thin_pool";done
+#1657070713
+for i in {1..3}; do ssh kworker0$i "lsmod| grep dm_snapshot; lsmod| grep dm_mirror; lsmod | grep dm_thin_pool";done
+#1657070755
+ls
+#1657070794
+ls *.sh
+#1657070810
+ls
+#1657070824
+pwd
+#1657070833
+hostname
+#1657070851
+cd ..
+#1657070856
+mkdir git
+#1657070859
+cd git/
+#1657070957
+ls ../ansible/exttasks/
+#1657071000
+ls
+#1657071012
+git clone git@github.com:berivan82/k8s-cluster-deploy.git
+#1657071016
+ls
+#1657071021
+cd k8s-cluster-deploy/
+#1657071022
+ls
+#1657071042
+ls -lahprt
+#1657071250
+ls
+#1657071258
+cd ../../ansible/
+#1657071262
+git status
+#1657071427
+ls
+#1657071433
+cd ..
+#1657071435
+ls
+#1657071448
+rm -rf git
+#1657071450
+cd ansible/
+#1657071452
+ls
+#1657071473
+history
+#1657071484
+sync
+#1657071489
+echo $?
+#1657071495
+ls
+#1657072254
+vi roles/heketi/tasks/main.yaml 
+#1657072746
+vim roles/heketi/tasks/main.yaml 
+#1657100836
+history
+#1657100898
+cat roles/*/tasks/main.yaml|grep cmd
+#1657100927
+vim roles/heketi/tasks/main.yaml 
+#1657100994
+cat roles/*/tasks/main.yaml|less
+#1657101019
+vim roles/heketi/tasks/main.yaml 
+#1657101213
+mkdir roles/heketi/files
+#1657101251
+vim roles/heketi/files/topology.json
+#1657101282
+nano roles/heketi/files/topology.json
+#1657101604
+vim roles/heketi/tasks/main.yaml 
+#1657104338
+ls
+#1657104349
+cat *.yaml
+#1657104385
+vi 09-heketi.yaml 
+#1657104401
+ls
+#1657104465
+ansible-playbook -i inventory/ -v 09-heketi.yaml 
+#1657120722
+exit
+#1657070083
+ls
+#1657070092
+cd ansible/
+#1657070094
+ls
+#1657070117
+cat roles/*/tasks/main.yaml|less
+#1657071537
+ls
+#1657071578
+ssh kworker03
+#1657258713
+ls
+#1657258716
+cd ansible/
+#1657258799
+ansible -i inventory/ -v all -m command -a"service glusterfs status"
+#1657258863
+ansible -i inventory/ -v all -m command -a"updatedb"
+#1657258890
+ansible -i inventory/ -v all -m command -a"locate glusterfs.service"
+#1657258900
+ansible -i inventory/ -v all -m command -a"locate glusterfs"
+#1657259005
+ansible -i inventory/ -v all -m command -a"locate gluster-blockd"
+#1657259119
+kubectl get po -A
+#1657259142
+exit

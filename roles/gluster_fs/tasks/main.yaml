@@ -9,10 +9,14 @@
     dd if=/dev/zero of=/home/gluster/image bs=1M count=10000
     losetup /dev/loop0 /home/gluster/image
 
-- name: Load dm_thin_pool module
+- name: Load kernel modules
   modprobe:
-    name: dm_thin_pool
+    name: "{{ item }}"
     state: present
+  with_items:
+  - 'dm_snapshot'
+  - 'dm_mirror'
+  - 'dm_thin_pool'
 
 - name: Install glusterfs-client
   package:
