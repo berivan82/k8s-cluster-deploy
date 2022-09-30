@@ -51,7 +51,7 @@
   shell: |
     echo "auth 1\n1 md5 $(echo -n mypassword|md5sum|awk -F' ' '{print $1}')" > /etc/ha.d/authkeys
   
-- name: Change autkeys file permissions
+- name: Change authkeys file permissions
   file:
     path: /etc/ha.d/authkeys
     owner: haproxy
@@ -60,13 +60,13 @@
 
 - name: Copy ha.cf to etcd01
   copy:
-    src: /root/ansible/roles/balancer/files/ha.cf.etcd01
+    src: ./roles/balancer/files/ha.cf.etcd01
     dest: /etc/ha.d/ha.cf
   when: "groups['haproxy'] | select('search','01') | list"
 
 - name: Copy ha.cf to etcd02
   copy:
-    src: /root/ansible/roles/balancer/files/ha.cf.etcd02
+    src: ./roles/balancer/files/ha.cf.etcd02
     dest: /etc/ha.d/ha.cf
   when: "groups['haproxy'] | select('search','02') | list"
 

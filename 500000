@@ -5332,3 +5332,176 @@ ansible -i inventory/ -v all -m command -a"locate gluster-blockd"
 kubectl get po -A
 #1657259142
 exit
+#1664192537
+ls
+#1664192568
+cp /etc/containerd/config.toml /etc/containerd/config.toml.bak
+#1664192586
+rm /etc/containerd/config.toml
+#1664192626
+containerd config default > /etc/containerd/config.toml
+#1664192638
+cat /etc/containerd/config.toml
+#1664193011
+echo """
+runtime-endpoint: unix:///run/containerd/containerd.sock
+image-endpoint: unix:///run/containerd/containerd.sock
+""" > /etc/crictl.yaml
+#1664193021
+echo  $?
+#1664193034
+cat /etc/crictl.yaml
+#1664193046
+journalctl -xe
+#1664193131
+systemctl restart cpntainerd
+#1664193138
+systemctl restart containerd
+#1664193142
+echo  $?
+#1664193147
+journalctl -xe
+#1664193272
+ls
+#1664193304
+cp /etc/containerd/config.toml.bak /etc/containerd/config.toml
+#1664193308
+systemctl restart containerd
+#1664193311
+echo  $?
+#1664193315
+journalctl -xe
+#1664193357
+ps ax|grep con
+#1664193432
+docker ps
+#1664193435
+docker ps -a
+#1664194165
+journalctl -xe
+#1664194815
+echo $CONTAINER_RUNTIME_ENDPOINT
+#1664194888
+apt-file search default/kubelet
+#1664194900
+apt-file update
+#1664194906
+apt-file search default/kubelet
+#1664194911
+echo $?
+#1664194924
+crictl
+#1664195629
+echo $CONTAINER_RUNTIME_ENDPOINT
+#1664195682
+CONTAINER_RUNTIME_ENDPOINT=unix:///var/run/containerd/containerd.sock
+#1664195683
+echo $CONTAINER_RUNTIME_ENDPOINT
+#1664195698
+crictl -h
+#1664195745
+history
+#1664195764
+service kubelet stop
+#1664195775
+journalctl -xe
+#1664195856
+cat /etc/systemd/system/kubelet.service.d/20-etcd-service-manager.conf 
+#1664195883
+service kubelet start
+#1664195887
+echo $?
+#1664195891
+journalctl -xe
+#1664195923
+echo $CONTAINER_RUNTIME_ENDPOINT
+#1664195941
+apt search crio
+#1664195947
+apt search cri-o
+#1664284334
+nano /etc/containerd/config.toml
+#1664284350
+cat /etc/containerd/config.toml
+#1664284444
+nano /etc/containerd/config.toml
+#1664284480
+cat /etc/containerd/config.toml
+#1664284493
+service containerd restart
+#1664284497
+echo $?
+#1664284505
+ctr plugin ls
+#1664284537
+rm /var/log/daemon.log
+#1664284544
+rm /var/log/syslog
+#1664284549
+rm /var/log/messages
+#1664284556
+ls /var/log
+#1664284575
+service containerd restart
+#1664284584
+journalctl -xe
+#1664284616
+cat /var/log/daemon.log
+#1664284628
+touch /var/log/daemon.log
+#1664284640
+touch /var/log/messages
+#1664284649
+touch /var/log/syslog
+#1664284653
+service containerd restart
+#1664284656
+cat /var/log/daemon.log
+#1664284665
+service syslog restart
+#1664284671
+echo $?
+#1664284674
+cat /var/log/daemon.log
+#1664284948
+updatedb
+#1664284955
+locate kubelet.
+#1664285082
+locate kubeadm.
+#1664285777
+ls /var/run/containerd/
+#1664291141
+kubeadm config print init-defaults
+#1664291249
+kubelet version
+#1664291258
+kubelet --version
+#1664291274
+kubeadm --version
+#1664291284
+kubeadm version
+#1664291310
+kubectl version
+#1664291382
+kubeadm config print init-defaults --component-configs KubeletConfiguration
+#1664291548
+locate KubeletConfiguration
+#1664291569
+cat $(locate KubeletConfiguration)
+#1664291706
+pwd
+#1664291709
+cd ansible/
+#1664291722
+cat roles/kubelet/tasks/main.yaml 
+#1664291739
+ls /etc/kubernetes.d/KubeletConfiguration.yaml 
+#1664291747
+cat /etc/kubernetes.d/KubeletConfiguration.yaml 
+#1664291867
+journalctl -xe
+#1664298657
+dir
+#1664298778
+history

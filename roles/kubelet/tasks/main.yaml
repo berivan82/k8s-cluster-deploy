@@ -1,6 +1,29 @@
 ---
+- name: Create CNI plugins config dir
+  file:
+    path: /etc/cni/net.d
+    state: directory
+    mode: 644
 
-- name:
+- name: Copy mynet cni plugin config
+  copy:
+    src: ./roles/kubelet/files/10-mynet.conf
+    dest: /etc/cni/net.d/
+    mode: 0644
+
+- name: Copy loopback cni plugin config
+  copy:
+    src: ./roles/kubelet/files/99-loopback.conf
+    dest: /etc/cni/net.d/
+    mode: 0644
+
+- name: Copy CRI config
+  copy:
+    src: ./roles/kubelet/files/crictl.yaml
+    dest: /etc/
+    mode: 0644
+
+- name: Create configs dir for kubernetes
   file:
     path: /etc/kubernetes.d
     state: directory
@@ -17,6 +40,11 @@
     src: ./roles/kubelet/files/20-etcd-service-manager.conf
     dest: /etc/systemd/system/kubelet.service.d/
     mode: 0644
+
+- name: Restart containerd daemon
+  systemd:
+    name: containerd
+    state: restarted
 
 - name: Enable and start kubelet service
   systemd:

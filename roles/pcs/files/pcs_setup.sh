@@ -3,24 +3,30 @@ set -x -v
 
 cat /etc/passwd|grep hacluster
 if [ $? == 0 ]
- then  echo "hacluster:hacluster" | chpasswd
- else useradd hacluster -p hacluster
+  then
+    echo "hacluster:hacluster" | chpasswd
+  else
+    useradd hacluster -p hacluster
 fi
 
 pcs property|grep failed
 if [ $? != 0 ]
- then pcs cluster destroy
+  then
+    pcs cluster destroy
 fi
 
 ssh -T etcd02 /bin/bash << "EOF"
 cat /etc/passwd|grep hacluster
 if [ $? == 0 ]
- then  echo "hacluster:hacluster" | chpasswd
- else useradd hacluster -p hacluster
+  then
+    echo "hacluster:hacluster" | chpasswd
+  else
+    useradd hacluster -p hacluster
 fi
 pcs property|grep failed
 if [ $? != 0 ]
- then pcs cluster destroy
+  then
+    pcs cluster destroy
 fi
 EOF
 

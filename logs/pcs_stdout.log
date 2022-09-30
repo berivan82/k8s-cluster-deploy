@@ -677,3 +677,682 @@ PCSD Status:
   etcd01: Online
   etcd02: Online
   * virtual_ip	(ocf::heartbeat:IPaddr2):	 Stopped
+hacluster:x:108:114::/var/lib/pacemaker:/usr/sbin/nologin
+Shutting down pacemaker/corosync services...
+Killing any remaining services...
+Removing all cluster configuration files...
+hacluster:x:108:114::/var/lib/pacemaker:/usr/sbin/nologin
+Shutting down pacemaker/corosync services...
+Killing any remaining services...
+Removing all cluster configuration files...
+etcd01: Authorized
+etcd02: Authorized
+Sending HTTP Request to: https://192.168.234.112:2224/remote/check_host
+
+Sending HTTP Request to: https://192.168.234.113:2224/remote/check_host
+
+Finished calling: https://192.168.234.112:2224/remote/check_host
+Response Code: 200
+--Debug Response Start--
+{"services":{"pacemaker":{"installed":true,"enabled":false,"running":false,"version":"2.0.5"},"pacemaker_remote":{"installed":false,"enabled":false,"running":false,"version":null},"corosync":{"installed":true,"enabled":false,"running":false,"version":"3.1.2"},"pcsd":{"installed":true,"enabled":true,"running":true,"version":"0.10.8"},"sbd":{"installed":false,"enabled":false,"running":false,"version":null},"qdevice":{"installed":false,"enabled":false,"running":false,"version":null},"booth":{"installed":false,"enabled":false,"running":false,"version":null}},"cluster_configuration_exists":false}
+--Debug Response End--
+
+Communication debug info for calling: https://192.168.234.112:2224/remote/check_host
+--Debug Communication Info Start--
+*   Trying 192.168.234.112:2224...
+* Connected to 192.168.234.112 (192.168.234.112) port 2224 (#0)
+* found 387 certificates in /etc/ssl/certs
+* ALPN, offering h2
+* ALPN, offering http/1.1
+* SSL connection using TLS1.3 / ECDHE_RSA_AES_256_GCM_SHA384
+* 	 server certificate verification SKIPPED
+* 	 server certificate status verification SKIPPED
+* 	 common name: etcd01 (does not match '192.168.234.112')
+* 	 server certificate expiration date OK
+* 	 server certificate activation date OK
+* 	 certificate public key: RSA
+* 	 certificate version: #3
+* 	 subject: C=US,ST=MN,L=Minneapolis,O=pcsd,OU=pcsd,CN=etcd01
+* 	 start date: Sun, 25 Sep 2022 14:38:39 GMT
+* 	 expire date: Wed, 22 Sep 2032 14:38:39 GMT
+* 	 issuer: C=US,ST=MN,L=Minneapolis,O=pcsd,OU=pcsd,CN=etcd01
+* ALPN, server did not agree to a protocol
+> GET /remote/check_host HTTP/1.1
+Host: 192.168.234.112:2224
+User-Agent: PycURL/7.43.0.6 libcurl/7.74.0 GnuTLS/3.7.1 zlib/1.2.11 brotli/1.0.9 libidn2/2.3.0 libpsl/0.21.0 (+libidn2/2.3.0) libssh2/1.9.0 nghttp2/1.43.0 librtmp/2.3
+Accept: */*
+Cookie: token=4edcb37d-ad07-4274-b6d9-400eb5ea7929
+
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 OK
+< Server: TornadoServer/6.1
+< Content-Type: text/html;charset=utf-8
+< Date: Sun, 25 Sep 2022 14:48:49 GMT
+< Strict-Transport-Security: max-age=604800
+< Content-Length: 598
+< Etag: "ed2afc05016b86185cd10fe98a5d3e7e12b5ba1f"
+< 
+<< {"services":{"pacemaker":{"installed":true,"enabled":false,"running":false,"version":"2.0.5"},"pacemaker_remote":{"installed":false,"enabled":false,"running":false,"version":null},"corosync":{"installed":true,"enabled":false,"running":false,"version":"3.1.2"},"pcsd":{"installed":true,"enabled":true,"running":true,"version":"0.10.8"},"sbd":{"installed":false,"enabled":false,"running":false,"version":null},"qdevice":{"installed":false,"enabled":false,"running":false,"version":null},"booth":{"installed":false,"enabled":false,"running":false,"version":null}},"cluster_configuration_exists":false}
+* Connection #0 to host 192.168.234.112 left intact
+
+--Debug Communication Info End--
+
+Finished calling: https://192.168.234.113:2224/remote/check_host
+Response Code: 200
+--Debug Response Start--
+{"services":{"pacemaker":{"installed":true,"enabled":false,"running":false,"version":"2.0.5"},"pacemaker_remote":{"installed":false,"enabled":false,"running":false,"version":null},"corosync":{"installed":true,"enabled":false,"running":false,"version":"3.1.2"},"pcsd":{"installed":true,"enabled":true,"running":true,"version":"0.10.8"},"sbd":{"installed":false,"enabled":false,"running":false,"version":null},"qdevice":{"installed":false,"enabled":false,"running":false,"version":null},"booth":{"installed":false,"enabled":false,"running":false,"version":null}},"cluster_configuration_exists":false}
+--Debug Response End--
+
+Communication debug info for calling: https://192.168.234.113:2224/remote/check_host
+--Debug Communication Info Start--
+*   Trying 192.168.234.113:2224...
+* Connected to 192.168.234.113 (192.168.234.113) port 2224 (#1)
+* found 387 certificates in /etc/ssl/certs
+* ALPN, offering h2
+* ALPN, offering http/1.1
+* SSL connection using TLS1.3 / ECDHE_RSA_AES_256_GCM_SHA384
+* 	 server certificate verification SKIPPED
+* 	 server certificate status verification SKIPPED
+* 	 common name: etcd02 (does not match '192.168.234.113')
+* 	 server certificate expiration date OK
+* 	 server certificate activation date OK
+* 	 certificate public key: RSA
+* 	 certificate version: #3
+* 	 subject: C=US,ST=MN,L=Minneapolis,O=pcsd,OU=pcsd,CN=etcd02
+* 	 start date: Sun, 25 Sep 2022 14:38:40 GMT
+* 	 expire date: Wed, 22 Sep 2032 14:38:40 GMT
+* 	 issuer: C=US,ST=MN,L=Minneapolis,O=pcsd,OU=pcsd,CN=etcd02
+* ALPN, server did not agree to a protocol
+> GET /remote/check_host HTTP/1.1
+Host: 192.168.234.113:2224
+User-Agent: PycURL/7.43.0.6 libcurl/7.74.0 GnuTLS/3.7.1 zlib/1.2.11 brotli/1.0.9 libidn2/2.3.0 libpsl/0.21.0 (+libidn2/2.3.0) libssh2/1.9.0 nghttp2/1.43.0 librtmp/2.3
+Accept: */*
+Cookie: token=a1247462-1ab7-477a-ab08-434b04308844
+
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 OK
+< Server: TornadoServer/6.1
+< Content-Type: text/html;charset=utf-8
+< Date: Sun, 25 Sep 2022 14:48:49 GMT
+< Strict-Transport-Security: max-age=604800
+< Content-Length: 598
+< Etag: "ed2afc05016b86185cd10fe98a5d3e7e12b5ba1f"
+< 
+<< {"services":{"pacemaker":{"installed":true,"enabled":false,"running":false,"version":"2.0.5"},"pacemaker_remote":{"installed":false,"enabled":false,"running":false,"version":null},"corosync":{"installed":true,"enabled":false,"running":false,"version":"3.1.2"},"pcsd":{"installed":true,"enabled":true,"running":true,"version":"0.10.8"},"sbd":{"installed":false,"enabled":false,"running":false,"version":null},"qdevice":{"installed":false,"enabled":false,"running":false,"version":null},"booth":{"installed":false,"enabled":false,"running":false,"version":null}},"cluster_configuration_exists":false}
+* Connection #1 to host 192.168.234.113 left intact
+
+--Debug Communication Info End--
+
+Destroying cluster on hosts: 'etcd01', 'etcd02'...
+Sending HTTP Request to: https://192.168.234.112:2224/remote/cluster_destroy
+
+Sending HTTP Request to: https://192.168.234.113:2224/remote/cluster_destroy
+
+Finished calling: https://192.168.234.112:2224/remote/cluster_destroy
+Response Code: 200
+--Debug Response Start--
+Successfully destroyed cluster
+--Debug Response End--
+
+Communication debug info for calling: https://192.168.234.112:2224/remote/cluster_destroy
+--Debug Communication Info Start--
+*   Trying 192.168.234.112:2224...
+* Connected to 192.168.234.112 (192.168.234.112) port 2224 (#0)
+* found 387 certificates in /etc/ssl/certs
+* ALPN, offering h2
+* ALPN, offering http/1.1
+* SSL connection using TLS1.3 / ECDHE_RSA_AES_256_GCM_SHA384
+* 	 server certificate verification SKIPPED
+* 	 server certificate status verification SKIPPED
+* 	 common name: etcd01 (does not match '192.168.234.112')
+* 	 server certificate expiration date OK
+* 	 server certificate activation date OK
+* 	 certificate public key: RSA
+* 	 certificate version: #3
+* 	 subject: C=US,ST=MN,L=Minneapolis,O=pcsd,OU=pcsd,CN=etcd01
+* 	 start date: Sun, 25 Sep 2022 14:38:39 GMT
+* 	 expire date: Wed, 22 Sep 2032 14:38:39 GMT
+* 	 issuer: C=US,ST=MN,L=Minneapolis,O=pcsd,OU=pcsd,CN=etcd01
+* ALPN, server did not agree to a protocol
+> GET /remote/cluster_destroy HTTP/1.1
+Host: 192.168.234.112:2224
+User-Agent: PycURL/7.43.0.6 libcurl/7.74.0 GnuTLS/3.7.1 zlib/1.2.11 brotli/1.0.9 libidn2/2.3.0 libpsl/0.21.0 (+libidn2/2.3.0) libssh2/1.9.0 nghttp2/1.43.0 librtmp/2.3
+Accept: */*
+Cookie: token=4edcb37d-ad07-4274-b6d9-400eb5ea7929
+
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 OK
+< Server: TornadoServer/6.1
+< Content-Type: text/html;charset=utf-8
+< Date: Sun, 25 Sep 2022 14:48:50 GMT
+< Strict-Transport-Security: max-age=604800
+< Content-Length: 30
+< Etag: "50380e86690cf4a02d4db664f5f2bcc3b9bad484"
+< 
+<< Successfully destroyed cluster
+* Connection #0 to host 192.168.234.112 left intact
+
+--Debug Communication Info End--
+
+etcd01: Successfully destroyed cluster
+Finished calling: https://192.168.234.113:2224/remote/cluster_destroy
+Response Code: 200
+--Debug Response Start--
+Successfully destroyed cluster
+--Debug Response End--
+
+Communication debug info for calling: https://192.168.234.113:2224/remote/cluster_destroy
+--Debug Communication Info Start--
+*   Trying 192.168.234.113:2224...
+* Connected to 192.168.234.113 (192.168.234.113) port 2224 (#1)
+* found 387 certificates in /etc/ssl/certs
+* ALPN, offering h2
+* ALPN, offering http/1.1
+* SSL connection using TLS1.3 / ECDHE_RSA_AES_256_GCM_SHA384
+* 	 server certificate verification SKIPPED
+* 	 server certificate status verification SKIPPED
+* 	 common name: etcd02 (does not match '192.168.234.113')
+* 	 server certificate expiration date OK
+* 	 server certificate activation date OK
+* 	 certificate public key: RSA
+* 	 certificate version: #3
+* 	 subject: C=US,ST=MN,L=Minneapolis,O=pcsd,OU=pcsd,CN=etcd02
+* 	 start date: Sun, 25 Sep 2022 14:38:40 GMT
+* 	 expire date: Wed, 22 Sep 2032 14:38:40 GMT
+* 	 issuer: C=US,ST=MN,L=Minneapolis,O=pcsd,OU=pcsd,CN=etcd02
+* ALPN, server did not agree to a protocol
+> GET /remote/cluster_destroy HTTP/1.1
+Host: 192.168.234.113:2224
+User-Agent: PycURL/7.43.0.6 libcurl/7.74.0 GnuTLS/3.7.1 zlib/1.2.11 brotli/1.0.9 libidn2/2.3.0 libpsl/0.21.0 (+libidn2/2.3.0) libssh2/1.9.0 nghttp2/1.43.0 librtmp/2.3
+Accept: */*
+Cookie: token=a1247462-1ab7-477a-ab08-434b04308844
+
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 OK
+< Server: TornadoServer/6.1
+< Content-Type: text/html;charset=utf-8
+< Date: Sun, 25 Sep 2022 14:48:50 GMT
+< Strict-Transport-Security: max-age=604800
+< Content-Length: 30
+< Etag: "50380e86690cf4a02d4db664f5f2bcc3b9bad484"
+< 
+<< Successfully destroyed cluster
+* Connection #1 to host 192.168.234.113 left intact
+
+--Debug Communication Info End--
+
+etcd02: Successfully destroyed cluster
+Sending HTTP Request to: https://192.168.234.112:2224/remote/known_hosts_change
+--Debug Input Start--
+data_json=%7B%22known_hosts_add%22%3A+%7B%22etcd01%22%3A+%7B%22token%22%3A+%224edcb37d-ad07-4274-b6d9-400eb5ea7929%22%2C+%22dest_list%22%3A+%5B%7B%22addr%22%3A+%22192.168.234.112%22%2C+%22port%22%3A+2224%7D%5D%7D%2C+%22etcd02%22%3A+%7B%22token%22%3A+%22a1247462-1ab7-477a-ab08-434b04308844%22%2C+%22dest_list%22%3A+%5B%7B%22addr%22%3A+%22192.168.234.113%22%2C+%22port%22%3A+2224%7D%5D%7D%7D%2C+%22known_hosts_remove%22%3A+%7B%7D%7D
+--Debug Input End--
+
+Sending HTTP Request to: https://192.168.234.113:2224/remote/known_hosts_change
+--Debug Input Start--
+data_json=%7B%22known_hosts_add%22%3A+%7B%22etcd01%22%3A+%7B%22token%22%3A+%224edcb37d-ad07-4274-b6d9-400eb5ea7929%22%2C+%22dest_list%22%3A+%5B%7B%22addr%22%3A+%22192.168.234.112%22%2C+%22port%22%3A+2224%7D%5D%7D%2C+%22etcd02%22%3A+%7B%22token%22%3A+%22a1247462-1ab7-477a-ab08-434b04308844%22%2C+%22dest_list%22%3A+%5B%7B%22addr%22%3A+%22192.168.234.113%22%2C+%22port%22%3A+2224%7D%5D%7D%7D%2C+%22known_hosts_remove%22%3A+%7B%7D%7D
+--Debug Input End--
+
+Finished calling: https://192.168.234.112:2224/remote/known_hosts_change
+Response Code: 200
+--Debug Response Start--
+
+--Debug Response End--
+
+Communication debug info for calling: https://192.168.234.112:2224/remote/known_hosts_change
+--Debug Communication Info Start--
+*   Trying 192.168.234.112:2224...
+* Connected to 192.168.234.112 (192.168.234.112) port 2224 (#0)
+* found 387 certificates in /etc/ssl/certs
+* ALPN, offering h2
+* ALPN, offering http/1.1
+* SSL connection using TLS1.3 / ECDHE_RSA_AES_256_GCM_SHA384
+* 	 server certificate verification SKIPPED
+* 	 server certificate status verification SKIPPED
+* 	 common name: etcd01 (does not match '192.168.234.112')
+* 	 server certificate expiration date OK
+* 	 server certificate activation date OK
+* 	 certificate public key: RSA
+* 	 certificate version: #3
+* 	 subject: C=US,ST=MN,L=Minneapolis,O=pcsd,OU=pcsd,CN=etcd01
+* 	 start date: Sun, 25 Sep 2022 14:38:39 GMT
+* 	 expire date: Wed, 22 Sep 2032 14:38:39 GMT
+* 	 issuer: C=US,ST=MN,L=Minneapolis,O=pcsd,OU=pcsd,CN=etcd01
+* ALPN, server did not agree to a protocol
+> POST /remote/known_hosts_change HTTP/1.1
+Host: 192.168.234.112:2224
+User-Agent: PycURL/7.43.0.6 libcurl/7.74.0 GnuTLS/3.7.1 zlib/1.2.11 brotli/1.0.9 libidn2/2.3.0 libpsl/0.21.0 (+libidn2/2.3.0) libssh2/1.9.0 nghttp2/1.43.0 librtmp/2.3
+Accept: */*
+Cookie: token=4edcb37d-ad07-4274-b6d9-400eb5ea7929
+Content-Length: 431
+Content-Type: application/x-www-form-urlencoded
+
+>> data_json=%7B%22known_hosts_add%22%3A+%7B%22etcd01%22%3A+%7B%22token%22%3A+%224edcb37d-ad07-4274-b6d9-400eb5ea7929%22%2C+%22dest_list%22%3A+%5B%7B%22addr%22%3A+%22192.168.234.112%22%2C+%22port%22%3A+2224%7D%5D%7D%2C+%22etcd02%22%3A+%7B%22token%22%3A+%22a1247462-1ab7-477a-ab08-434b04308844%22%2C+%22dest_list%22%3A+%5B%7B%22addr%22%3A+%22192.168.234.113%22%2C+%22port%22%3A+2224%7D%5D%7D%7D%2C+%22known_hosts_remove%22%3A+%7B%7D%7D
+* upload completely sent off: 431 out of 431 bytes
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 OK
+< Server: TornadoServer/6.1
+< Content-Type: text/html;charset=utf-8
+< Date: Sun, 25 Sep 2022 14:48:51 GMT
+< Strict-Transport-Security: max-age=604800
+< Content-Length: 0
+< 
+* Connection #0 to host 192.168.234.112 left intact
+
+--Debug Communication Info End--
+
+Finished calling: https://192.168.234.113:2224/remote/known_hosts_change
+Response Code: 200
+--Debug Response Start--
+
+--Debug Response End--
+
+Communication debug info for calling: https://192.168.234.113:2224/remote/known_hosts_change
+--Debug Communication Info Start--
+*   Trying 192.168.234.113:2224...
+* Connected to 192.168.234.113 (192.168.234.113) port 2224 (#1)
+* found 387 certificates in /etc/ssl/certs
+* ALPN, offering h2
+* ALPN, offering http/1.1
+* SSL connection using TLS1.3 / ECDHE_RSA_AES_256_GCM_SHA384
+* 	 server certificate verification SKIPPED
+* 	 server certificate status verification SKIPPED
+* 	 common name: etcd02 (does not match '192.168.234.113')
+* 	 server certificate expiration date OK
+* 	 server certificate activation date OK
+* 	 certificate public key: RSA
+* 	 certificate version: #3
+* 	 subject: C=US,ST=MN,L=Minneapolis,O=pcsd,OU=pcsd,CN=etcd02
+* 	 start date: Sun, 25 Sep 2022 14:38:40 GMT
+* 	 expire date: Wed, 22 Sep 2032 14:38:40 GMT
+* 	 issuer: C=US,ST=MN,L=Minneapolis,O=pcsd,OU=pcsd,CN=etcd02
+* ALPN, server did not agree to a protocol
+> POST /remote/known_hosts_change HTTP/1.1
+Host: 192.168.234.113:2224
+User-Agent: PycURL/7.43.0.6 libcurl/7.74.0 GnuTLS/3.7.1 zlib/1.2.11 brotli/1.0.9 libidn2/2.3.0 libpsl/0.21.0 (+libidn2/2.3.0) libssh2/1.9.0 nghttp2/1.43.0 librtmp/2.3
+Accept: */*
+Cookie: token=a1247462-1ab7-477a-ab08-434b04308844
+Content-Length: 431
+Content-Type: application/x-www-form-urlencoded
+
+>> data_json=%7B%22known_hosts_add%22%3A+%7B%22etcd01%22%3A+%7B%22token%22%3A+%224edcb37d-ad07-4274-b6d9-400eb5ea7929%22%2C+%22dest_list%22%3A+%5B%7B%22addr%22%3A+%22192.168.234.112%22%2C+%22port%22%3A+2224%7D%5D%7D%2C+%22etcd02%22%3A+%7B%22token%22%3A+%22a1247462-1ab7-477a-ab08-434b04308844%22%2C+%22dest_list%22%3A+%5B%7B%22addr%22%3A+%22192.168.234.113%22%2C+%22port%22%3A+2224%7D%5D%7D%7D%2C+%22known_hosts_remove%22%3A+%7B%7D%7D
+* upload completely sent off: 431 out of 431 bytes
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 OK
+< Server: TornadoServer/6.1
+< Content-Type: text/html;charset=utf-8
+< Date: Sun, 25 Sep 2022 14:48:51 GMT
+< Strict-Transport-Security: max-age=604800
+< Content-Length: 0
+< 
+* Connection #1 to host 192.168.234.113 left intact
+
+--Debug Communication Info End--
+
+Requesting remove 'pcsd settings' from 'etcd01', 'etcd02'
+Sending HTTP Request to: https://192.168.234.112:2224/remote/remove_file
+--Debug Input Start--
+data_json=%7B%22pcsd+settings%22%3A+%7B%22type%22%3A+%22pcsd_settings%22%7D%7D
+--Debug Input End--
+
+Sending HTTP Request to: https://192.168.234.113:2224/remote/remove_file
+--Debug Input Start--
+data_json=%7B%22pcsd+settings%22%3A+%7B%22type%22%3A+%22pcsd_settings%22%7D%7D
+--Debug Input End--
+
+Finished calling: https://192.168.234.112:2224/remote/remove_file
+Response Code: 200
+--Debug Response Start--
+{"files":{"pcsd settings":{"code":"not_found","message":""}}}
+--Debug Response End--
+
+Communication debug info for calling: https://192.168.234.112:2224/remote/remove_file
+--Debug Communication Info Start--
+*   Trying 192.168.234.112:2224...
+* Connected to 192.168.234.112 (192.168.234.112) port 2224 (#0)
+* found 387 certificates in /etc/ssl/certs
+* ALPN, offering h2
+* ALPN, offering http/1.1
+* SSL connection using TLS1.3 / ECDHE_RSA_AES_256_GCM_SHA384
+* 	 server certificate verification SKIPPED
+* 	 server certificate status verification SKIPPED
+* 	 common name: etcd01 (does not match '192.168.234.112')
+* 	 server certificate expiration date OK
+* 	 server certificate activation date OK
+* 	 certificate public key: RSA
+* 	 certificate version: #3
+* 	 subject: C=US,ST=MN,L=Minneapolis,O=pcsd,OU=pcsd,CN=etcd01
+* 	 start date: Sun, 25 Sep 2022 14:38:39 GMT
+* 	 expire date: Wed, 22 Sep 2032 14:38:39 GMT
+* 	 issuer: C=US,ST=MN,L=Minneapolis,O=pcsd,OU=pcsd,CN=etcd01
+* ALPN, server did not agree to a protocol
+> POST /remote/remove_file HTTP/1.1
+Host: 192.168.234.112:2224
+User-Agent: PycURL/7.43.0.6 libcurl/7.74.0 GnuTLS/3.7.1 zlib/1.2.11 brotli/1.0.9 libidn2/2.3.0 libpsl/0.21.0 (+libidn2/2.3.0) libssh2/1.9.0 nghttp2/1.43.0 librtmp/2.3
+Accept: */*
+Cookie: token=4edcb37d-ad07-4274-b6d9-400eb5ea7929
+Content-Length: 78
+Content-Type: application/x-www-form-urlencoded
+
+>> data_json=%7B%22pcsd+settings%22%3A+%7B%22type%22%3A+%22pcsd_settings%22%7D%7D
+* upload completely sent off: 78 out of 78 bytes
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 OK
+< Server: TornadoServer/6.1
+< Content-Type: text/html;charset=utf-8
+< Date: Sun, 25 Sep 2022 14:48:51 GMT
+< Strict-Transport-Security: max-age=604800
+< Content-Length: 61
+< 
+<< {"files":{"pcsd settings":{"code":"not_found","message":""}}}
+* Connection #0 to host 192.168.234.112 left intact
+
+--Debug Communication Info End--
+
+etcd01: successful removal of the file 'pcsd settings'
+Finished calling: https://192.168.234.113:2224/remote/remove_file
+Response Code: 200
+--Debug Response Start--
+{"files":{"pcsd settings":{"code":"not_found","message":""}}}
+--Debug Response End--
+
+Communication debug info for calling: https://192.168.234.113:2224/remote/remove_file
+--Debug Communication Info Start--
+*   Trying 192.168.234.113:2224...
+* Connected to 192.168.234.113 (192.168.234.113) port 2224 (#1)
+* found 387 certificates in /etc/ssl/certs
+* ALPN, offering h2
+* ALPN, offering http/1.1
+* SSL connection using TLS1.3 / ECDHE_RSA_AES_256_GCM_SHA384
+* 	 server certificate verification SKIPPED
+* 	 server certificate status verification SKIPPED
+* 	 common name: etcd02 (does not match '192.168.234.113')
+* 	 server certificate expiration date OK
+* 	 server certificate activation date OK
+* 	 certificate public key: RSA
+* 	 certificate version: #3
+* 	 subject: C=US,ST=MN,L=Minneapolis,O=pcsd,OU=pcsd,CN=etcd02
+* 	 start date: Sun, 25 Sep 2022 14:38:40 GMT
+* 	 expire date: Wed, 22 Sep 2032 14:38:40 GMT
+* 	 issuer: C=US,ST=MN,L=Minneapolis,O=pcsd,OU=pcsd,CN=etcd02
+* ALPN, server did not agree to a protocol
+> POST /remote/remove_file HTTP/1.1
+Host: 192.168.234.113:2224
+User-Agent: PycURL/7.43.0.6 libcurl/7.74.0 GnuTLS/3.7.1 zlib/1.2.11 brotli/1.0.9 libidn2/2.3.0 libpsl/0.21.0 (+libidn2/2.3.0) libssh2/1.9.0 nghttp2/1.43.0 librtmp/2.3
+Accept: */*
+Cookie: token=a1247462-1ab7-477a-ab08-434b04308844
+Content-Length: 78
+Content-Type: application/x-www-form-urlencoded
+
+>> data_json=%7B%22pcsd+settings%22%3A+%7B%22type%22%3A+%22pcsd_settings%22%7D%7D
+* upload completely sent off: 78 out of 78 bytes
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 OK
+< Server: TornadoServer/6.1
+< Content-Type: text/html;charset=utf-8
+< Date: Sun, 25 Sep 2022 14:48:51 GMT
+< Strict-Transport-Security: max-age=604800
+< Content-Length: 61
+< 
+<< {"files":{"pcsd settings":{"code":"not_found","message":""}}}
+* Connection #1 to host 192.168.234.113 left intact
+
+--Debug Communication Info End--
+
+etcd02: successful removal of the file 'pcsd settings'
+Sending 'corosync authkey', 'pacemaker authkey' to 'etcd01', 'etcd02'
+Sending HTTP Request to: https://192.168.234.112:2224/remote/put_file
+--Debug Input Start--
+data_json=%7B%22corosync+authkey%22%3A+%7B%22data%22%3A+%22GZx883T74dM5PBQDN2c6QZFS2Hct0DZKlYFj5XrCthIEWDSoUy8XrfTcIL%2FsuMFPvp%2Bufl%2BjUCosqItGDywJXn9MQ8F%2FOnnt0%2FHV01FDmwaV3CD48C4hcRgwSQLKsgj3iozLYTAA1EE9zJD6T%2FHivXmMuqiGBNl5mmxMTH9qXpPFX8BKUQxQFqRwtiyHYWK5JJbd96H0BonaB1ePUBTAIKY9yt905Im5cxVFpIvyLul1RM5DfHZDHmqQ0Xx6Bos7dizGOXqATBgKyOWZ9GI5Z6Yn3oJReAZpuqwmY%2BJxtPiMfZsjwYuv1pOBtTktumuOQjfWkJWrtre1xYPewAChkg%3D%3D%22%2C+%22type%22%3A+%22corosync_authkey%22%2C+%22rewrite_existing%22%3A+true%7D%2C+%22pacemaker_remote+authkey%22%3A+%7B%22data%22%3A+%2230rSYBWd3DwfM3JjNxncW8b6hHYF%2FS14%2BVB%2Bfy9%2FxagVcofyVD0g276T9vAcJMpd9%2FtCEFnqksNPeCbMfgH2g5DwdiwL4kgMiu2N4gXv79YnxCTb8S%2BOskTwKh8sgggiR5MqA1Qn29LyBNl5mMyjudrBHF7S%2BEa6QOp4fxUMhNuCHMoQzhGGq6yicVkxLraB3ZaqloppggitAO6MxKci1uC6UuCQV9MDk%2BhZVYY%2F43Mz6k3bPM4E6QFDY2DsBN6rIfytHt2B6H7WtnTucUjo9uH7paGDdZFDsBnSWDYgjaFp%2Bs5vYnBXuf39FH4uBsgvFvNDSCZ1m1k96h8L5Cvi8g%3D%3D%22%2C+%22type%22%3A+%22pcmk_remote_authkey%22%2C+%22rewrite_existing%22%3A+true%7D%7D
+--Debug Input End--
+
+Sending HTTP Request to: https://192.168.234.113:2224/remote/put_file
+--Debug Input Start--
+data_json=%7B%22corosync+authkey%22%3A+%7B%22data%22%3A+%22GZx883T74dM5PBQDN2c6QZFS2Hct0DZKlYFj5XrCthIEWDSoUy8XrfTcIL%2FsuMFPvp%2Bufl%2BjUCosqItGDywJXn9MQ8F%2FOnnt0%2FHV01FDmwaV3CD48C4hcRgwSQLKsgj3iozLYTAA1EE9zJD6T%2FHivXmMuqiGBNl5mmxMTH9qXpPFX8BKUQxQFqRwtiyHYWK5JJbd96H0BonaB1ePUBTAIKY9yt905Im5cxVFpIvyLul1RM5DfHZDHmqQ0Xx6Bos7dizGOXqATBgKyOWZ9GI5Z6Yn3oJReAZpuqwmY%2BJxtPiMfZsjwYuv1pOBtTktumuOQjfWkJWrtre1xYPewAChkg%3D%3D%22%2C+%22type%22%3A+%22corosync_authkey%22%2C+%22rewrite_existing%22%3A+true%7D%2C+%22pacemaker_remote+authkey%22%3A+%7B%22data%22%3A+%2230rSYBWd3DwfM3JjNxncW8b6hHYF%2FS14%2BVB%2Bfy9%2FxagVcofyVD0g276T9vAcJMpd9%2FtCEFnqksNPeCbMfgH2g5DwdiwL4kgMiu2N4gXv79YnxCTb8S%2BOskTwKh8sgggiR5MqA1Qn29LyBNl5mMyjudrBHF7S%2BEa6QOp4fxUMhNuCHMoQzhGGq6yicVkxLraB3ZaqloppggitAO6MxKci1uC6UuCQV9MDk%2BhZVYY%2F43Mz6k3bPM4E6QFDY2DsBN6rIfytHt2B6H7WtnTucUjo9uH7paGDdZFDsBnSWDYgjaFp%2Bs5vYnBXuf39FH4uBsgvFvNDSCZ1m1k96h8L5Cvi8g%3D%3D%22%2C+%22type%22%3A+%22pcmk_remote_authkey%22%2C+%22rewrite_existing%22%3A+true%7D%7D
+--Debug Input End--
+
+Finished calling: https://192.168.234.112:2224/remote/put_file
+Response Code: 200
+--Debug Response Start--
+{"files":{"corosync authkey":{"code":"written","message":""},"pacemaker_remote authkey":{"code":"written","message":""}}}
+--Debug Response End--
+
+Communication debug info for calling: https://192.168.234.112:2224/remote/put_file
+--Debug Communication Info Start--
+*   Trying 192.168.234.112:2224...
+* Connected to 192.168.234.112 (192.168.234.112) port 2224 (#0)
+* found 387 certificates in /etc/ssl/certs
+* ALPN, offering h2
+* ALPN, offering http/1.1
+* SSL connection using TLS1.3 / ECDHE_RSA_AES_256_GCM_SHA384
+* 	 server certificate verification SKIPPED
+* 	 server certificate status verification SKIPPED
+* 	 common name: etcd01 (does not match '192.168.234.112')
+* 	 server certificate expiration date OK
+* 	 server certificate activation date OK
+* 	 certificate public key: RSA
+* 	 certificate version: #3
+* 	 subject: C=US,ST=MN,L=Minneapolis,O=pcsd,OU=pcsd,CN=etcd01
+* 	 start date: Sun, 25 Sep 2022 14:38:39 GMT
+* 	 expire date: Wed, 22 Sep 2032 14:38:39 GMT
+* 	 issuer: C=US,ST=MN,L=Minneapolis,O=pcsd,OU=pcsd,CN=etcd01
+* ALPN, server did not agree to a protocol
+> POST /remote/put_file HTTP/1.1
+Host: 192.168.234.112:2224
+User-Agent: PycURL/7.43.0.6 libcurl/7.74.0 GnuTLS/3.7.1 zlib/1.2.11 brotli/1.0.9 libidn2/2.3.0 libpsl/0.21.0 (+libidn2/2.3.0) libssh2/1.9.0 nghttp2/1.43.0 librtmp/2.3
+Accept: */*
+Cookie: token=4edcb37d-ad07-4274-b6d9-400eb5ea7929
+Content-Length: 1013
+Content-Type: application/x-www-form-urlencoded
+
+>> data_json=%7B%22corosync+authkey%22%3A+%7B%22data%22%3A+%22GZx883T74dM5PBQDN2c6QZFS2Hct0DZKlYFj5XrCthIEWDSoUy8XrfTcIL%2FsuMFPvp%2Bufl%2BjUCosqItGDywJXn9MQ8F%2FOnnt0%2FHV01FDmwaV3CD48C4hcRgwSQLKsgj3iozLYTAA1EE9zJD6T%2FHivXmMuqiGBNl5mmxMTH9qXpPFX8BKUQxQFqRwtiyHYWK5JJbd96H0BonaB1ePUBTAIKY9yt905Im5cxVFpIvyLul1RM5DfHZDHmqQ0Xx6Bos7dizGOXqATBgKyOWZ9GI5Z6Yn3oJReAZpuqwmY%2BJxtPiMfZsjwYuv1pOBtTktumuOQjfWkJWrtre1xYPewAChkg%3D%3D%22%2C+%22type%22%3A+%22corosync_authkey%22%2C+%22rewrite_existing%22%3A+true%7D%2C+%22pacemaker_remote+authkey%22%3A+%7B%22data%22%3A+%2230rSYBWd3DwfM3JjNxncW8b6hHYF%2FS14%2BVB%2Bfy9%2FxagVcofyVD0g276T9vAcJMpd9%2FtCEFnqksNPeCbMfgH2g5DwdiwL4kgMiu2N4gXv79YnxCTb8S%2BOskTwKh8sgggiR5MqA1Qn29LyBNl5mMyjudrBHF7S%2BEa6QOp4fxUMhNuCHMoQzhGGq6yicVkxLraB3ZaqloppggitAO6MxKci1uC6UuCQV9MDk%2BhZVYY%2F43Mz6k3bPM4E6QFDY2DsBN6rIfytHt2B6H7WtnTucUjo9uH7paGDdZFDsBnSWDYgjaFp%2Bs5vYnBXuf39FH4uBsgvFvNDSCZ1m1k96h8L5Cvi8g%3D%3D%22%2C+%22type%22%3A+%22pcmk_remote_authkey%22%2C+%22rewrite_existing%22%3A+true%7D%7D
+* upload completely sent off: 1013 out of 1013 bytes
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 OK
+< Server: TornadoServer/6.1
+< Content-Type: text/html;charset=utf-8
+< Date: Sun, 25 Sep 2022 14:48:51 GMT
+< Strict-Transport-Security: max-age=604800
+< Content-Length: 121
+< 
+<< {"files":{"corosync authkey":{"code":"written","message":""},"pacemaker_remote authkey":{"code":"written","message":""}}}
+* Connection #0 to host 192.168.234.112 left intact
+
+--Debug Communication Info End--
+
+etcd01: successful distribution of the file 'corosync authkey'
+etcd01: successful distribution of the file 'pacemaker authkey'
+Finished calling: https://192.168.234.113:2224/remote/put_file
+Response Code: 200
+--Debug Response Start--
+{"files":{"corosync authkey":{"code":"written","message":""},"pacemaker_remote authkey":{"code":"written","message":""}}}
+--Debug Response End--
+
+Communication debug info for calling: https://192.168.234.113:2224/remote/put_file
+--Debug Communication Info Start--
+*   Trying 192.168.234.113:2224...
+* Connected to 192.168.234.113 (192.168.234.113) port 2224 (#1)
+* found 387 certificates in /etc/ssl/certs
+* ALPN, offering h2
+* ALPN, offering http/1.1
+* SSL connection using TLS1.3 / ECDHE_RSA_AES_256_GCM_SHA384
+* 	 server certificate verification SKIPPED
+* 	 server certificate status verification SKIPPED
+* 	 common name: etcd02 (does not match '192.168.234.113')
+* 	 server certificate expiration date OK
+* 	 server certificate activation date OK
+* 	 certificate public key: RSA
+* 	 certificate version: #3
+* 	 subject: C=US,ST=MN,L=Minneapolis,O=pcsd,OU=pcsd,CN=etcd02
+* 	 start date: Sun, 25 Sep 2022 14:38:40 GMT
+* 	 expire date: Wed, 22 Sep 2032 14:38:40 GMT
+* 	 issuer: C=US,ST=MN,L=Minneapolis,O=pcsd,OU=pcsd,CN=etcd02
+* ALPN, server did not agree to a protocol
+> POST /remote/put_file HTTP/1.1
+Host: 192.168.234.113:2224
+User-Agent: PycURL/7.43.0.6 libcurl/7.74.0 GnuTLS/3.7.1 zlib/1.2.11 brotli/1.0.9 libidn2/2.3.0 libpsl/0.21.0 (+libidn2/2.3.0) libssh2/1.9.0 nghttp2/1.43.0 librtmp/2.3
+Accept: */*
+Cookie: token=a1247462-1ab7-477a-ab08-434b04308844
+Content-Length: 1013
+Content-Type: application/x-www-form-urlencoded
+
+>> data_json=%7B%22corosync+authkey%22%3A+%7B%22data%22%3A+%22GZx883T74dM5PBQDN2c6QZFS2Hct0DZKlYFj5XrCthIEWDSoUy8XrfTcIL%2FsuMFPvp%2Bufl%2BjUCosqItGDywJXn9MQ8F%2FOnnt0%2FHV01FDmwaV3CD48C4hcRgwSQLKsgj3iozLYTAA1EE9zJD6T%2FHivXmMuqiGBNl5mmxMTH9qXpPFX8BKUQxQFqRwtiyHYWK5JJbd96H0BonaB1ePUBTAIKY9yt905Im5cxVFpIvyLul1RM5DfHZDHmqQ0Xx6Bos7dizGOXqATBgKyOWZ9GI5Z6Yn3oJReAZpuqwmY%2BJxtPiMfZsjwYuv1pOBtTktumuOQjfWkJWrtre1xYPewAChkg%3D%3D%22%2C+%22type%22%3A+%22corosync_authkey%22%2C+%22rewrite_existing%22%3A+true%7D%2C+%22pacemaker_remote+authkey%22%3A+%7B%22data%22%3A+%2230rSYBWd3DwfM3JjNxncW8b6hHYF%2FS14%2BVB%2Bfy9%2FxagVcofyVD0g276T9vAcJMpd9%2FtCEFnqksNPeCbMfgH2g5DwdiwL4kgMiu2N4gXv79YnxCTb8S%2BOskTwKh8sgggiR5MqA1Qn29LyBNl5mMyjudrBHF7S%2BEa6QOp4fxUMhNuCHMoQzhGGq6yicVkxLraB3ZaqloppggitAO6MxKci1uC6UuCQV9MDk%2BhZVYY%2F43Mz6k3bPM4E6QFDY2DsBN6rIfytHt2B6H7WtnTucUjo9uH7paGDdZFDsBnSWDYgjaFp%2Bs5vYnBXuf39FH4uBsgvFvNDSCZ1m1k96h8L5Cvi8g%3D%3D%22%2C+%22type%22%3A+%22pcmk_remote_authkey%22%2C+%22rewrite_existing%22%3A+true%7D%7D
+* upload completely sent off: 1013 out of 1013 bytes
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 OK
+< Server: TornadoServer/6.1
+< Content-Type: text/html;charset=utf-8
+< Date: Sun, 25 Sep 2022 14:48:51 GMT
+< Strict-Transport-Security: max-age=604800
+< Content-Length: 121
+< 
+<< {"files":{"corosync authkey":{"code":"written","message":""},"pacemaker_remote authkey":{"code":"written","message":""}}}
+* Connection #1 to host 192.168.234.113 left intact
+
+--Debug Communication Info End--
+
+etcd02: successful distribution of the file 'corosync authkey'
+etcd02: successful distribution of the file 'pacemaker authkey'
+Sending 'corosync.conf' to 'etcd01', 'etcd02'
+Sending HTTP Request to: https://192.168.234.112:2224/remote/put_file
+--Debug Input Start--
+data_json=%7B%22corosync.conf%22%3A+%7B%22type%22%3A+%22corosync_conf%22%2C+%22data%22%3A+%22totem+%7B%5Cn++++version%3A+2%5Cn++++cluster_name%3A+haproxycluster%5Cn++++transport%3A+knet%5Cn++++crypto_cipher%3A+aes256%5Cn++++crypto_hash%3A+sha256%5Cn%7D%5Cn%5Cnnodelist+%7B%5Cn++++node+%7B%5Cn++++++++ring0_addr%3A+192.168.234.112%5Cn++++++++name%3A+etcd01%5Cn++++++++nodeid%3A+1%5Cn++++%7D%5Cn%5Cn++++node+%7B%5Cn++++++++ring0_addr%3A+192.168.234.113%5Cn++++++++name%3A+etcd02%5Cn++++++++nodeid%3A+2%5Cn++++%7D%5Cn%7D%5Cn%5Cnquorum+%7B%5Cn++++provider%3A+corosync_votequorum%5Cn++++two_node%3A+1%5Cn%7D%5Cn%5Cnlogging+%7B%5Cn++++to_logfile%3A+yes%5Cn++++logfile%3A+%2Fvar%2Flog%2Fcorosync%2Fcorosync.log%5Cn++++to_syslog%3A+yes%5Cn++++timestamp%3A+on%5Cn%7D%5Cn%22%7D%7D
+--Debug Input End--
+
+Sending HTTP Request to: https://192.168.234.113:2224/remote/put_file
+--Debug Input Start--
+data_json=%7B%22corosync.conf%22%3A+%7B%22type%22%3A+%22corosync_conf%22%2C+%22data%22%3A+%22totem+%7B%5Cn++++version%3A+2%5Cn++++cluster_name%3A+haproxycluster%5Cn++++transport%3A+knet%5Cn++++crypto_cipher%3A+aes256%5Cn++++crypto_hash%3A+sha256%5Cn%7D%5Cn%5Cnnodelist+%7B%5Cn++++node+%7B%5Cn++++++++ring0_addr%3A+192.168.234.112%5Cn++++++++name%3A+etcd01%5Cn++++++++nodeid%3A+1%5Cn++++%7D%5Cn%5Cn++++node+%7B%5Cn++++++++ring0_addr%3A+192.168.234.113%5Cn++++++++name%3A+etcd02%5Cn++++++++nodeid%3A+2%5Cn++++%7D%5Cn%7D%5Cn%5Cnquorum+%7B%5Cn++++provider%3A+corosync_votequorum%5Cn++++two_node%3A+1%5Cn%7D%5Cn%5Cnlogging+%7B%5Cn++++to_logfile%3A+yes%5Cn++++logfile%3A+%2Fvar%2Flog%2Fcorosync%2Fcorosync.log%5Cn++++to_syslog%3A+yes%5Cn++++timestamp%3A+on%5Cn%7D%5Cn%22%7D%7D
+--Debug Input End--
+
+Finished calling: https://192.168.234.112:2224/remote/put_file
+Response Code: 200
+--Debug Response Start--
+{"files":{"corosync.conf":{"code":"written","message":""}}}
+--Debug Response End--
+
+Communication debug info for calling: https://192.168.234.112:2224/remote/put_file
+--Debug Communication Info Start--
+*   Trying 192.168.234.112:2224...
+* Connected to 192.168.234.112 (192.168.234.112) port 2224 (#0)
+* found 387 certificates in /etc/ssl/certs
+* ALPN, offering h2
+* ALPN, offering http/1.1
+* SSL connection using TLS1.3 / ECDHE_RSA_AES_256_GCM_SHA384
+* 	 server certificate verification SKIPPED
+* 	 server certificate status verification SKIPPED
+* 	 common name: etcd01 (does not match '192.168.234.112')
+* 	 server certificate expiration date OK
+* 	 server certificate activation date OK
+* 	 certificate public key: RSA
+* 	 certificate version: #3
+* 	 subject: C=US,ST=MN,L=Minneapolis,O=pcsd,OU=pcsd,CN=etcd01
+* 	 start date: Sun, 25 Sep 2022 14:38:39 GMT
+* 	 expire date: Wed, 22 Sep 2032 14:38:39 GMT
+* 	 issuer: C=US,ST=MN,L=Minneapolis,O=pcsd,OU=pcsd,CN=etcd01
+* ALPN, server did not agree to a protocol
+> POST /remote/put_file HTTP/1.1
+Host: 192.168.234.112:2224
+User-Agent: PycURL/7.43.0.6 libcurl/7.74.0 GnuTLS/3.7.1 zlib/1.2.11 brotli/1.0.9 libidn2/2.3.0 libpsl/0.21.0 (+libidn2/2.3.0) libssh2/1.9.0 nghttp2/1.43.0 librtmp/2.3
+Accept: */*
+Cookie: token=4edcb37d-ad07-4274-b6d9-400eb5ea7929
+Content-Length: 770
+Content-Type: application/x-www-form-urlencoded
+
+>> data_json=%7B%22corosync.conf%22%3A+%7B%22type%22%3A+%22corosync_conf%22%2C+%22data%22%3A+%22totem+%7B%5Cn++++version%3A+2%5Cn++++cluster_name%3A+haproxycluster%5Cn++++transport%3A+knet%5Cn++++crypto_cipher%3A+aes256%5Cn++++crypto_hash%3A+sha256%5Cn%7D%5Cn%5Cnnodelist+%7B%5Cn++++node+%7B%5Cn++++++++ring0_addr%3A+192.168.234.112%5Cn++++++++name%3A+etcd01%5Cn++++++++nodeid%3A+1%5Cn++++%7D%5Cn%5Cn++++node+%7B%5Cn++++++++ring0_addr%3A+192.168.234.113%5Cn++++++++name%3A+etcd02%5Cn++++++++nodeid%3A+2%5Cn++++%7D%5Cn%7D%5Cn%5Cnquorum+%7B%5Cn++++provider%3A+corosync_votequorum%5Cn++++two_node%3A+1%5Cn%7D%5Cn%5Cnlogging+%7B%5Cn++++to_logfile%3A+yes%5Cn++++logfile%3A+%2Fvar%2Flog%2Fcorosync%2Fcorosync.log%5Cn++++to_syslog%3A+yes%5Cn++++timestamp%3A+on%5Cn%7D%5Cn%22%7D%7D
+* upload completely sent off: 770 out of 770 bytes
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 OK
+< Server: TornadoServer/6.1
+< Content-Type: text/html;charset=utf-8
+< Date: Sun, 25 Sep 2022 14:48:51 GMT
+< Strict-Transport-Security: max-age=604800
+< Content-Length: 59
+< 
+<< {"files":{"corosync.conf":{"code":"written","message":""}}}
+* Connection #0 to host 192.168.234.112 left intact
+
+--Debug Communication Info End--
+
+etcd01: successful distribution of the file 'corosync.conf'
+Finished calling: https://192.168.234.113:2224/remote/put_file
+Response Code: 200
+--Debug Response Start--
+{"files":{"corosync.conf":{"code":"written","message":""}}}
+--Debug Response End--
+
+Communication debug info for calling: https://192.168.234.113:2224/remote/put_file
+--Debug Communication Info Start--
+*   Trying 192.168.234.113:2224...
+* Connected to 192.168.234.113 (192.168.234.113) port 2224 (#1)
+* found 387 certificates in /etc/ssl/certs
+* ALPN, offering h2
+* ALPN, offering http/1.1
+* SSL connection using TLS1.3 / ECDHE_RSA_AES_256_GCM_SHA384
+* 	 server certificate verification SKIPPED
+* 	 server certificate status verification SKIPPED
+* 	 common name: etcd02 (does not match '192.168.234.113')
+* 	 server certificate expiration date OK
+* 	 server certificate activation date OK
+* 	 certificate public key: RSA
+* 	 certificate version: #3
+* 	 subject: C=US,ST=MN,L=Minneapolis,O=pcsd,OU=pcsd,CN=etcd02
+* 	 start date: Sun, 25 Sep 2022 14:38:40 GMT
+* 	 expire date: Wed, 22 Sep 2032 14:38:40 GMT
+* 	 issuer: C=US,ST=MN,L=Minneapolis,O=pcsd,OU=pcsd,CN=etcd02
+* ALPN, server did not agree to a protocol
+> POST /remote/put_file HTTP/1.1
+Host: 192.168.234.113:2224
+User-Agent: PycURL/7.43.0.6 libcurl/7.74.0 GnuTLS/3.7.1 zlib/1.2.11 brotli/1.0.9 libidn2/2.3.0 libpsl/0.21.0 (+libidn2/2.3.0) libssh2/1.9.0 nghttp2/1.43.0 librtmp/2.3
+Accept: */*
+Cookie: token=a1247462-1ab7-477a-ab08-434b04308844
+Content-Length: 770
+Content-Type: application/x-www-form-urlencoded
+
+>> data_json=%7B%22corosync.conf%22%3A+%7B%22type%22%3A+%22corosync_conf%22%2C+%22data%22%3A+%22totem+%7B%5Cn++++version%3A+2%5Cn++++cluster_name%3A+haproxycluster%5Cn++++transport%3A+knet%5Cn++++crypto_cipher%3A+aes256%5Cn++++crypto_hash%3A+sha256%5Cn%7D%5Cn%5Cnnodelist+%7B%5Cn++++node+%7B%5Cn++++++++ring0_addr%3A+192.168.234.112%5Cn++++++++name%3A+etcd01%5Cn++++++++nodeid%3A+1%5Cn++++%7D%5Cn%5Cn++++node+%7B%5Cn++++++++ring0_addr%3A+192.168.234.113%5Cn++++++++name%3A+etcd02%5Cn++++++++nodeid%3A+2%5Cn++++%7D%5Cn%7D%5Cn%5Cnquorum+%7B%5Cn++++provider%3A+corosync_votequorum%5Cn++++two_node%3A+1%5Cn%7D%5Cn%5Cnlogging+%7B%5Cn++++to_logfile%3A+yes%5Cn++++logfile%3A+%2Fvar%2Flog%2Fcorosync%2Fcorosync.log%5Cn++++to_syslog%3A+yes%5Cn++++timestamp%3A+on%5Cn%7D%5Cn%22%7D%7D
+* upload completely sent off: 770 out of 770 bytes
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 OK
+< Server: TornadoServer/6.1
+< Content-Type: text/html;charset=utf-8
+< Date: Sun, 25 Sep 2022 14:48:51 GMT
+< Strict-Transport-Security: max-age=604800
+< Content-Length: 59
+< 
+<< {"files":{"corosync.conf":{"code":"written","message":""}}}
+* Connection #1 to host 192.168.234.113 left intact
+
+--Debug Communication Info End--
+
+etcd02: successful distribution of the file 'corosync.conf'
+Cluster has been successfully set up.
+etcd01: Starting Cluster...
+etcd02: Starting Cluster...
+Cluster Name: haproxycluster
+Transport: knet
+Nodes:
+  etcd01:
+    Link 0 address: 192.168.234.112
+    nodeid: 1
+  etcd02:
+    Link 0 address: 192.168.234.113
+    nodeid: 2
+Crypto Options:
+  cipher: aes256
+  hash: sha256
+Cluster Properties:
+ no-quorum-policy: ignore
+ stonith-enabled: false
+Cluster Status:
+ Cluster Summary:
+   * Stack: unknown
+   * Current DC: NONE
+   * Last updated: Sun Sep 25 17:48:54 2022
+   * Last change:  Sun Sep 25 17:48:53 2022 by root via cibadmin on etcd01
+   * 2 nodes configured
+   * 1 resource instance configured
+ Node List:
+   * OFFLINE: [ etcd01 etcd02 ]
+
+PCSD Status:
+  etcd01: Online
+  etcd02: Online
+  * virtual_ip	(ocf::heartbeat:IPaddr2):	 Stopped
